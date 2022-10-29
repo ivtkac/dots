@@ -1,0 +1,35 @@
+[[language]]
+name = "css"
+language-server = { command = "vscode-css-languageserver", args = ["--stdio"] }
+auto-format = true
+
+[[language]]
+name = "json"
+language-server = { command = "vscode-json-languageserver", args = ["--stdio"] }
+auto-format = true
+
+[[language]]
+name = "html"
+language-server = { command = "vscode-html-languageserver", args = ["--stdio"] }
+auto-format = true
+
+[[language]]
+name = "markdown"
+file-types = ["md", "mdx"]
+formatter = { command = "prettier", args = ["--parser", "markdown"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+formatter = { command = "deno", args = ["fmt", '-'] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = "deno", args = ["fmt", '-'] }
+auto-format = true
+
+[[language]]
+name = "java"
+auto-format = true
+language-server = { command = "jdtls", timeout = 60 }
