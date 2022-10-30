@@ -1,3 +1,3 @@
-function vim --wraps=hx --description 'alias vim=hx'
-    hx $argv;
+function vim --wraps=helix --description 'alias vim=helix'
+    helix $argv;
 end
