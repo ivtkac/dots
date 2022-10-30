@@ -1,7 +1,7 @@
 theme = "boo_berry"
 
 [editor]
-line-number = "absolute"
+line-number = "relative"
 scrolloff = 5
 idle-timeout = 0
 rulers = [120]
@@ -24,9 +24,5 @@ select = "underline"
 display-messages = true
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-
-[keys.normal]
-C-q = ":buffer-close"
+left = ["mode", "spinner", "file-name"]
+right = ["lsp-name", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
