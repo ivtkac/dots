@@ -3,13 +3,15 @@
 DIR=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 THIS=${0##*/}
 
-for file in $DIR/*
+for file in $DIR/config/*
 do
-  if [[ -f $file ]] && [[ $file != *"${THIS}" ]]; then
+  if [[ -d $file ]] && [[ $file != *"${THIS}" ]]; then
     bn=`basename $file`
-    ln -sfv $file "${HOME}/.${bn}"
-  elif [[ -d $file ]] && [[ $file != *"${THIS}" ]]; then
-    bn=`basename $file`
-    ln -sfv $file "${HOME}/.${bn}"
+    ln -sfv $file "${HOME}/.config/${bn}"
   fi
 done
+
+if [[ -d ~/.bashrc ]]; then
+  mv ~/.bashrc ~/.bashrc.old
+  ln -sfv "$DIR/.bashrc" "${HOME}/.bashrc"
+fi
