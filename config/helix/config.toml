@@ -25,4 +25,4 @@ display-messages = true
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name"]
-right = ["lsp-name", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
