@@ -15,3 +15,8 @@ if [[ -d ~/.bashrc ]]; then
   mv ~/.bashrc ~/.bashrc.old
   ln -sfv "$DIR/.bashrc" "${HOME}/.bashrc"
 fi
+
+if [[ -d ~/.tmux.conf ]]; then
+  mv ~/.tmux.conf ~/.tmux.conf.old
+  ln -sfv "$DIR/.tmux.conf" "${HOME}/.tmux.conf"
+fi

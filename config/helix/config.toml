@@ -2,6 +2,7 @@ theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
+true-color = true
 scrolloff = 5
 idle-timeout = 0
 rulers = [80]
@@ -11,6 +12,7 @@ auto-completion = true
 cursorline = true
 color-modes = true
 bufferline = "always"
+auto-save = false
 
 [editor.indent-guides]
 render = true
