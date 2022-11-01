@@ -2,8 +2,8 @@
 alias gcb='git checkout -b'
 alias gco='git checkout'
 alias gst='git status'
-alias gac='git add -A && git commit'
-alias guc='git add -u && git commit'
+alias gac='git add -A && git commit -v'
+alias guc='git add -u && git commit -v'
 
 alias gp='git push'
 alias gpl='git pull'
