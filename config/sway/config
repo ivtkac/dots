@@ -1,6 +1,11 @@
 set {
 	$alt Mod1
 	$mod Mod4
+	$left h
+	$down j
+	$up k
+	$right l
+	
 	$term footclient
 	$alt_term alacritty
 	$launcher wofi &
@@ -26,19 +31,6 @@ client.urgent			$red	$red	$black	$red	$red
 seat seat0 {
 	xcursor_theme Colloid-dark-cursors
 	hide_cursor when-typing enable
-}
-
-set $gnome-schema org.gnome.desktop.interface
-exec_always $gnome-scheme {
-	gsettings set {
-		gtk-theme 'Colloid'
-		color-scheme 'prefer-dark'
-		icon-theme 'Fluent-dark'
-		cursor-theme 'Colloid-dark-cursors'
-		font-name 'SF Pro Text 10.5'
-		document-font-name 'New York Small 10.5'
-		monospace-font-name 'SF Mono 10.5'
-	}
 }
 
 # Misc optioms
@@ -91,17 +83,13 @@ bindsym {
 
 bindsym {
     # Applications
-    $mod+b exec $browser
-    $mod+Shift+b exec $alt_browser
-    $mod+Shift+f exec $file_manager
+    $mod+Shift+f exec $browser
+    $mod+Shift+m exec $file_manager
     $mod+Return exec $term
     $mod+Shift+Return exec $alt_term
-    $mod+c kill
-    $mod+d exec $launcher
-    $mod+Shift+d exec $menu
-    $mod+Escape reload
-	$alt+v exec clipboard.sh
-	$mod+Shift+w exec sway_wallpaper.sh
+    $mod+q kill
+    $mod+d exec $menu
+    $mod+Shift+c reload
 	
 	 # Screenshot
     Print exec grimshot --notify copy output
@@ -113,11 +101,21 @@ bindsym {
     $mod+Down focus down
     $mod+Up focus up
     $mod+Right focus right 
+	
+    $mod+$left focus left
+    $mod+$down focus down
+    $mod+$up focus up
+    $mod+$right focus right 
 
     $mod+Shift+Left move left
     $mod+Shift+Down move down
     $mod+Shift+Up move up
     $mod+Shift+Right move right
+	
+    $mod+Shift+$left move left
+    $mod+Shift+$down move down
+    $mod+Shift+$up move up
+    $mod+Shift+$right move right
 
     $mod+1 workspace number 1
     $mod+2 workspace number 2
@@ -141,13 +139,21 @@ bindsym {
     Ctrl+$alt+Left workspace prev
     Ctrl+$alt+Right workspace next
 
-    $mod+h splith
+    $mod+Ctrl+$left workspace prev
+    $mod+Ctrl+$right workspace next
+    $mod+$alt+$left workspace prev
+    $mod+$alt+$right workspace next
+    Ctrl+$alt+$left workspace prev
+    Ctrl+$alt+$right workspace next
+
+    $mod+b splith
     $mod+v splitv
 
     $mod+f fullscreen
-    $mod+space floating toggle
-    $mod+Tab focus mode_toggle
-    $mod+p focus parent
+    $mod+Shift+space floating toggle
+    $mod+space focus mode_toggle
+
+    $mod+a focus parent
 
     $mod+Shift+o move scratchpad
     $mod+Shift+p scratchpad show
@@ -155,6 +161,11 @@ bindsym {
 
 mode "Resize" {
     bindsym {
+        $left resize shrink width 20px
+        $down resize grow height 20px
+        $up resize shrink height 20px
+        $right resize grow width 20px
+	
         Left resize shrink width 20px
         Down resize grow height 20px
         Up resize shrink height 20px
@@ -171,7 +182,7 @@ mode "Layout" {
         t layout tabbed       ; mode "default"
         s layout toggle split ; mode "default"
         v layout splitv       ; mode "default"
-        h layout splith       ; mode "default"
+        b layout splith       ; mode "default"
 
         Return mode "default"
         Escape mode "default"
@@ -180,7 +191,7 @@ mode "Layout" {
 
 bindsym {
     $mod+r mode "Resize"
-    $mod+l mode "Layout"
+    $mod+t mode "Layout"
 }
 
 # Automove rules
