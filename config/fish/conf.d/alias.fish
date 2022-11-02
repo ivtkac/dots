@@ -1,6 +1,7 @@
 # Git
 alias gcb='git checkout -b'
 alias gco='git checkout'
+alias gcd='git checkout dev'
 alias gst='git status'
 alias gac='git add -A && git commit -v'
 alias guc='git add -u && git commit -v'
