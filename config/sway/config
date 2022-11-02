@@ -8,7 +8,7 @@ set {
 	
 	$term footclient
 	$alt_term alacritty
-	$launcher wofi &
+	$launcher fuzzel
 	$browser firefox
 	$file_manager footclient nnn
 	$wallpapers_path $HOME/Pictures/Wallpapers	
