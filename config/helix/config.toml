@@ -1,4 +1,5 @@
-theme = "base16_transparent"
+# theme = "base16_transparent"
+theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
