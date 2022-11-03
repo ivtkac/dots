@@ -7,7 +7,6 @@ set {
 	$right l
 	
 	$term footclient
-	$alt_term alacritty
 	$launcher fuzzel
 	$browser firefox
 	$file_manager footclient nnn

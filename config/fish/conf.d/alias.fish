@@ -16,3 +16,8 @@ alias gcpno='git cherry-pick --no-commit'
 # Zellij
 alias zr='zellij run --'
 alias ze='zellij edit'
+
+alias dev='cd ~/.dev'
+alias dots='cd ~/.dev/dotfiles'
+
+alias v='lvim'
