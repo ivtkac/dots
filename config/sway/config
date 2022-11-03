@@ -87,7 +87,7 @@ bindsym {
     $mod+Return exec $term
     $mod+Shift+Return exec $alt_term
     $mod+q kill
-    $mod+d exec $menu
+    $mod+d exec $launcher
     $mod+Shift+c reload
 	
 	 # Screenshot
