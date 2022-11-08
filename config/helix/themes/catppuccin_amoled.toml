@@ -1,4 +1,0 @@
-inherits = "catppuccin_mocha"
-
-[palette]
-base = "#000000"

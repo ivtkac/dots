@@ -7,6 +7,7 @@
 [github]
 	user = seshotake
 [core]
+	pager = delta
 	quotePath = false
 	ignorecase = false
 	editor = nvim
@@ -17,6 +18,22 @@
 	conflictstyle = diff3
 [diff]
 	colorMoved = default
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+[delta]
+    features = decorations
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
 [alias]
 	back = reset HEAD~
 	
@@ -43,3 +60,9 @@
 	autocrrect = 30
 [init]
 	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
