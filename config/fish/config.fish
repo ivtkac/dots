@@ -14,3 +14,4 @@ fish_vi_key_bindings
 
 starship init fish | source
 zoxide init fish | source
+atuin init fish | source
