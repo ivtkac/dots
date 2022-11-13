@@ -1,18 +1,10 @@
 theme = "catppuccin_mocha"
 
 [editor]
-line-number = "relative"
-true-color = true
-scrolloff = 5
-idle-timeout = 0
 rulers = [80]
-mouse = false
-completion-trigger-len = 1
-auto-completion = true
 cursorline = true
 color-modes = true
 bufferline = "always"
-auto-save = false
 
 [editor.indent-guides]
 render = true
@@ -26,5 +18,4 @@ select = "underline"
 display-messages = true
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = ["diagnostics", "selections", "position", "file-line-ending", "file-type"]
