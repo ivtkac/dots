@@ -1,7 +1,7 @@
 theme = "nightfox"
 
 [editor]
-rulers = [80]
+rulers = [120]
 cursorline = true
 color-modes = true
 bufferline = "always"
@@ -27,3 +27,11 @@ select = " SELECT"
 
 [editor.explorer]
 position = "embed"
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+tab = "→"

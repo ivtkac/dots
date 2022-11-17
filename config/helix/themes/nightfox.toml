@@ -19,22 +19,22 @@
 "ui.cursor" = { bg = "fg3", fg = "bg1" } # Fallback cursor colour, non-primary cursors when there are multiple (shift-c).
 "ui.cursor.primary" = { bg = "fg1", fg = "bg1" } # The primary cursor when there are multiple (shift-c).
 # "ui.cursor.insert" = { } # The cursor in insert mode (i).
-"ui.cursor.select" = { bg = "sel0", modifiers = ["underlined"] } # The cursor in select mode (v).
+"ui.cursor.select" = { modifiers = ["underlined"] } # The cursor in select mode (v).
 "ui.cursor.match" = { fg = "yellow", modifiers = ["reversed", "bold"] } # The matching parentheses of that under the cursor.
 
-"ui.selection" = { bg = "bg3" } # All currently selected text.
-"ui.selection.primary" = { bg = "bg4" } # The primary selection when there are multiple.
-"ui.cursorline.primary" = { bg = "bg3" } # The line of the primary cursor (if cursorline is enabled)
-"ui.cursorline.secondary" = { bg = "bg2" } #	The lines of any other cursors (if cursorline is enabled)
+"ui.selection" = { bg = "bg2" } # All currently selected text.
+"ui.selection.primary" = { bg = "bg3" } # The primary selection when there are multiple.
+"ui.cursorline.primary" = { bg = "bg2" } # The line of the primary cursor (if cursorline is enabled)
+# "ui.cursorline.secondary" = { } #	The lines of any other cursors (if cursorline is enabled)
 # "ui.cursorcolumn.primary" = { } #	The column of the primary cursor (if cursorcolumn is enabled)
 # "ui.cursorcolumn.secondary" = { } #	The columns of any other cursors (if cursorcolumn is enabled)
 
 "ui.linenr" = { fg = "fg3" } # Line numbers.
 "ui.linenr.selected" = { fg = "yellow", modifiers = ["bold"] } # Current line number.
 
-"ui.virtual" = { fg = "fg1" } # Namespace for additions to the editing area.
+"ui.virtual" = { fg = "fg3" } # Namespace for additions to the editing area.
 "ui.virtual.ruler" = { bg = "bg3" } # Vertical rulers (colored columns in editing area).
-"ui.virtual.whitespace" = { fg = "bg3" } # Whitespace markers in editing area.
+# "ui.virtual.whitespace" = { } # Whitespace markers in editing area.
 "ui.virtual.indent-guide" = { fg = "black" } # Vertical indent width guides
 
 "ui.statusline" = { fg = "fg2", bg = "bg0" } # Status line.
