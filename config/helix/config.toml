@@ -19,3 +19,11 @@ display-messages = true
 
 [editor.statusline]
 right = ["diagnostics", "selections", "position", "file-line-ending", "file-type"]
+
+[editor.statusline.mode]
+normal = " NORMAL"
+insert = " INSERT"
+select = " SELECT"
+
+[editor.explorer]
+position = "embed"
