@@ -25,8 +25,8 @@ normal = " NORMAL"
 insert = " INSERT"
 select = " SELECT"
 
-[editor.explorer]
-position = "embed"
+# [editor.explorer]
+# position = "embed"
 
 [editor.whitespace.render]
 space = "none"
