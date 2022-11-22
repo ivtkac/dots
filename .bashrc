@@ -12,7 +12,7 @@ alias la='ls -a'
 alias gcb='git checkout -b'
 alias gco='git checkout'
 alias gst='git status'
-alais gac='git add -A && git commit'
+alias gac='git add -A && git commit'
 alias guc='git add -u && git commit'
 
 alias gp='git push'
@@ -20,7 +20,7 @@ alias gpl='git pull'
 alias gf='git fetch'
 
 alias gcp='git cherry-pick'
-alais gcpno='git cherry-pick --no-commit'
+alias gcpno='git cherry-pick --no-commit'
 
 alias zr='zellij run --'
 alias ze='zellij edit'
