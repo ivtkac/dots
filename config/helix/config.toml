@@ -1,6 +1,7 @@
 theme = "mocha"
 
 [editor]
+shell = ["fish", "-c"]
 rulers = [120]
 cursorline = true
 color-modes = true
@@ -8,6 +9,7 @@ bufferline = "always"
 
 [editor.indent-guides]
 render = true
+skip-levels = 1
 
 [editor.cursor-shape]
 insert = "bar"
@@ -18,18 +20,11 @@ select = "underline"
 display-messages = true
 
 [editor.statusline]
-right = ["diagnostics", "selections", "position", "file-line-ending", "file-type"]
-
-[editor.statusline.mode]
-normal = " NORMAL"
-insert = " INSERT"
-select = " SELECT"
-
-# [editor.explorer]
-# position = "embed"
+left = ["mode", "spinner", "file-name", "diagnostics"]
+right = ["workspace-diagnostics", "selections", "position", "file-line-ending"]
 
 [editor.whitespace.render]
-space = "none"
+space = "all"
 tab = "all"
 newline = "none"
 
