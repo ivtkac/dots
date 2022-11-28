@@ -32,4 +32,3 @@ auto-format = true
 [[language]]
 name = "java"
 auto-format = true
-language-server = { command = "jdtls", timeout = 60 }
