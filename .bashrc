@@ -5,7 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='exa --color=always'
 alias ll='ls -l'
 alias la='ls -a'
 
@@ -28,8 +27,6 @@ alias ze='zellij edit'
 export EDITOR=hx
 export HELIX_RUNTIME=~/.local/share/helix/runtime
 
-export PATH="$PATH:~/.local/bin"
-export PATH="$PATH:~/.cargo/bin"
-export PATH="$PATH:~/.deno/bin"
+export PATH="$PATH:~/.local/bin:~/.cargo/bin:~/.deno/bin"
 
 PS1='[\u@\h \W]\$ '

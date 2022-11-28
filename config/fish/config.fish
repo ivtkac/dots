@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 set -Ux EDITOR hx
+set -Ux VISUAL EDITOR
 
 set -Ux HELIX_RUNTIME ~/.local/share/helix/runtime
 
