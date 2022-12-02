@@ -24,7 +24,7 @@ left = ["mode", "spinner", "file-name", "diagnostics"]
 right = ["workspace-diagnostics", "selections", "position", "file-line-ending"]
 
 [editor.whitespace.render]
-space = "all"
+space = "none"
 tab = "all"
 newline = "none"
 

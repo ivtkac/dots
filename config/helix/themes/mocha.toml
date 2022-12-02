@@ -8,8 +8,6 @@ inherits = "catppuccin_mocha"
 
 "markup.link.url" = { fg = "rosewater", modifiers = ["italic", "underlined"] }
 
-"diff.delta" = "minus"
-
 "ui.statusline" = { bg = "mantle" }
 "ui.statusline.inactive" = { fg = "surface2", bg = "mantle" } 
 
@@ -21,6 +19,3 @@ inherits = "catppuccin_mocha"
 "ui.selection.primary" = { bg = "surface2" }
 
 "ui.cursor.select" = { modifiers = ["underlined"] }
-
-# "ui.explorer.file" = { fg = "pink" }
-# "ui.explorer.dir" = { fg = "blue" }
