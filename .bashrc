@@ -130,7 +130,7 @@ __bash_prompt
 
 export PROMPT_DIRTRIM=4
 
-export EDITOR=hx
-export HELIX_RUNTIME=~/.local/share/helix/runtime
+export EDITOR="hx"
+export HELIX_RUNTIME="~/.local/share/helix/runtime"
 
 export PATH="$PATH:~/.local/bin:~/.cargo/bin:~/.deno/bin"
