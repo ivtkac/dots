@@ -1,4 +1,4 @@
-theme = "mocha"
+theme = "fleet_dark"
 
 [editor]
 shell = ["fish", "-c"]
