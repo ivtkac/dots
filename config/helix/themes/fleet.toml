@@ -1,0 +1,7 @@
+inherits = "fleet_dark"
+
+"variable.builtin" = "red"
+
+"diff.plus" = "cyan"
+"diff.minus" = "yellow"
+"diff.delta" = "purple"

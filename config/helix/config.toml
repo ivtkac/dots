@@ -1,8 +1,8 @@
-theme = "fleet_dark"
+theme = "fleet"
 
 [editor]
 shell = ["fish", "-c"]
-rulers = [120]
+rulers = [80, 120]
 cursorline = true
 color-modes = true
 bufferline = "always"
