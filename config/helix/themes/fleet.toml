@@ -5,3 +5,9 @@ inherits = "fleet_dark"
 "diff.plus" = "cyan"
 "diff.minus" = "yellow"
 "diff.delta" = "purple"
+
+"ui.statusline.normal" = { fg = "darker", bg = "purple", modifiers = ["bold"]}
+"ui.statusline.insert" = { fg = "darker", bg = "cyan", modifiers = ["bold"]}
+"ui.statusline.select" = { fg = "darker", bg = "yellow", modifiers = ["bold"]}
+
+"ui.bufferline.active" = { bg = "background" }
