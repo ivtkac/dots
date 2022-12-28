@@ -202,27 +202,11 @@ default_shell "fish"
 // For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
-themes {
-    catppuccin_mocha {
-        bg 88 91 112 // "#585b70" # Surface2
-        fg 205 214 244 // : "#cdd6f4"
-        red 243 139 168 // : "#f38ba8"
-        green 166 227 161 // : "#a6e3a1"
-        blue 137 180 250 // : "#89b4fa"
-        yellow 249 226 175 // : "#f9e2af"
-        magenta 245 192 231 // : "#f5c2e7" # Pink
-        orange 250 179 135 // : "#fab387" # Peach
-        cyan 137 220 235 // : "#89dceb" # Sky
-        black 24 24 37 // : "#181825" # Mantle
-        white 205 214 244 // : "#cdd6f4"      
-    }
-}
-
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "catppuccin_mocha"
+// theme "default"
 
 // The name of the default layout to load on startup
 // Default: "default"
