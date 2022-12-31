@@ -1,0 +1,78 @@
+[Параметри для code]
+Description=Параметри для code
+activity=95846d30-39c3-401c-9361-799d903bf5b2
+activityrule=3
+desktops=693cf2ea-7524-483c-9375-a430793fb526
+desktopsrule=3
+wmclass=code
+wmclassmatch=1
+
+[Параметри для discover]
+Description=Параметри для discover
+activity=e68a808a-1324-48a5-b719-bebd2b63999c
+activityrule=3
+desktops=b8d540cb-4caf-4970-9983-df53132badab
+desktopsrule=3
+wmclass=discover
+wmclassmatch=1
+
+[Параметри для dolphin]
+Description=Параметри для dolphin
+activity=00000000-0000-0000-0000-000000000000
+activityrule=3
+desktops=b8d540cb-4caf-4970-9983-df53132badab
+desktopsrule=3
+wmclass=dolphin
+wmclassmatch=1
+
+[Параметри для firefox]
+Description=Параметри для firefox
+desktops=50e2d224-a226-4dae-bd95-3733f0a90b30
+desktopsrule=3
+wmclass=firefox
+wmclassmatch=1
+
+[Параметри для konsole]
+Description=Параметри для konsole
+activity=95846d30-39c3-401c-9361-799d903bf5b2
+activityrule=3
+desktops=0fb8ac27-b9ab-4dda-b3ec-b89109446c96
+desktopsrule=3
+wmclass=konsole
+wmclassmatch=1
+
+[Параметри для minecraft launcher]
+Description=Параметри для minecraft launcher
+activity=e68a808a-1324-48a5-b719-bebd2b63999c
+activityrule=3
+desktops=f5f82183-23a2-471d-83b0-2d7b46b5f46d
+desktopsrule=3
+wmclass=minecraft launcher
+wmclassmatch=1
+
+[Параметри для spotify]
+Description=Параметри для spotify
+activity=e68a808a-1324-48a5-b719-bebd2b63999c
+activityrule=3
+desktops=afc326e4-2294-4a0c-8527-ddc5c527c93a
+desktopsrule=3
+wmclass=spotify
+wmclassmatch=1
+
+[Параметри для systemsettings]
+Description=Параметри для systemsettings
+activity=00000000-0000-0000-0000-000000000000
+activityrule=3
+desktops=\\0
+desktopsrule=3
+wmclass=systemsettings
+wmclassmatch=1
+
+[Параметри для telegramdesktop]
+Description=Параметри для telegramdesktop
+activity=00000000-0000-0000-0000-000000000000
+activityrule=3
+desktops=50e2d224-a226-4dae-bd95-3733f0a90b30
+desktopsrule=3
+wmclass=telegramdesktop
+wmclassmatch=1
