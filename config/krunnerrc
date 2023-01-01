@@ -1,0 +1,10 @@
+[PlasmaRunnerManager]
+migrated=true
+
+[Plugins]
+baloosearchEnabled=true
+
+[Runners][krunner_kill]
+sorting=0
+triggerWord=kill
+useTriggerWord=true

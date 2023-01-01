@@ -1,0 +1,6 @@
+[General]
+DefaultWebShortcut=
+EnableWebShortcuts=true
+KeywordDelimiter=:
+PreferredWebShortcuts=github,google_maps,google,archpkg,yahoo,gitlab,youtube,wikit,python,wikipedia,protondb
+UsePreferredWebShortcutsOnly=false

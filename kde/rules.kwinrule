@@ -1,3 +1,12 @@
+[Параметри для ark]
+Description=Параметри для ark
+activity=00000000-0000-0000-0000-000000000000
+activityrule=3
+desktops=b8d540cb-4caf-4970-9983-df53132badab
+desktopsrule=3
+wmclass=ark
+wmclassmatch=1
+
 [Параметри для code]
 Description=Параметри для code
 activity=95846d30-39c3-401c-9361-799d903bf5b2
@@ -9,7 +18,7 @@ wmclassmatch=1
 
 [Параметри для discover]
 Description=Параметри для discover
-activity=e68a808a-1324-48a5-b719-bebd2b63999c
+activity=00000000-0000-0000-0000-000000000000
 activityrule=3
 desktops=b8d540cb-4caf-4970-9983-df53132badab
 desktopsrule=3
@@ -32,6 +41,15 @@ desktopsrule=3
 wmclass=firefox
 wmclassmatch=1
 
+[Параметри для gwenview]
+Description=Параметри для gwenview
+activity=00000000-0000-0000-0000-000000000000
+activityrule=3
+desktops=b8d540cb-4caf-4970-9983-df53132badab
+desktopsrule=3
+wmclass=gwenview
+wmclassmatch=1
+
 [Параметри для konsole]
 Description=Параметри для konsole
 activity=95846d30-39c3-401c-9361-799d903bf5b2
@@ -41,6 +59,15 @@ desktopsrule=3
 wmclass=konsole
 wmclassmatch=1
 
+[Параметри для minecraft]
+Description=Параметри для minecraft
+activity=e68a808a-1324-48a5-b719-bebd2b63999c
+activityrule=3
+desktops=f5f82183-23a2-471d-83b0-2d7b46b5f46d
+desktopsrule=3
+wmclass=minecraft
+wmclassmatch=1
+
 [Параметри для minecraft launcher]
 Description=Параметри для minecraft launcher
 activity=e68a808a-1324-48a5-b719-bebd2b63999c
@@ -48,6 +75,15 @@ activityrule=3
 desktops=f5f82183-23a2-471d-83b0-2d7b46b5f46d
 desktopsrule=3
 wmclass=minecraft launcher
+wmclassmatch=1
+
+[Параметри для okular]
+Description=Параметри для okular
+activity=00000000-0000-0000-0000-000000000000
+activityrule=3
+desktops=b8d540cb-4caf-4970-9983-df53132badab
+desktopsrule=3
+wmclass=okular
 wmclassmatch=1
 
 [Параметри для spotify]
