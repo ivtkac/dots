@@ -1,4 +1,4 @@
-theme = "light_theme"
+theme = "mocha"
 
 [editor]
 shell = ["fish", "-c"]
