@@ -32,3 +32,8 @@ auto-format = true
 [[language]]
 name = "java"
 auto-format = true
+
+[[language]]
+name = "python"
+scope = "source.python"
+language-server = { command = "ruff-lsp" }
