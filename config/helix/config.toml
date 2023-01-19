@@ -1,8 +1,8 @@
-theme = "boo_berry"
+theme = "rose_pine"
 
 [editor]
 shell = ["fish", "-c"]
-rulers = [80, 120]
+rulers = [120]
 cursorline = true
 color-modes = true
 bufferline = "multiple"
@@ -19,14 +19,5 @@ select = "underline"
 [editor.lsp]
 display-messages = true
 
-[editor.statusline]
-left = ["mode", "spinner", "file-name", "diagnostics"]
-right = ["workspace-diagnostics", "selections", "position", "file-line-ending"]
-
-[editor.whitespace.render]
-space = "none"
-tab = "all"
-newline = "none"
-
-[editor.whitespace.characters]
-tab = "→"
+[keys.normal]
+V = ["extend_line_below", "select_mode"]
