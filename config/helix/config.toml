@@ -13,8 +13,6 @@ skip-levels = 1
 
 [editor.cursor-shape]
 insert = "bar"
-normal = "block"
-select = "underline"
 
 [editor.lsp]
 display-messages = true
