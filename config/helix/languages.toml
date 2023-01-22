@@ -30,6 +30,16 @@ formatter = { command = "deno", args = ["fmt", '-'] }
 auto-format = true
 
 [[language]]
+name = "jsx"
+formatter = { command = "deno", args = ["fmt", '-'] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+formatter = { command = "deno", args = ["fmt", '-'] }
+auto-format = true
+
+[[language]]
 name = "java"
 auto-format = true
 

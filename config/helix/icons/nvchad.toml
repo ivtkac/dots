@@ -1,0 +1,48 @@
+inherits = "nerdfonts"
+name = "nvchad"
+
+[symbol-kind]
+file = {icon = ""}
+module = {icon = ""}
+namespace = {icon = ""}
+package = {icon = ""}
+class = {icon = "ﴯ"}
+method = {icon = ""}
+property = {icon = "ﰠ"}
+field = {icon = "ﰠ"}
+constructor = {icon = ""}
+enumeration = {icon = ""}
+interface = {icon = ""}
+variable = {icon = ""}
+function = {icon = ""}
+constant = {icon = ""}
+string = {icon = ""}
+number = {icon = ""}
+boolean = {icon = ""}
+object = {icon = ""}
+key = {icon = ""}
+null = {icon = "ﳠ"}
+enum-member = {icon = ""}
+structure = {icon = "פּ"}
+event = {icon = ""}
+operator = {icon = ""}
+type-parameter = {icon = ""}
+
+[mime-type]
+"Dockerfile" = {icon = "", color = "#89DCEB"}
+"jpeg" = {icon = "", color = "#d5aeea"}
+"jpg" = {icon = "", color = "#d5aeea"}
+"js" = {icon = "", color = "#ffe9b6"}
+"lock" = { icon = "", color = "#F28FAD" }
+"png" = {icon = "", color = "#d5aeea"}
+"toml" = {icon = "", color = "#96CDFB"}
+"ts" = {icon = "ﯤ", color = "#B5E8E0"}
+"rb" = { icon = "", color = "#F5C2E7" }
+"vue" = {icon = "﵂", color = "#b6f4be"}
+"html" = {icon = "", color = "#ffa5c3"}
+"py" = { icon = "", color = "#89DCEB" }
+"css" = {icon = "", color = "#96CDFB"}
+"markdown" = {icon = "", color ="#ffffff"}
+"md" = {icon = "", color = "#ffffff"}
+".bash_profile" = { icon = "", color = "#ffffff" }
+".bashrc" = { icon = "", color = "#ffffff" }

@@ -1,4 +1,5 @@
 theme = "catppuccin_mocha"
+icons = "nerdfonts"
 
 [editor]
 shell = ["fish", "-c"]
@@ -16,6 +17,12 @@ insert = "bar"
 
 [editor.lsp]
 display-messages = true
+
+[editor.icons]
+enable = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-type-icon", "file-name"]
 
 [keys.normal]
 V = ["extend_line_below", "select_mode"]
