@@ -44,4 +44,5 @@ name = "python"
 scope = "source.python"
 language-server = { command = "pyright-langserver", args = ["--stdio"] }
 config = { python = { analysis = { autoSearchPaths = true, useLibraryCodeForTypes = true, diagnosticMode = 'workspace' } } }
+formatter = { command = "autopep8", args = ["-"]}
 auto-format = true
