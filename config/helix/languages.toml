@@ -52,6 +52,9 @@ autoSearchPaths = true
 userLibraryCodeForTypes = true
 diagnosticMode = 'workspace'
 
+[language.config.python.linting]
+mypyEnabled = true
+
 [language.formatter]
 command = "autopep8"
 args = ["-"]
