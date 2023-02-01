@@ -8,6 +8,7 @@ cursorline = true
 auto-save = true
 color-modes = true
 bufferline = "multiple"
+idle-timeout = 250
 
 [editor.indent-guides]
 render = true
@@ -19,6 +20,10 @@ select = "block"
 
 [editor.lsp]
 display-messages = true
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = ""
 
 # [editor.icons]
 # enable = true
