@@ -12,6 +12,7 @@ idle-timeout = 250
 
 [editor.indent-guides]
 render = true
+skip-levels = 1
 
 [editor.cursor-shape]
 insert = "bar"
@@ -30,6 +31,12 @@ wrap-indicator = ""
 
 # [editor.statusline]
 # left = ["mode", "spinner", "file-type-icon", "file-name"]
+
+[editor.statusline]
+left = ["mode", "spinner", "spacer", "file-base-name"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 [keys.normal]
 V = ["extend_line_below", "select_mode"]
