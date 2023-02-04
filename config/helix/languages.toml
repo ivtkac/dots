@@ -1,43 +1,66 @@
 [[language]]
 name = "css"
-language-server = { command = "vscode-css-languageserver", args = ["--stdio"] }
 auto-format = true
+
+[language.language-server]
+command = "vscode-css-languageserver"
+args = ["--stdio"]
 
 [[language]]
 name = "json"
-language-server = { command = "vscode-json-languageserver", args = ["--stdio"] }
 auto-format = true
+
+[language.language-server]
+command = "vscode-json-languageserver"
+args = ["--stdio"]
 
 [[language]]
 name = "html"
-language-server = { command = "vscode-html-languageserver", args = ["--stdio"] }
 auto-format = true
+
+[language.language-server]
+command = "vscode-html-languageserver"
+args = ["--stdio"]
 
 [[language]]
 name = "markdown"
-file-types = ["md", "mdx"]
-formatter = { command = "prettier", args = ["--parser", "markdown"] }
 auto-format = true
+
+[language.formatter]
+command = "prettier"
+args = ["--parser", "markdown"]
 
 [[language]]
 name = "tsx"
-formatter = { command = "deno", args = ["fmt", '-'] }
 auto-format = true
+
+[language.formatter]
+command = "deno"
+args = ["fmt", "-"]
 
 [[language]]
 name = "typescript"
-formatter = { command = "deno", args = ["fmt", '-'] }
 auto-format = true
+
+[language.formatter]
+command = "deno"
+args = ["fmt", "-"]
 
 [[language]]
 name = "jsx"
-formatter = { command = "deno", args = ["fmt", '-'] }
 auto-format = true
+
+[language.formatter]
+command = "deno"
+args = ["fmt", "-"]
 
 [[language]]
 name = "javascript"
-formatter = { command = "deno", args = ["fmt", '-'] }
 auto-format = true
+
+[language.formatter]
+command = "deno"
+ars = ["fmt", "-"]
 
 [[language]]
 name = "python"
@@ -47,14 +70,12 @@ auto-format = true
 command = "pyright-langserver"
 args = ["--stdio"]
 
-[language.config.python.analysis]
-autoSearchPaths = true
-userLibraryCodeForTypes = true
-diagnosticMode = 'workspace'
-
-[language.config.python.linting]
-mypyEnabled = true
-
 [language.formatter]
 command = "autopep8"
 args = ["-"]
+
+[language.config]
+"python.analysis.autoSearchPaths" = true
+"python.analysis.userLibraryCodeForTypes" = true
+"python.analysis.diagnosticMode" = "workspace"
+"python.linting.mypyEnabled" = true
