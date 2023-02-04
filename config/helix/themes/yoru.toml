@@ -11,6 +11,7 @@
 "ui.menu.scroll" = { fg = "grey", bg = "one_bg"}
 
 "ui.popup" = { bg = "darker_black" }
+"ui.popup.info" = "pink"
 
 "ui.help" = { bg = "darker_black" }
 
@@ -29,12 +30,14 @@
 
 "ui.cursorline.primary" = { bg = "lighter_black" }
 
+"ui.cursorcolumn.primary" = { bg = "lighter_black" }
+
 "ui.virtual.indent-guide" = "grey"
 "ui.virtual.ruler" = { bg = "one_bg" }
 
 "ui.highlight" = { bg = "lighter_black" }
 
-"special" = "light_blue"
+"special" = "blue"
 
 # Statusline
 # -----------
@@ -60,7 +63,7 @@
 
 "type" = "orange"
 
-"type.builtin" = "orange"
+"type.builtin" = "purple"
 
 "constructor" = "orange"
 
@@ -99,6 +102,27 @@
 "punctuation" = "pink"
 "punctuation.special" = "dark_purple"
 
+# Markdown
+# ---------
+
+"markup.heading.marker" = { fg = "pink", modifiers = ["bold", "italic"] }
+"markup.heading.1" = { fg = "nord_blue", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "blue", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "dark_purple", modifiers = ["bold"] }
+"markup.heading.4" = { fg  = "purple", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "cyan", modifiers = ["bold"] }
+"markup.heading.6" = { fg  = "teal", modifiers = ["bold"] }
+
+"markup.list" = "orange"
+
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+
+"markup.link.url" = { fg = "green", underline = { color = "green", style = "line" } }
+"markup.link.text" = "purple"
+
+"markup.raw" = "teal"
+
 # Diagnostics
 # ------------
 
@@ -118,6 +142,7 @@
 "diff.plus" = "green"
 "diff.minus" = "red"
 "diff.delta" = "blue"
+"diff.delta.moved" = "orange"
 
 [palette]
 white = "#edeff0"
@@ -135,7 +160,6 @@ light_grey = "#505253"
 red = "#DF5B61"
 baby_pink = "#EE6A70"
 pink = "#e8646a"
-light_pink = "#f26e74"
 line = "#1b1d1e"
 green = "#78B892"
 vibrant_green = "#81c19b"
@@ -147,7 +171,6 @@ purple = "#c58cec"
 dark_purple = "#BC83E3"
 teal = "#70b8ca"
 orange = "#E89982"
-light_orange = "#e79881"
 cyan = "#67AFC1"
 statusline_bg = "#101213"
 lightbg = "#1d1f20"
