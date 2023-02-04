@@ -17,8 +17,8 @@
 "ui.linenr" = { fg = "grey" }
 "ui.linenr.selected" = { fg = "white" }
 
-"ui.selection" = { bg = "base02" }
-"ui.selection.primary" = { bg = "base03" }
+"ui.selection" = { bg = "one_bg" }
+"ui.selection.primary" = { bg = "one_bg2" }
 
 "ui.text" = "white"
 "ui.text.focus" = { fg = "white", bg = "black2" }
