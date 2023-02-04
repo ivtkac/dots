@@ -1,5 +1,4 @@
-theme = "catppuccin_mocha"
-# icons = "codeicons"
+theme = "yoru"
 
 [editor]
 shell = ["fish", "-c"]
@@ -24,13 +23,6 @@ display-messages = true
 
 [editor.soft-wrap]
 enable = true
-wrap-indicator = ""
-
-# [editor.icons]
-# enable = true
-
-# [editor.statusline]
-# left = ["mode", "spinner", "file-type-icon", "file-name"]
 
 [editor.statusline]
 left = ["mode", "spinner", "spacer", "file-base-name"]
