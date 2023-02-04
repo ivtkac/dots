@@ -87,8 +87,6 @@
 "keyword.control.repeat" = "orange"
 "keyword.control.exception" = "pink"
 
-"keyword.storage" = "orange"
-
 "variable" = "white"
 "variable.builtin" = "purple"
 "variable.parameter" = "pink"
