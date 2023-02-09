@@ -11,7 +11,7 @@
 "ui.menu.scroll" = { fg = "grey", bg = "one_bg"}
 
 "ui.popup" = { bg = "darker_black" }
-"ui.popup.info" = { fg = "pink", bg = "darker_black" }
+"ui.popup.info" = { fg = "blue", bg = "darker_black" }
 
 "ui.help" = { bg = "darker_black" }
 
