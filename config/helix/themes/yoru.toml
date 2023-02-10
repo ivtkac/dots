@@ -34,6 +34,7 @@
 
 "ui.virtual.indent-guide" = "grey"
 "ui.virtual.ruler" = { bg = "one_bg" }
+"ui.virtual.wrap" = "grey_fg2"
 
 "ui.highlight" = { bg = "one_bg" }
 
