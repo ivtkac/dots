@@ -2,7 +2,6 @@
 name = "css"
 auto-format = true
 language-server = { command = "vscode-css-languageserver", args = ["--stdio"] }
-config = { css.validate = true, scss.validate = true, less.validate = true }
 
 [[language]]
 name = "json"
@@ -13,11 +12,6 @@ language-server = { command = "vscode-json-languageserver", args = ["--stdio"] }
 name = "html"
 auto-format = true
 language-server = { command = "vscode-html-languageserver", args = ["--stdio"] }
-
-[language.config]
-provideFormatter = true
-embeddedLanguages = { css = true, javascript = true }
-configurationSection = ["html", "css", "javascript"]
 
 [[language]]
 name = "markdown"
