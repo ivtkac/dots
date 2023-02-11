@@ -1,78 +1,54 @@
 [[language]]
 name = "css"
 auto-format = true
-
-[language.language-server]
-command = "vscode-css-languageserver"
-args = ["--stdio"]
+language-server = { command = "vscode-css-languageserver", args = ["--stdio"] }
+config = { css.validate = true, scss.validate = true, less.validate = true }
 
 [[language]]
 name = "json"
 auto-format = true
-
-[language.language-server]
-command = "vscode-json-languageserver"
-args = ["--stdio"]
+language-server = { command = "vscode-json-languageserver", args = ["--stdio"] }
 
 [[language]]
 name = "html"
 auto-format = true
+language-server = { command = "vscode-html-languageserver", args = ["--stdio"] }
 
-[language.language-server]
-command = "vscode-html-languageserver"
-args = ["--stdio"]
+[language.config]
+provideFormatter = true
+embeddedLanguages = { css = true, javascript = true }
+configurationSection = ["html", "css", "javascript"]
 
 [[language]]
 name = "markdown"
 auto-format = true
-
-[language.formatter]
-command = "prettier"
-args = ["--parser", "markdown"]
+formatter = { command = "prettier", args = ["--parser", "markdown"] }
 
 [[language]]
 name = "tsx"
 auto-format = true
-
-[language.formatter]
-command = "deno"
-args = ["fmt", "-"]
+formatter = { command = "deno", args = ["fmt", "-"] }
 
 [[language]]
 name = "typescript"
 auto-format = true
-
-[language.formatter]
-command = "deno"
-args = ["fmt", "-"]
+formatter = { command = "deno", args = ["fmt", "-"] } 
 
 [[language]]
 name = "jsx"
 auto-format = true
-
-[language.formatter]
-command = "deno"
-args = ["fmt", "-"]
+formatter = { command = "deno", args = ["fmt", "-"] } 
 
 [[language]]
 name = "javascript"
 auto-format = true
-
-[language.formatter]
-command = "deno"
-ars = ["fmt", "-"]
+formatter = { command = "deno", args = ["fmt", "-"] } 
 
 [[language]]
 name = "python"
 auto-format = true
-
-[language.language-server]
-command = "pyright-langserver"
-args = ["--stdio"]
-
-[language.formatter]
-command = "autopep8"
-args = ["-"]
+language-server = { command = "pyright-langserver", args = ["--stdio"] }
+formatter = { command = "autopep8", args = ["-"] }
 
 [language.config]
 "python.analysis.autoSearchPaths" = true
