@@ -1,42 +1,8 @@
 [[language]]
-name = "css"
-auto-format = true
-language-server = { command = "vscode-css-languageserver", args = ["--stdio"] }
-
-[[language]]
-name = "json"
-auto-format = true
-language-server = { command = "vscode-json-languageserver", args = ["--stdio"] }
-
-[[language]]
-name = "html"
-auto-format = true
-language-server = { command = "vscode-html-languageserver", args = ["--stdio"] }
-
-[[language]]
 name = "markdown"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
 
-[[language]]
-name = "tsx"
-auto-format = true
-formatter = { command = "deno", args = ["fmt", "-"] }
-
-[[language]]
-name = "typescript"
-auto-format = true
-formatter = { command = "deno", args = ["fmt", "-"] } 
-
-[[language]]
-name = "jsx"
-auto-format = true
-formatter = { command = "deno", args = ["fmt", "-"] } 
-
-[[language]]
-name = "javascript"
-auto-format = true
-formatter = { command = "deno", args = ["fmt", "-"] } 
 
 [[language]]
 name = "python"
@@ -45,7 +11,21 @@ language-server = { command = "pyright-langserver", args = ["--stdio"] }
 formatter = { command = "autopep8", args = ["-"] }
 
 [language.config]
-"python.analysis.autoSearchPaths" = true
-"python.analysis.userLibraryCodeForTypes" = true
-"python.analysis.diagnosticMode" = "workspace"
-"python.linting.mypyEnabled" = true
+python.analysis.autoSearchPaths = true
+python.analysis.userLibraryCodeForTypes = true
+python.analysis.diagnosticMode = "workspace"
+python.linting.mypyEnabled = true
+
+
+[[language]]
+name = "rust"
+
+[language.config]
+assist.importGranularity = "module"
+checkOnSave.command = "clippy"
+hoverActions.references = true
+lens.enumVariantReferences = true
+lens.methodReferences = true
+lens.references = true
+procMacro.enable = true
+workspace.symbol.search.kind = "all_symbols"
