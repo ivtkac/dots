@@ -1,13 +1,13 @@
 theme = "yoru"
 
 [editor]
-shell = ["fish", "-c"]
 rulers = [80, 100, 120]
 cursorline = true
 auto-save = true
 color-modes = true
 bufferline = "multiple"
-idle-timeout = 250
+idle-timeout = 0
+completion-trigger-len = 1
 
 [editor.indent-guides]
 render = true
