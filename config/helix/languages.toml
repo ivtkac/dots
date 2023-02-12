@@ -1,4 +1,11 @@
 [[language]]
+name = "css"
+
+[language.config]
+css.validate = true
+
+
+[[language]]
 name = "markdown"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
