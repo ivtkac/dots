@@ -6,7 +6,6 @@ cursorline = true
 auto-save = true
 color-modes = true
 bufferline = "multiple"
-idle-timeout = 100
 completion-trigger-len = 1
 
 [editor.indent-guides]
