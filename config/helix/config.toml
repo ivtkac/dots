@@ -26,9 +26,6 @@ enable = true
 
 [editor.statusline]
 left = ["mode", "spinner", "spacer", "file-base-name"]
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
 
 [keys.normal]
 V = ["extend_line_below", "select_mode"]
