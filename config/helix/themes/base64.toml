@@ -45,9 +45,9 @@
 
 "ui.statusline" = { bg = "statusline_bg" }
 "ui.statusline.inactive" = { fg = "grey_fg2", bg = "statusline_bg" }
-"ui.statusline.normal" = { fg = "black", bg = "nord_blue", modifiers = ["bold"] }
-"ui.statusline.insert" = { fg = "black", bg = "dark_purple", modifiers = ["bold"] }
-"ui.statusline.select" = { fg = "black", bg = "cyan", modifiers = ["bold"] }
+"ui.statusline.normal" = { fg = "black", bg = "nord_blue" }
+"ui.statusline.insert" = { fg = "black", bg = "dark_purple"}
+"ui.statusline.select" = { fg = "black", bg = "cyan" }
 
 # Bufferline
 
@@ -93,7 +93,7 @@
 
 "variable" = "white"
 "variable.builtin" = "purple"
-"variable.parameter" = "sun"
+"variable.parameter" = "red"
 "variable.other.member" = "red"
 
 "function" = "blue"
