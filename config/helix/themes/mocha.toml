@@ -1,0 +1,10 @@
+inherits = "catppuccin_mocha"
+
+attribute = { fg = "teal", modifiers = ["italic"] }
+
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.info" = { underline = { color = "sky", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "teal", style = "curl" } }
+
+"function.builtin" = "blue"

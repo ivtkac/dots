@@ -134,3 +134,5 @@ export EDITOR=hx
 export HELIX_RUNTIME=~/.local/share/helix/runtime
 
 export PATH="$PATH:~/.local/bin:~/.cargo/bin:~/.deno/bin"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

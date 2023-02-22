@@ -1,4 +1,4 @@
-theme = "yoru"
+theme = "mocha"
 
 [editor]
 rulers = [80, 100, 120]
