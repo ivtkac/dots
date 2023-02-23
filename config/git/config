@@ -9,7 +9,7 @@
 [core]
 	quotePath = false
 	ignorecase = false
-	editor = hx
+	editor = nvim
 [push]
 	default = simple
 [merge]
