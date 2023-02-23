@@ -71,7 +71,7 @@
 "ui.text" = "fg0"
 "ui.text.focus" = "fg0"
 "ui.menu" = { fg = "fg0", bg = "bg3" }
-"ui.menu.selected" = { fg = "bg0", bg = "blue", modifiers = ["bold"]  }
+"ui.menu.selected" = { fg = "green", bg = "bg_visual_green", modifiers = ["bold"]  }
 "ui.virtual.whitespace" = { fg = "bg4" }
 "ui.virtual.indent-guide" = { fg = "bg4" }
 "ui.virtual.ruler" = { bg = "bg2" }
