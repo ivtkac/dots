@@ -1,6 +1,7 @@
 theme = "theme"
 
 [editor]
+shell = ["/usr/bin/fish", "-c"]
 rulers = [80, 100, 120]
 cursorline = true
 auto-save = true
