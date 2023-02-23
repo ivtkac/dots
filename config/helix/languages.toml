@@ -36,8 +36,3 @@ lens.methodReferences = true
 lens.references = true
 procMacro.enable = true
 workspace.symbol.search.kind = "all_symbols"
-
-
-[[language]]
-name = "c-sharp"
-language-server = { command = "omnisharp", args = [ "--languageserver" ] }
