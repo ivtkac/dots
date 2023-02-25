@@ -58,7 +58,7 @@
 "ui.selection" = { bg = "bg3" }
 "ui.linenr" = "grey0"
 "ui.linenr.selected" = "fg0"
-"ui.statusline" = { fg = "grey0", bg = "bg0" }
+"ui.statusline" = { fg = "fg0", bg = "bg_statusline3" }
 "ui.statusline.inactive" = { fg = "grey0", bg = "bg0" }
 "ui.statusline.normal" = { fg = "blue", bg = "bg_visual_blue" }
 "ui.statusline.insert" = { fg = "yellow", bg = "bg_visual_yellow" }
@@ -72,6 +72,7 @@
 "ui.text.focus" = "fg0"
 "ui.menu" = { fg = "fg0", bg = "bg3" }
 "ui.menu.selected" = { fg = "green", bg = "bg_visual_green", modifiers = ["bold"]  }
+"ui.virtual" = "bg4"
 "ui.virtual.whitespace" = { fg = "bg4" }
 "ui.virtual.indent-guide" = { fg = "bg4" }
 "ui.virtual.ruler" = { bg = "bg2" }
