@@ -4,7 +4,7 @@
 "constant.character.escape" = "orange"
 "string" = "green"
 "string.regexp" = "blue"
-"comment" = "grey0"
+"comment" = { fg = "grey1", modifiers = ["italic"] }
 "variable" = "fg0"
 "variable.builtin" = "blue"
 "variable.parameter" = "fg0"
@@ -73,6 +73,7 @@
 "ui.menu" = { fg = "fg0", bg = "bg3" }
 "ui.menu.selected" = { fg = "green", bg = "bg_visual_green", modifiers = ["bold"]  }
 "ui.virtual" = "bg4"
+"ui.virtual.inlay-hint" = "grey1"
 "ui.virtual.whitespace" = { fg = "bg4" }
 "ui.virtual.indent-guide" = { fg = "bg4" }
 "ui.virtual.ruler" = { bg = "bg2" }
