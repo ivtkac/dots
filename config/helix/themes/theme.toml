@@ -72,7 +72,7 @@
 "ui.text.focus" = "fg0"
 "ui.menu" = { fg = "fg0", bg = "bg3" }
 "ui.menu.selected" = { fg = "green", bg = "bg_visual_green", modifiers = ["bold"]  }
-"ui.virtual" = "bg4"
+"ui.virtual" = "bg5"
 "ui.virtual.inlay-hint" = "grey1"
 "ui.virtual.whitespace" = { fg = "bg4" }
 "ui.virtual.indent-guide" = { fg = "bg4" }
