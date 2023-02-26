@@ -9,14 +9,20 @@ color-modes = true
 bufferline = "multiple"
 completion-trigger-len = 1
 
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+
 [editor.indent-guides]
 render = true
-character = "┊"
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "block"
+
+[editor.statusline]
+right = ["file-type", "separator", "selections", "separator", "primary-selection-length", "separator", "position", "separator", "spacer", "position-percentage", "total-line-numbers"]
 
 [editor.lsp]
 display-messages = true
