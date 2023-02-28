@@ -21,5 +21,4 @@ for bashfile in "$PWD/.bash*"; do
 done
 
 # Install arch packages
-installable_packages=$(comm -12 <(pacman -Slq | sort) <(sort pkglist.txt))
 pacman -S --needed $installable_packages
