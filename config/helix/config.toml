@@ -8,6 +8,7 @@ auto-save = true
 color-modes = true
 bufferline = "multiple"
 completion-trigger-len = 1
+mouse = false
 
 [editor.whitespace.render]
 space = "all"
