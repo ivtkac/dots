@@ -15,7 +15,7 @@
 
 "comment" = { fg = "overlay1", modifiers = ["italic"] }
 
-"variable" = "text"
+"variable" = "flamingo"
 "variable.parameter" = { fg = "maroon", modifiers = ["italic"] }
 "variable.builtin" = "red"
 "variable.other.member" = "teal"
@@ -23,6 +23,7 @@
 "label" = "sapphire" # used for lifetimes
 
 "punctuation" = "overlay2"
+"punctuation.bracket" = "pink"
 "punctuation.special" = "sky"
 
 "keyword" = "mauve"
@@ -95,6 +96,8 @@
 "ui.cursorline.primary" = { bg = "cursorline" }
 
 "ui.highlight" = { bg = "surface1", modifiers = ["bold"] }
+
+"ui.higlight.inlay-hint" = "teal"
 
 "ui.menu" = { fg = "overlay2", bg = "surface0" }
 "ui.menu.selected" = { fg = "text", bg = "surface1", modifiers = ["bold"] }
