@@ -2,7 +2,7 @@ theme = "catppuccin_mocha"
 
 [editor]
 shell = ["/usr/bin/fish", "-c"]
-rulers = [80, 100, 120]
+rulers = [120]
 cursorline = true
 auto-save = true
 color-modes = true
@@ -23,7 +23,9 @@ normal = "block"
 select = "block"
 
 [editor.statusline]
-right = ["file-type", "separator", "selections", "separator", "primary-selection-length", "separator", "position", "separator", "spacer", "position-percentage", "total-line-numbers"]
+separator = ""
+left = ["mode", "spinner", "file-base-name", "file-modification-indicator"]
+right = ["workspace-diagnostics", "file-type", "separator", "file-line-ending", "separator", "spacer", "position-percentage", "position"]
 
 [editor.lsp]
 display-messages = true
