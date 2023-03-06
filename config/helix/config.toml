@@ -1,4 +1,4 @@
-theme = "theme"
+theme = "catppuccin_mocha"
 
 [editor]
 shell = ["/usr/bin/fish", "-c"]
