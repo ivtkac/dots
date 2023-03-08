@@ -1,7 +1,7 @@
 # Ls aliases
 
 alias exa='exa -al --color=always --group-directories-first'
-alias lt='exa -aT --color=always --group-directories-first'
+alias lt='exa -T --color=always'
 alias l.='ls -a | grep -E "^\."'
 
 # Grep aliases
@@ -18,21 +18,35 @@ alias .5='cd ../../../../..'
 
 # Git aliases
 
-alias gst='git status'
-alias gco='git checkout'
 alias gcb='git checkout -b'
-alias gb='git branch'
+alias gco='git checkout'
+alias gcm='git checkout main'
+alias gcd='git checkout dev'
+alias gst='git status'
 alias gac='git add -A && git commit -v'
 alias guc='git add -u && git commit -v'
+
+alias gb='git branch'
 alias gp='git push'
 alias gpl='git pull'
 alias gf='git fetch'
+
 alias gcp='git cherry-pick'
 alias gcpno='git cherry-pick --no-commit'
 
-# Skim aliases
+alias gd="git diff --name-only --relative --diff-filter=d | xargs bat --diff"
 
-alias sgb='git branch --sort=-committerdate | sk --header "Checkout Recent Branch" --preview "git diff --color=always {1}" | xargs git checkout'
+# Zellij aliases
+
+alias zr='zellij run --'
+alias ze='zellij edit'
+
+# Command aliases
+
+# alias vim='hx'
+# alias tmux='zellij'
+# alias du='dust'
+# alias grep="rg"
 
 # Pacman aliases
 
