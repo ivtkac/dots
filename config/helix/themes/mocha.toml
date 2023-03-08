@@ -15,7 +15,7 @@
 
 "comment" = { fg = "overlay1", modifiers = ["italic"] }
 
-"variable" = "flamingo"
+"variable" = "text"
 "variable.parameter" = { fg = "maroon", modifiers = ["italic"] }
 "variable.builtin" = "red"
 "variable.other.member" = "teal"
@@ -27,6 +27,7 @@
 "punctuation.special" = "sky"
 
 "keyword" = "mauve"
+"keyword.control.import" = "red"
 "keyword.control.conditional" = { fg = "mauve", modifiers = ["italic"] }
 
 "operator" = "sky"
@@ -34,7 +35,7 @@
 "function" = "blue"
 "function.macro" = "mauve"
 
-"tag" = "mauve"
+"tag" = "red"
 
 "namespace" = { fg = "blue", modifiers = ["italic"] }
 "attribute" = { fg = "teal", modifiers = ["italic"] }
