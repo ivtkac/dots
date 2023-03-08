@@ -26,19 +26,4 @@ python.linting.mypyEnabled = true
 
 [[language]]
 name = "rust"
-
-[language.config]
-assist.importGranularity = "module"
-checkOnSave.command = "clippy"
-hoverActions.references = true
-lens.enumVariantReferences = true
-lens.methodReferences = true
-lens.references = true
-procMacro.enable = true
-workspace.symbol.search.kind = "all_symbols"
-inlayHints.bindingModeHints.enable = false
-inlayHints.closingBraceHints.minLines = 10
-inlayHints.closureReturnTypeHints.enable = "with_block"
-inlayHints.discriminantHints.enable = "fieldless"
-inlayHints.lifetimeElisionHints.enable = "skip_trivial"
-inlayHints.typeHints.hideClosureInitialization = false
+config = { checkOnSave = { command = "clippy" } }
