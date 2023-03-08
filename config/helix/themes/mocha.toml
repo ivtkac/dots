@@ -76,8 +76,8 @@
 "ui.window" = { fg = "crust" }
 "ui.help" = { fg = "overlay2", bg = "surface0" }
 
-"ui.bufferline" = { fg = "surface1", bg = "mantle" }
-"ui.bufferline.active" = { fg = "text", bg = "base", modifiers = ["bold", "italic"] }
+"ui.bufferline" = { fg = "text", bg = "base" }
+"ui.bufferline.active" = { fg = "base", bg = "mauve", modifiers = ["bold"] }
 "ui.bufferline.background" = { bg = "mantle" }
 
 "ui.text" = "text" 
