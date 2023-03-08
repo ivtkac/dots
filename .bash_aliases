@@ -1,7 +1,8 @@
 # Ls aliases
 
-alias lt='exa -T --color=always --git-ignore'
-alias l.='ls -a | grep -E "^\."'
+alias ll='exa -lhgF --git'
+alias tree='exa -T --color=always --git-ignore --icons'
+alias l.='exa -a | grep -E "^\."'
 
 # Grep aliases
 
@@ -42,10 +43,11 @@ alias ze='zellij edit'
 
 # Command aliases
 
-# alias vim='hx'
-# alias tmux='zellij'
-# alias du='dust'
-# alias grep="rg"
+alias cat='bat'
+alias vim='hx'
+alias tmux='zellij'
+alias du='dust'
+alias grep='rg'
 
 # Pacman aliases
 

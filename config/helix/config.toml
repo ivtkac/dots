@@ -23,6 +23,7 @@ right = ["workspace-diagnostics", "file-type", "separator", "file-line-ending", 
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = true
 
 [editor.soft-wrap]
 enable = true
