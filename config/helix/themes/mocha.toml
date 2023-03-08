@@ -107,7 +107,7 @@
 
 "ui.highlight" = { bg = "surface1", modifiers = ["bold"] }
 
-"ui.higlight.inlay-hint" = "teal"
+"ui.virtual.inlay-hint" = { fg = "teal", bg = "inlay_hint_bg" }
 
 "ui.menu" = { fg = "overlay2", bg = "surface0" }
 "ui.menu.selected" = { fg = "text", bg = "surface1", modifiers = ["bold"] }
@@ -159,3 +159,4 @@ secondary_cursor = "#b5a6a8"
 # dim to 29.5%
 secondary_cursor_normal = "#878ec0"
 secondary_cursor_insert = "#7da87f"
+inlay_hint_bg = "#232736"
