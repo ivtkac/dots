@@ -1,7 +1,6 @@
 # Ls aliases
 
-alias exa='exa -al --color=always --group-directories-first'
-alias lt='exa -T --color=always'
+alias lt='exa -T --color=always --git-ignore'
 alias l.='ls -a | grep -E "^\."'
 
 # Grep aliases
