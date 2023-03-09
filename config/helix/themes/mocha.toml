@@ -107,7 +107,7 @@
 
 "ui.highlight" = { bg = "surface1", modifiers = ["bold"] }
 
-"ui.virtual.inlay-hint" = { fg = "teal", bg = "inlay_hint_bg" }
+"ui.virtual.inlay-hint" = { fg = "surface1", bg = "mantle" }
 
 "ui.menu" = { fg = "overlay2", bg = "surface0" }
 "ui.menu.selected" = { fg = "text", bg = "surface1", modifiers = ["bold"] }
