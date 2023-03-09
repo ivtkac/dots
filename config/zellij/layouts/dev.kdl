@@ -1,0 +1,23 @@
+layout {
+	pane {
+		command "hx"
+		close_on_exit true
+		borderless true
+	}
+}
+
+keybinds {
+    shared {
+        bind "Alt g" {
+            Run "gitui" {
+                close_on_exit true
+            }
+        }
+        bind "Alt e" {
+            Run "xplr" {
+                close_on_exit true
+            }
+        }
+        bind "Alt t" { NewPane "Down"; }
+    }
+}
