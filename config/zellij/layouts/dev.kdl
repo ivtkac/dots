@@ -1,0 +1,29 @@
+layout {
+	pane split_direction="horizontal" {
+		pane split_direction="vertical" {
+			pane {
+				name "editor"
+				command "hx"
+				size "60%"
+				close_on_exit true
+				focus true
+			}
+			pane stacked=true {
+				pane {
+					name "git"
+					command "gitui"
+					close_on_exit true
+				}
+				pane {
+					name "explorer"
+					command "xplr"
+					close_on_exit true
+				}
+			}
+		}
+		pane {
+			name "terminal"
+			size "30%"
+		}
+	}
+}
