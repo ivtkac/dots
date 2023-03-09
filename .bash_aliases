@@ -47,7 +47,6 @@ alias cat='bat'
 alias vim='hx'
 alias tmux='zellij'
 alias du='dust'
-alias grep='rg'
 
 # Pacman aliases
 

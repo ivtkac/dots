@@ -1,7 +1,6 @@
 theme = "mocha"
 
 [editor]
-shell = ["/usr/bin/fish", "-c"]
 rulers = [120]
 cursorline = true
 auto-save = true
@@ -30,3 +29,7 @@ enable = true
 
 [keys.normal]
 V = ["extend_line_below", "select_mode"]
+space.c.t = ":sh exa -T --git-ignore --icons"
+space.c.e = ":sh zellij run -c -- xplr"
+space.c.f = ":sh zellij action toggle-floating-panes"
+space.c.g = ":sh zellij run -c -- gitui"
