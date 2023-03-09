@@ -29,7 +29,7 @@ enable = true
 
 [keys.normal]
 V = ["extend_line_below", "select_mode"]
-'\'.f = ":sh zellij action toggle-floating-panes"
-'\'.t = ":sh zellij action new-pane"
+'\'.f = ":sh zellij action toggle-fullscreen"
+'\'.t = ":sh zellij action toggle-floating-panes"
 '\'.e = ":sh zellij run -c -- xplr"
 '\'.g = ":sh zellij run -c -- gitui"
