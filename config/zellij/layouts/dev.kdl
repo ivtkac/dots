@@ -46,3 +46,9 @@ layout {
 		}
 	}
 }
+
+keybinds {
+	shared {
+		bind "Alt 1" { Run "git" "status"; }
+	}
+}
