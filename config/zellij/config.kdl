@@ -1,5 +1,23 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds {
+    shared {
+		bind "Alt g" {
+			Run "gitui" {
+				close_on_exit true
+			}
+		}
+
+		bind "Alt e" {
+			Run "xplr" {
+				close_on_exit true
+			}
+		}
+
+		bind "Alt t" { NewPane "Down"; }
+		
+		bind "Alt f" { ToggleFocusFullscreen; }
+    }
+
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }

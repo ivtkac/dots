@@ -1,0 +1,17 @@
+layout {
+	cwd "/home/seshotake/Documents/College/Development/DotnetLabs"
+	pane {
+		name "code"
+		command "hx"
+		close_on_exit true
+		focus true
+		borderless true
+	}
+}
+
+keybinds {
+	shared {
+		bind "Alt R" { Run "dotnet" "run" "--project" "App/App.csproj"; }
+		bind "Alt T" { Run "dotnet" "test" "ResearchTest/ResearchTest.csproj"; }
+	}
+}

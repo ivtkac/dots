@@ -46,23 +46,3 @@ layout {
 		}
 	}
 }
-
-keybinds {
-	shared {
-		bind "Alt g" {
-			Run "gitui" {
-				close_on_exit true
-			}
-		}
-
-		bind "Alt e" {
-			Run "xplr" {
-				close_on_exit true
-			}
-		}
-
-		bind "Alt t" { NewPane "Down"; }
-		
-		bind "Alt f" { ToggleFocusFullscreen; }
-	}
-}
