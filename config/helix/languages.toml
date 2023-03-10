@@ -1,5 +1,6 @@
 [[language]]
 name = "css"
+formatter = { command = "prettier", args = ["--parser", "css"] }
 
 [language.config]
 css.validate = true
