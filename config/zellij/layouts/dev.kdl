@@ -1,23 +1,68 @@
 layout {
-	pane {
+	tab_template name="ui" {
+		pane size=1 borderless=true {
+			plugin location="zellij:tab-bar"
+		}
+		children
+		pane size=2 borderless=true {
+			plugin location="zellij:status-bar"
+		}
+	}
+
+	pane_template name="code" {
+		name "code"
 		command "hx"
 		close_on_exit true
+		focus true
 		borderless true
+	}
+
+	pane_template name="git" {
+		name "git"
+		command "gitui"
+		close_on_exit true
+	}
+
+	pane_template name="explorer" {
+		name "explorer"
+		command "xplr"
+		close_on_exit true
+	}
+
+	pane_template name="terminal"
+
+	ui {
+		pane split_direction="horizontal" {
+			pane split_direction="vertical" {
+				code size="60%"
+
+				pane stacked=true {
+					git
+					explorer
+				}
+			}
+
+			terminal size="30%"
+		}
 	}
 }
 
 keybinds {
-    shared {
-        bind "Alt g" {
-            Run "gitui" {
-                close_on_exit true
-            }
-        }
-        bind "Alt e" {
-            Run "xplr" {
-                close_on_exit true
-            }
-        }
-        bind "Alt t" { NewPane "Down"; }
-    }
+	shared {
+		bind "Alt g" {
+			Run "gitui" {
+				close_on_exit true
+			}
+		}
+
+		bind "Alt e" {
+			Run "xplr" {
+				close_on_exit true
+			}
+		}
+
+		bind "Alt t" { NewPane "Down"; }
+		
+		bind "Alt f" { ToggleFocusFullscreen; }
+	}
 }
