@@ -52,7 +52,7 @@
 "markup.list" = "mauve"
 "markup.bold" = { modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
-"markup.link.url" = { fg = "rosewater", modifiers = ["italic", "underlined"] }
+"markup.link.url" = { fg = "rosewater", modifiers = ["underlined"] }
 "markup.link.text" = "blue"
 "markup.raw" = "flamingo"
 
@@ -77,7 +77,7 @@
 "ui.window" = { fg = "crust" }
 "ui.help" = { fg = "overlay2", bg = "surface0" }
 
-"ui.bufferline" = { fg = "text", bg = "base" }
+"ui.bufferline" = { fg = "overlay0", bg = "base" }
 "ui.bufferline.active" = { fg = "base", bg = "mauve", modifiers = ["bold"] }
 "ui.bufferline.background" = { bg = "mantle" }
 
@@ -87,6 +87,7 @@
 "ui.virtual" = "overlay0"
 "ui.virtual.ruler" = { bg = "surface0" }
 "ui.virtual.indent-guide" = "surface0"
+"ui.virtual.inlay-hint" = { fg = "surface1", bg = "mantle" }
 
 "ui.selection" = { bg = "surface1" }
 
@@ -106,8 +107,6 @@
 "ui.cursorline.primary" = { bg = "cursorline" }
 
 "ui.highlight" = { bg = "surface1", modifiers = ["bold"] }
-
-"ui.virtual.inlay-hint" = { fg = "surface1", bg = "mantle" }
 
 "ui.menu" = { fg = "overlay2", bg = "surface0" }
 "ui.menu.selected" = { fg = "text", bg = "surface1", modifiers = ["bold"] }
@@ -159,4 +158,3 @@ secondary_cursor = "#b5a6a8"
 # dim to 29.5%
 secondary_cursor_normal = "#878ec0"
 secondary_cursor_insert = "#7da87f"
-inlay_hint_bg = "#232736"
