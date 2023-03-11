@@ -10,9 +10,9 @@ inherits = "catppuccin_mocha"
 
 "ui.virtual.inlay-hint" = { fg = "surface1", bg = "mantle" }
 
-"ui.bufferline" = { fg = "subtext0", bg = "mantle" }
-"ui.bufferline.active" = { fg = "text", bg = "base", modifiers = ["bold"] }
-"ui.bufferline.background" = { bg = "crust" }
+"ui.bufferline" = { fg = "subtext0", bg = "base" }
+"ui.bufferline.active" = { fg = "mauve", bg = "base", underline = { color = "mauve", style = "line" },  modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "mantle" }
 
 "attribute" = "blue"
 

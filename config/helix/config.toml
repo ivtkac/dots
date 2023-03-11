@@ -1,4 +1,4 @@
-theme = "mocha"
+theme = "catppuccin_mocha"
 
 [editor]
 rulers = [120]
@@ -17,7 +17,7 @@ render = true
 
 [editor.statusline]
 separator = ""
-left = ["mode", "spinner", "file-base-name", "file-modification-indicator"]
+left = ["mode", "spinner", "version-control", "file-base-name", "file-modification-indicator"]
 right = ["workspace-diagnostics", "file-type", "separator", "file-line-ending", "separator", "spacer", "position-percentage", "position"]
 
 [editor.lsp]
