@@ -17,8 +17,8 @@ render = true
 
 [editor.statusline]
 separator = ""
-left = ["mode", "spacer", "version-control", "spacer", "file-base-name", "file-modification-indicator"]
-right = ["workspace-diagnostics", "spinner", "file-type", "separator", "file-line-ending", "separator", "spacer", "position-percentage", "position"]
+left = ["mode", "file-base-name", "version-control", "file-modification-indicator"]
+right = ["workspace-diagnostics", "spinner", "file-type", "file-line-ending",  "spacer", "position-percentage", "position"]
 
 [editor.lsp]
 display-messages = true
