@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/bashrc.pre.bash" ]] && builtin source "$HOME/.fig/shell/bashrc.pre.bash"
 #
 # ~/.bashrc
 #
@@ -5,9 +7,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if [ -f /usr/share/blesh/ble.sh ]; then
-    . /usr/share/blesh/ble.sh --noattach
-fi
+# if [ -f /usr/share/blesh/ble.sh ]; then
+#     . /usr/share/blesh/ble.sh --noattach
+# fi
 
 # Exports
 
@@ -27,10 +29,6 @@ HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -96,5 +94,7 @@ hash zoxide && eval "$(zoxide init bash)"
 hash starship && eval "$(starship init bash)"
 hash atuin && eval "$(atuin init bash)"
 
-[[ ${BLE_VERSION-} ]] && ble-attach
+# [[ ${BLE_VERSION-} ]] && ble-attach
 
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/bashrc.post.bash" ]] && builtin source "$HOME/.fig/shell/bashrc.post.bash"
