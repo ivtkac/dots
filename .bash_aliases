@@ -31,6 +31,8 @@ alias gp='git push'
 alias gpl='git pull'
 alias gf='git fetch'
 
+alias gacp='git add -A && git commit && git push -u'
+
 alias gcp='git cherry-pick'
 alias gcpno='git cherry-pick --no-commit'
 
