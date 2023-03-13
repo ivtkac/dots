@@ -23,9 +23,12 @@
 "label" = "sapphire" # used for lifetimes
 
 "punctuation" = "overlay2"
+"punctuation.delimiter" = "teal"
+"punctuation.bracket" = "red"
 "punctuation.special" = "sky"
 
 "keyword" = "mauve"
+"keyword.storage.modifier.ref" = "teal"
 "keyword.control.conditional" = { fg = "mauve", modifiers = ["italic"] }
 
 "operator" = "sky"
@@ -40,20 +43,14 @@
 
 "special" = "blue" # fuzzy highlight
 
-"markup.heading.marker" = { fg = "peach", modifiers = ["bold"] }
-"markup.heading.1" = "lavender"
-"markup.heading.2" = "mauve"
-"markup.heading.3" = "green"
-"markup.heading.4" = "yellow"
-"markup.heading.5" = "pink"
-"markup.heading.6" = "teal"
-"markup.list" = "mauve"
+"markup.heading" = { fg = "teal", modifiers = ["bold"] }
+"markup.list" = "teal"
 "markup.bold" = { modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
-"markup.link.url" = { fg = "rosewater", modifiers = ["underlined"] }
+"markup.link.url" = { fg = "red", modifiers = ["underlined"] }
 "markup.link.text" = "blue"
-"markup.raw" = "flamingo"
+"markup.raw" = "green"
 
 "diff.plus" = "green"
 "diff.minus" = "red"
