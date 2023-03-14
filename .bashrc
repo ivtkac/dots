@@ -5,11 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if [ -f /usr/share/blesh/ble.sh ]; then
-	. /usr/share/blesh/ble.sh
-fi
-
-
 # Exports
 
 export EDITOR=hx
@@ -43,5 +38,3 @@ fi
 hash zoxide && eval "$(zoxide init bash)"
 hash starship && eval "$(starship init bash)"
 hash atuin && eval "$(atuin init bash)"
-
-[[ ${BLE_VERSION-} ]] && ble-attach
