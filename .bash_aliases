@@ -43,7 +43,6 @@ alias gd="git diff --name-only --relative --diff-filter=d | xargs bat --diff"
 alias zr='zellij run --'
 alias ze='zellij edit'
 alias zt='zellij action toggle-floating-panes'
-alias helix='zellij --layout dev'
 
 # Command aliases
 
