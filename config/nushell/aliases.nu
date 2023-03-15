@@ -21,7 +21,7 @@ export def gac [] {
     git commit
 }
 
-export def gacm [commit:string] {
+export def gacm [commit:string ] {
     git add -A
     git commit -m $commit
 }

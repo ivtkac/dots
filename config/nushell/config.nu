@@ -36,6 +36,7 @@ let-env config = {
 }
 
 use ~/.config/nushell/aliases.nu *
+use ~/.config/nushell/scripts/git-completions.nu *
 
 source ~/.cache/nushell/starship.nu
 source ~/.cache/nushell/zoxide.nu
