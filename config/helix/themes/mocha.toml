@@ -74,7 +74,7 @@
 "ui.help" = { fg = "overlay2", bg = "surface0" }
 
 "ui.bufferline" = { fg = "subtext0", bg = "mantle" }
-"ui.bufferline.active" = { fg = "mauve", bg = "base" }
+"ui.bufferline.active" = { fg = "mauve", bg = "base", underline = { color = "mauve", style = "line" } }
 "ui.bufferline.background" = { bg = "crust" }
 
 "ui.text" = "text"
