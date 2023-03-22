@@ -16,7 +16,6 @@ tab = "all"
 render = true
 
 [editor.statusline]
-separator = ""
 left = ["mode", "file-base-name", "version-control", "file-modification-indicator"]
 right = ["workspace-diagnostics", "spinner", "file-type", "file-line-ending",  "spacer", "position-percentage", "position"]
 

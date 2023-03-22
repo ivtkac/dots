@@ -11,6 +11,11 @@ name = "markdown"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
 
+[[language]]
+name = "typescript"
+auto-format = true
+formatter = { command = "deno", args = ["fmt", "-"] }
+
 
 [[language]]
 name = "python"
@@ -36,3 +41,13 @@ inlayHints.closureReturnTypeHints.enable = "with_block"
 inlayHints.discriminantHints.enable = "fieldless"
 inlayHints.lifetimeElisionHints.enable = "skip_trivial"
 inlayHints.typeHints.hideClosureInitialization = false
+
+
+[[language]]
+name = "svg"
+file-types = ["svg"]
+scope = "svg"
+injection-regex = "Svg"
+indent = { tab-width = 2, unit = "  " }
+roots = []
+grammar = "xml"
