@@ -17,7 +17,7 @@ done
 
 # Install bash scripts
 for bashfile in "$PWD/.bash*"; do
-  ln -fsnv "$PWD/.bashrc" "~/${bashfile:t}"
+  ln -fsnv "$PWD/$bashfile" "~/${bashfile:t}"
 done
 
 # Install arch packages
