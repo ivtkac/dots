@@ -1,8 +1,8 @@
-# Set the theme to "TwoDark"
---theme="TwoDark"
+# Set the theme to "Catppucin Mocha"
+--theme='Catppuccin-mocha'
 
 # Show line numbers, Git modifications and file header (but no grid)
 --style="changes,header"
 
-# Use italic text on the terminal (not supported on all terminals)
+# Use italic text on the terminal
 --italic-text=always

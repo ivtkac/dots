@@ -9,8 +9,6 @@
 
 export EDITOR=hx
 export VISUAL=$EDITOR
-export HELIX_RUNTIME=~/.local/share/helix/runtime
-
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export PATH="$PATH:~/.local/bin:~/.cargo/bin:~/.deno/bin"
