@@ -3,11 +3,16 @@ theme = "catppuccin_mocha"
 [editor]
 rulers = [80]
 cursorline = true
-auto-save = true
 color-modes = true
-bufferline = "multiple"
+bufferline = "always"
 completion-trigger-len = 1
 mouse = false
+gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
 
 [editor.whitespace.render]
 tab = "all"
