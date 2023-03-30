@@ -1,7 +1,8 @@
 inherits = "catppuccin_mocha"
 
-"ui.statusline" = { fg = "subtext1", bg = "crust" }
-"ui.statusline.inactive" = { fg = "surface2", bg = "crust" }
+"ui.statusline.normal" = { fg = "sky", bg = "sky10" }
+"ui.statusline.insert" = { fg = "green", bg = "green10" }
+"ui.statusline.select" = { fg = "flamingo", bg = "flamingo10" }
 
 "ui.popup" = { fg = "subtext1", bg = "mantle" }
 "ui.help" = { fg = "subtext0", bg = "mantle" }
@@ -9,3 +10,11 @@ inherits = "catppuccin_mocha"
 "ui.menu" = { fg = "text", bg = "mantle" }
 "ui.menu.selected" = { fg = "text", bg = "surface0" }
 "ui.menu.scroll" = { fg = "surface1", bg = "mantle" }
+
+"ui.cursor.match" = { fg = "rosewater", bg = "rosewater10" }
+
+[palette]
+sky10 = "#1d252f"
+green10 = "#1f2628"
+flamingo10 = "#27232c"
+rosewater10 = "#494450"
