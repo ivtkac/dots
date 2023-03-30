@@ -1,0 +1,11 @@
+inherits = "catppuccin_mocha"
+
+"ui.statusline" = { fg = "subtext1", bg = "crust" }
+"ui.statusline.inactive" = { fg = "surface2", bg = "crust" }
+
+"ui.popup" = { fg = "subtext1", bg = "mantle" }
+"ui.help" = { fg = "subtext0", bg = "mantle" }
+
+"ui.menu" = { fg = "text", bg = "mantle" }
+"ui.menu.selected" = { fg = "text", bg = "surface0" }
+"ui.menu.scroll" = { fg = "surface1", bg = "mantle" }

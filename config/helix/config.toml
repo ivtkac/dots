@@ -1,10 +1,11 @@
-theme = "catppuccin_mocha"
+theme = "mocha"
 
 [editor]
 rulers = [80]
 cursorline = true
 color-modes = true
 bufferline = "always"
+true-color = true
 completion-trigger-len = 1
 mouse = false
 gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
