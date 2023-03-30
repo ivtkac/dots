@@ -11,10 +11,9 @@ inherits = "catppuccin_mocha"
 "ui.menu.selected" = { fg = "text", bg = "surface0" }
 "ui.menu.scroll" = { fg = "surface1", bg = "mantle" }
 
-"ui.cursor.match" = { fg = "rosewater", bg = "rosewater10" }
+"ui.cursor.match" = { bg = "surface1" }
 
 [palette]
 sky10 = "#1d252f"
 green10 = "#1f2628"
 flamingo10 = "#27232c"
-rosewater10 = "#494450"
