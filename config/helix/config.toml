@@ -22,9 +22,9 @@ tab = "all"
 render = true
 
 [editor.statusline]
-left = ["mode", "spacer", "version-control"]
+left = ["mode", "spinner", "version-control", "workspace-diagnostics"]
 center = ["file-base-name", "file-modification-indicator"]
-right = ["workspace-diagnostics", "spinner", "file-type", "file-line-ending",  "spacer", "position-percentage", "position"]
+right = ["position", "primary-selection-length", "file-line-ending", "file-type", "position-percentage"]
 
 [editor.lsp]
 display-messages = true

@@ -13,6 +13,21 @@ inherits = "catppuccin_mocha"
 
 "ui.cursor.match" = { bg = "surface1" }
 
+"markup.heading.marker" = { fg = "lavender", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "lavender", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "lavender", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "lavender", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "lavender", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "lavender", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "lavender", modifiers = ["bold"] }
+"markup.list" = "sapphire"
+"markup.bold" = { fg = "sky", modifiers = ["bold"] }
+"markup.italic" = { fg = "green", modifiers = ["italic"] }
+"markup.strikethrough" = { fg = "maroon", modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "teal", modifiers = ["underlined"] }
+"markup.link.text" = "blue"
+"markup.raw" = { fg = "overlay2", bg = "mantle" }
+
 [palette]
 sky10 = "#1d252f"
 green10 = "#1f2628"
