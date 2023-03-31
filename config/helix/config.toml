@@ -32,6 +32,7 @@ display-inlay-hints = true
 
 [editor.soft-wrap]
 enable = true
+wrap-indicator = ""
 
 [keys.normal]
 V = ["extend_line_below", "select_mode"]

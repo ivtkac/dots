@@ -21,7 +21,7 @@ inherits = "catppuccin_mocha"
 "markup.heading.5" = { fg = "lavender", modifiers = ["bold"] }
 "markup.heading.6" = { fg = "lavender", modifiers = ["bold"] }
 "markup.list" = "sapphire"
-"markup.bold" = { fg = "sky", modifiers = ["bold"] }
+"markup.bold" = { fg = "sapphire", modifiers = ["bold"] }
 "markup.italic" = { fg = "green", modifiers = ["italic"] }
 "markup.strikethrough" = { fg = "maroon", modifiers = ["crossed_out"] }
 "markup.link.url" = { fg = "teal", modifiers = ["underlined"] }
