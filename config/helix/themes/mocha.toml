@@ -1,9 +1,5 @@
 inherits = "catppuccin_mocha"
 
-"ui.statusline.normal" = { fg = "sky", bg = "sky10" }
-"ui.statusline.insert" = { fg = "green", bg = "green10" }
-"ui.statusline.select" = { fg = "flamingo", bg = "flamingo10" }
-
 "ui.popup" = { fg = "subtext1", bg = "mantle" }
 "ui.help" = { fg = "subtext0", bg = "mantle" }
 
@@ -27,8 +23,3 @@ inherits = "catppuccin_mocha"
 "markup.link.url" = { fg = "teal", modifiers = ["underlined"] }
 "markup.link.text" = "blue"
 "markup.raw" = { fg = "overlay2", bg = "mantle" }
-
-[palette]
-sky10 = "#1d252f"
-green10 = "#1f2628"
-flamingo10 = "#27232c"
