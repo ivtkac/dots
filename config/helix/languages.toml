@@ -21,7 +21,7 @@ formatter = { command = "deno", args = ["fmt", "-"] }
 name = "python"
 auto-format = true
 language-server = { command = "pyright-langserver", args = ["--stdio"] }
-formatter = { command = "autopep8", args = ["-"] }
+formatter = { command = "black", args = ["-"] }
 
 [language.config]
 python.analysis.autoSearchPaths = true

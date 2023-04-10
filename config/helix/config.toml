@@ -1,7 +1,7 @@
 theme = "mocha"
 
 [editor]
-rulers = [80]
+rulers = [100]
 cursorline = true
 color-modes = true
 bufferline = "always"
