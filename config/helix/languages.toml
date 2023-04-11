@@ -10,6 +10,7 @@ css.validate = true
 name = "markdown"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
+soft-wrap = { enable = true }
 
 [[language]]
 name = "typescript"

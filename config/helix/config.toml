@@ -1,7 +1,7 @@
 theme = "mocha"
 
 [editor]
-rulers = [100]
+rulers = [80]
 cursorline = true
 color-modes = true
 bufferline = "always"
@@ -31,7 +31,6 @@ display-messages = true
 display-inlay-hints = true
 
 [editor.soft-wrap]
-enable = true
 wrap-indicator = ""
 
 [keys.normal]
