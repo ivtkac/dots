@@ -1,4 +1,5 @@
 theme = "mocha"
+icons = "codeicons"
 
 [editor]
 rulers = [80]
@@ -22,9 +23,23 @@ tab = "all"
 render = true
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control", "workspace-diagnostics"]
-center = ["file-base-name", "file-modification-indicator"]
-right = ["position", "primary-selection-length", "file-line-ending", "file-type", "position-percentage"]
+left = [
+  "mode",
+  "spinner",
+  "file-type-icon",
+  "file-base-name",
+  "file-modification-indicator",
+  "spacer",
+  "workspace-diagnostics"
+]
+right = [
+  "version-control", 
+  "position", 
+  "primary-selection-length", 
+  "file-line-ending", 
+  "file-type", 
+  "position-percentage"
+]
 
 [editor.lsp]
 display-messages = true
