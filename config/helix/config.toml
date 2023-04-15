@@ -1,5 +1,4 @@
 theme = "mocha"
-icons = "codeicons"
 
 [editor]
 rulers = [80]
