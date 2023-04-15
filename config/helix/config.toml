@@ -26,14 +26,11 @@ render = true
 left = [
   "mode",
   "spinner",
-  "file-type-icon",
-  "file-base-name",
-  "file-modification-indicator",
+  "version-control", 
   "spacer",
   "workspace-diagnostics"
 ]
 right = [
-  "version-control", 
   "position", 
   "primary-selection-length", 
   "file-line-ending", 
