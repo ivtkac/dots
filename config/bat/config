@@ -1,5 +1,5 @@
 # Set the theme to "Catppucin Mocha"
---theme='Catppuccin-mocha'
+--theme='TwoDark'
 
 # Show line numbers, Git modifications and file header (but no grid)
 --style="changes,header"
