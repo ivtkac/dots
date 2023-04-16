@@ -53,8 +53,6 @@ alias du='dust'
 
 # Pacman aliases
 
-alias upg='ame'
-alias upgrepo='ame upg --repo'
-alias upgaur='ame upg --aur'
+alias upg='yay'
 alias unlock='sudo rm /var/lib/pacman/db.lck'
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'

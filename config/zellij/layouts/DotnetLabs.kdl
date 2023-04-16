@@ -1,8 +1,8 @@
 layout {
-	cwd "/home/seshotake/Documents/College/Development/DotnetLabs"
+	cwd "/home/seshotake/Documents/Development/DotnetLabs"
 	pane {
 		name "code"
-		command "hx"
+		command "helix"
 		close_on_exit true
 		focus true
 		borderless true
