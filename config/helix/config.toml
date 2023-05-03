@@ -1,4 +1,4 @@
-theme = "latte"
+theme = "mocha"
 
 [editor]
 rulers = [80]
