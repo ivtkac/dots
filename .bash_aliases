@@ -51,8 +51,16 @@ alias vim='hx'
 alias tmux='zellij'
 alias du='dust'
 
-# Pacman aliases
+# DNF aliases
 
-alias upg='yay'
-alias unlock='sudo rm /var/lib/pacman/db.lck'
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+alias up="sudo dnf upgrade --refresh --best --allowerasing -y && flatpak update -y"
+alias clean="sudo dnf autoremove -y && dnf clean all && flatpak uninstall --unused -y && sudo journalctl --vacuum-time=1weeks"
+alias dnfr="sudo dnf autoremove"
+alias dnfi="sudo dnf install"
+
+# Flatpak aliases
+
+alias fli="flatpak install --noninteractive -y flathub"
+alias flr="flatpak remove --noninteractive -y"
+alias fr="flatpak repair"
+alias fl="flatpak list"
