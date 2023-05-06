@@ -1,0 +1,177 @@
+# Ls aliases
+
+if [ -x "$(command -v exa)" ]; then
+    alias ls='exa'
+    alias l='exa -l'
+    alias la='exa -la'
+    alias ll='exa -lhgF'
+    alias tree='exa -T --color=always --icons'
+    alias l.='exa -a | grep -E "^\."'
+elif [ -x "$(command -v ls)" ]; then
+    alias ls='ls --color=auto'
+    alias l='ls -l'
+    alias la='ls -la'
+    alias ll='ls -lhgF'
+    alias tree='tree -C'
+    alias l.='ls -a | grep -E "^\."'
+fi
+
+# Grep aliases
+
+alias grep='grep --color=auto'
+
+# Navigation aliases
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# Git aliases
+
+alias gcb='git checkout -b'
+alias gco='git checkout'
+alias gcm='git checkout main'
+alias gcd='git checkout dev'
+alias gst='git status'
+alias gac='git add -A && git commit -v'
+alias guc='git add -u && git commit -v'
+
+alias gb='git branch'
+alias gp='git push'
+alias gpl='git pull'
+alias gf='git fetch'
+
+alias gacp='git add -A && git commit && git push -u'
+
+alias gcp='git cherry-pick'
+alias gcpno='git cherry-pick --no-commit'
+
+alias gd="git diff --name-only --relative --diff-filter=d | xargs bat --diff"
+
+# Zellij aliases
+
+if [ -x "$(command -v zellij)" ]; then
+    alias zr='zellij run --'
+    alias ze='zellij edit'
+    alias zt='zellij action toggle-floating-panes'
+fi
+
+# Command aliases
+
+if [ -x "$(command -v bat)" ]; then
+    alias cat='bat'
+fi
+
+if [ -x "$(command -v hx)" ]; then
+    alias vim='hx'
+elif [ -x "$(command -v nvim)" ]; then
+    alias vim='nvim'
+fi
+
+if [ -x "$(command -v zellij)" ]; then
+    alias tmux='zellij'
+fi
+
+if [ -x "$(command -v dust)" ]; then
+    alias du='dust'
+fi
+
+# DNF/Pacman aliases
+
+if [ -x "$(command -v pacman)" ]; then
+    command = pacman
+    if [ -x "$(command -v yay)" ]; then
+        command = yay
+    fi
+
+    alias upg="sudo $command -Syu --noconfirm"
+    alias clean="sudo $command -Rns $($command -Qtdq) && sudo $command -Sc"
+    alias remove="sudo $command -Rns"
+    alias install="sudo $command -S"
+
+    alias unlock="sudo rm /var/lib/pacman/db.lck"
+
+elif [ -x "$(command -v dnf)" ]; then
+    alias upg="sudo dnf upgrade --refresh"
+    alias clean="sudo dnf autoremove"
+    alias remove="sudo dnf remove"
+    alias install="sudo dnf install"
+fi
+
+
+# Flatpak aliases
+
+alias flatpak="flatpak --user"
+alias fl="flatpak list"
+alias flr="flatpak list --runtime"
+alias flh="flatpak list --app --columns=application,version,runtime"
+alias fls="flatpak search"
+alias flin="flatpak install"
+alias flun="flatpak uninstall"
+alias flup="flatpak update"
+alias flr="flatpak run"
+
+# Docker aliases
+
+alias d="docker"
+alias dc="docker-compose"
+alias dce="docker-compose exec"
+alias dcr="docker-compose run"
+alias dcb="docker-compose build"
+alias dcd="docker-compose down"
+alias dcl="docker-compose logs"
+
+# NPM aliases
+
+if [ -x "$(command -v npm)" ]; then
+    alias n="npm"
+    alias ni="npm install"
+    alias nis="npm install --save"
+    alias nisd="npm install --save-dev"
+    alias nisg="npm install --global"
+    alias nr="npm run"
+
+elif [ -x "$(command -v yarn)" ]; then
+    alias n="yarn"
+    alias ni="yarn add"
+    alias nis="yarn add --save"
+    alias nisd="yarn add --save-dev"
+    alias nisg="yarn global add"
+    alias nr="yarn run"
+
+elif [ -x "$(command -v pnpm)" ]; then
+    alias n="pnpm"
+    alias ni="pnpm add"
+    alias nis="pnpm add --save"
+    alias nisd="pnpm add --save-dev"
+    alias nisg="pnpm global add"
+    alias nr="pnpm run"
+fi
+
+# Python aliases
+
+alias py="python"
+
+# Deno aliases
+
+alias de="deno"
+alias der="deno run"
+alias det="deno test"
+
+# Rust aliases
+
+alias cr="cargo run"
+
+# .NET aliases
+
+alias dotnet="dotnet --info"
+alias dotnetr="dotnet run"
+alias dotnett="dotnet test"
+
+# Systemctl aliases
+
+alias sctl="sudo systemctl"
+alias sctlr="sudo systemctl restart"
+alias sctls="sudo systemctl start"
