@@ -103,7 +103,7 @@ fi
 
 # Flatpak aliases
 
-alias flatpak="flatpak --user"
+alias flatpak="flatpak"
 alias fl="flatpak list"
 alias flr="flatpak list --runtime"
 alias flh="flatpak list --app --columns=application,version,runtime"
