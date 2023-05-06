@@ -51,9 +51,9 @@ alias vim='hx'
 alias tmux='zellij'
 alias du='dust'
 
-# DNF aliases
+# DNF/Pacman aliases
 
-alias up="sudo dnf upgrade --refresh --best --allowerasing -y && flatpak update -y"
+alias upg="sudo dnf upgrade --refresh --best --allowerasing -y && flatpak update -y"
 alias clean="sudo dnf autoremove -y && dnf clean all && flatpak uninstall --unused -y && sudo journalctl --vacuum-time=1weeks"
 alias dnfr="sudo dnf autoremove"
 alias dnfi="sudo dnf install"
@@ -62,5 +62,5 @@ alias dnfi="sudo dnf install"
 
 alias fli="flatpak install --noninteractive -y flathub"
 alias flr="flatpak remove --noninteractive -y"
-alias fr="flatpak repair"
-alias fl="flatpak list"
+alias flr="flatpak repair"
+alias fll="flatpak list"
