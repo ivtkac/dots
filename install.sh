@@ -17,3 +17,18 @@ for file in config/*; do
     echo "Successfully installed ~/.config/$(basename $file)"
 done
 
+# Prompt for OS-specific scripts if press yes then execute
+
+read -p "Do you want to install OS-specific scripts? [y/N] " -n 1 -r
+echo ""
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    if [[ $(hostname) == "arch" ]]; then
+        for file in scripts/arch/*; do
+            bash $PWD/$file
+        done
+    elif [[ $(hostname) == "fedora" ]]; then
+        for file in scripts/fedora/*; do
+            bash $PWD/$file
+        done
+    fi
+fi
