@@ -1,11 +1,16 @@
-# Upgrade system
+# Enable multilib
+
+sudo sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+
+# Update system
 
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm flatpak
+
+# Install packages
+
+sudo pacman -S --noconfirm --needed base-devel git
 
 # Install AUR helper
-
-sudo pacman -S --noconfirm base-devel git
 
 git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
 
@@ -16,6 +21,10 @@ makepkg -si --noconfirm
 cd -
 
 rm -rf /tmp/yay-bin
+
+# Install flatpak
+
+sudo pacman -S --noconfirm --needed flatpak
 
 # Add repositories
 
