@@ -81,15 +81,15 @@ fi
 # DNF/Pacman aliases
 
 if [ -x "$(command -v pacman)" ]; then
-    command = pacman
-    if [ -x "$(command -v yay)" ]; then
-        command = yay
-    fi
+    alias upg="sudo pacman -Syu --noconfirm"
+    alias remove="sudo pacman -Rns"
+    alias install="sudo pacman -S"
 
-    alias upg="sudo $command -Syu --noconfirm"
-    alias clean="sudo $command -Rns $($command -Qtdq) && sudo $command -Sc"
-    alias remove="sudo $command -Rns"
-    alias install="sudo $command -S"
+    if [ -x "$(command -v yay)" ]; then
+        alias upg="yay -Syu --noconfirm"
+        alias remove="yay -Rns"
+        alias install="yay -S"
+    fi
 
     alias unlock="sudo rm /var/lib/pacman/db.lck"
 
