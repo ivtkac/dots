@@ -16,6 +16,5 @@ function flatclean() {
 
 function flatpakclean() {
   flatpak uninstall --unused
-  flatpak clean
   flatclean
 }
