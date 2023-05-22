@@ -1,3 +1,0 @@
-inherits = "nightfox"
-
-"ui.virtual.whitespace" = { fg = "comment" }
