@@ -1,10 +1,23 @@
+[language-server.pyright-langserver]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.pyright-langserver.config]
+python.analysis.autoSearchPaths = true
+python.analysis.userLibraryCodeForTypes = true
+python.analysis.diagnosticMode = "workspace"
+python.linting.mypyEnabled = true
+
+[language-server.rust-analyzer.config]
+checkOnSave.command = "clippy"
+
+[language-server.vscode-css-language-server.config]
+css.validate = true
+
+
 [[language]]
 name = "css"
 formatter = { command = "prettier", args = ["--parser", "css"] }
-
-[language.config]
-css.validate = true
-
 
 [[language]]
 name = "markdown"
@@ -17,28 +30,7 @@ name = "typescript"
 auto-format = true
 formatter = { command = "deno", args = ["fmt", "-"] }
 
-
 [[language]]
 name = "python"
 auto-format = true
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
-formatter = { command = "black", args = ["-"] }
-
-[language.config]
-python.analysis.autoSearchPaths = true
-python.analysis.userLibraryCodeForTypes = true
-python.analysis.diagnosticMode = "workspace"
-python.linting.mypyEnabled = true
-
-
-[[language]]
-name = "rust"
-
-[language.config]
-checkOnSave.command = "clippy"
-inlayHints.bindingModeHints.enable = false
-inlayHints.closingBraceHints.minLines = 10
-inlayHints.closureReturnTypeHints.enable = "with_block"
-inlayHints.discriminantHints.enable = "fieldless"
-inlayHints.lifetimeElisionHints.enable = "skip_trivial"
-inlayHints.typeHints.hideClosureInitialization = false
+language-servers =  ["pyright-langserver"]
