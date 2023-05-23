@@ -43,7 +43,3 @@ hash zoxide && eval "$(zoxide init bash)"
 hash starship && eval "$(starship init bash)"
 
 source /home/seshotake/.config/broot/launcher/bash/br
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH=$BUN_INSTALL/bin:$PATH
