@@ -9,7 +9,7 @@
 [core]
 	quotePath = false
 	ignorecase = false
-	editor = hx
+	editor = flatpak run re.sonny.Commit
 [push]
 	default = simple
 [merge]
