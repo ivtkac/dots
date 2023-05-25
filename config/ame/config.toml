@@ -1,11 +1,8 @@
 [base]
 pacdiff_warn = true
 aur_verification_prompt = true
-highlight_optdepens = true
-powerpill = false
 
 [extra]
-review_user_shell = false
 uwu = false
 
 [bin]
