@@ -78,29 +78,6 @@ if [ -x "$(command -v dust)" ]; then
     alias du='dust'
 fi
 
-# DNF/Pacman aliases
-
-if [ -x "$(command -v pacman)" ]; then
-    alias upg="sudo pacman -Syu --noconfirm"
-    alias remove="sudo pacman -Rns"
-    alias install="sudo pacman -S"
-
-    if [ -x "$(command -v yay)" ]; then
-        alias upg="yay -Syu --noconfirm"
-        alias remove="yay -Rns"
-        alias install="yay -S"
-    fi
-
-    alias unlock="sudo rm /var/lib/pacman/db.lck"
-
-elif [ -x "$(command -v dnf)" ]; then
-    alias upg="sudo dnf upgrade --refresh"
-    alias clean="sudo dnf autoremove"
-    alias remove="sudo dnf remove"
-    alias install="sudo dnf install"
-fi
-
-
 # Flatpak aliases
 
 alias flatpak="flatpak"
