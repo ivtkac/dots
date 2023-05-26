@@ -1,5 +1,7 @@
 inherits = "catppuccin_latte"
 
+"ui.virtual.inlay-hint" = { fg = "surface2" }
+
 "ui.popup" = { fg = "subtext1", bg = "mantle" }
 "ui.help" = { fg = "subtext0", bg = "mantle" }
 

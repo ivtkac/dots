@@ -1,4 +1,4 @@
-theme = "nightfox"
+theme = "mocha"
 
 [editor]
 rulers = [80]
@@ -9,6 +9,9 @@ true-color = true
 completion-trigger-len = 1
 mouse = false
 gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
+
+[editor.cursor-shape]
+insert = "bar"
 
 [editor.whitespace.render]
 tab = "all"
