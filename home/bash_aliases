@@ -152,3 +152,5 @@ alias dotnett="dotnet test"
 alias sctl="sudo systemctl"
 alias sctlr="sudo systemctl restart"
 alias sctls="sudo systemctl start"
+
+alias pacman="pkexec pacman"
