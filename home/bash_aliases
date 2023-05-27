@@ -5,7 +5,9 @@ if [ -x "$(command -v exa)" ]; then
     alias l='exa -l'
     alias la='exa -la'
     alias ll='exa -lhgF'
-    alias tree='exa -T --color=always --icons'
+    if ! command -v tree &> /dev/null; then
+        alias tree='exa -T --color=always --icons'
+    fi
     alias l.='exa -a | grep -E "^\."'
 elif [ -x "$(command -v ls)" ]; then
     alias ls='ls --color=auto'
