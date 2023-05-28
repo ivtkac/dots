@@ -1,4 +1,4 @@
-theme = "mocha"
+theme = "kaolin-dark"
 
 [editor]
 rulers = [80]
