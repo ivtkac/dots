@@ -41,5 +41,3 @@ fi
 
 hash zoxide && eval "$(zoxide init bash)"
 hash starship && eval "$(starship init bash)"
-
-source /home/seshotake/.config/broot/launcher/bash/br
