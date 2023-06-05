@@ -1,4 +1,4 @@
-inherits = "catppuccin_mocha"
+inherits = "catppuccin_macchiato"
 
 "ui.virtual.inlay-hint" = { fg = "surface2" }
 
