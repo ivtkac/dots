@@ -1,9 +1,0 @@
-layout {
-	cwd "/opt/lampp/htdocs/site"
-	pane {
-		command "hx"
-		close_on_exit true
-		focus true
-		borderless true
-	}
-}
