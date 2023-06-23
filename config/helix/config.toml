@@ -1,4 +1,4 @@
-theme = "macchiato"
+theme = "zed_onedark"
 
 [editor]
 rulers = [80]
