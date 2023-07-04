@@ -15,3 +15,4 @@ org.gnome.World.PikaBackup
 org.gtk.Gtk3theme.adw-gtk3
 org.gtk.Gtk3theme.adw-gtk3-dark
 io.mpv.Mpv
+re.sonny.Commit
