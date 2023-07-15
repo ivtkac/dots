@@ -1,5 +1,0 @@
-caffeine@patapon.info
-unredirect@vaina.lt
-gsconnect@andyholmes.github.io
-rounded-window-corners@yilozt
-quick-settings-avatar@d-go

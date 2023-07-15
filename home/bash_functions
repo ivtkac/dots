@@ -1,20 +1,23 @@
 #!/bin/bash
 
-function flatclean() {
-  apps=$(flatpak list --app --columns=application)
-
-  for folder in ~/.var/app/*/
-  do
-
-  folder_name=$(basename $folder)
-
-  if [[ ! $apps =~ $folder_name ]]; then
-    rm -rf "$folder"
-  fi
-  done
+function command_exists {
+    command -v "$1" >/dev/null 2>&1
 }
 
-function flatpakclean() {
-  flatpak uninstall --unused
-  flatclean
+function get_command {
+    for cmd in "$@"; do
+        if command_exists "$cmd"; then
+            echo "$cmd"
+            return
+        fi
+    done
+}
+
+function cd_up {
+    local n=$1
+
+    while [ $n -ne 0 ]; do
+        cd ..
+        n=$((n - 1))
+    done
 }

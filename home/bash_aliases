@@ -1,43 +1,35 @@
-# Ls aliases
+#!/bin/bash
 
-if [ -x "$(command -v exa)" ]; then
-    alias ls='exa'
-    alias l='exa -l'
-    alias la='exa -la'
-    alias ll='exa -lhgF'
-    if ! command -v tree &> /dev/null; then
-        alias tree='exa -T --color=always --icons'
-    fi
-    alias l.='exa -a | grep -E "^\."'
-elif [ -x "$(command -v ls)" ]; then
-    alias ls='ls --color=auto'
-    alias l='ls -l'
-    alias la='ls -la'
-    alias ll='ls -lhgF'
-    alias tree='tree -C'
-    alias l.='ls -a | grep -E "^\."'
-fi
+# ==================== #
+# = General Aliases = #
+# ==================== #
 
-# Grep aliases
+alias ls="$(get_command exa ls) --color=auto"
+alias la="ls -a" # List all
+alias l="ls -l" # List all, human-readable, with colors
+alias ll="ls -lhgF" # List all, human-readable, with colors, and file-type indicators
+alias l.="ls -a | grep -E '^\.'" # Show only hidden files
 
-alias grep='grep --color=auto'
+alias ..="cd .." # Go up one directory
+alias ...="cd ../.." # Go up two directories
+for i in {1..5}; do
+    alias "..$i"="cd_up $i" # Go up n directories
+done
 
-# Navigation aliases
+alias cat="$(get_command bat cat) --color=auto"
+alias vim="$(get_command nvim vim)"
+alias tmux="$(get_command zellij tmux)"
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
 
-# Git aliases
+# ==================== #
+# = Git Aliases = #
+# ==================== #
 
-alias gcb='git checkout -b'
-alias gco='git checkout'
-alias gcm='git checkout main'
-alias gcd='git checkout dev'
-alias gst='git status'
-alias gac='git add -A && git commit -v'
+alias g="git"
+alias gcb="git checkout -b"
+alias gco="git checkout"
+alias gs="git status"
+alias gac="git add -A && git commit -v"
 alias guc='git add -u && git commit -v'
 
 alias gb='git branch'
@@ -45,112 +37,11 @@ alias gp='git push'
 alias gpl='git pull'
 alias gf='git fetch'
 
-alias gacp='git add -A && git commit && git push -u'
-
 alias gcp='git cherry-pick'
 alias gcpno='git cherry-pick --no-commit'
 
-alias gd="git diff --name-only --relative --diff-filter=d | xargs bat --diff"
-
-# Zellij aliases
-
-if [ -x "$(command -v zellij)" ]; then
-    alias zr='zellij run --'
-    alias ze='zellij edit'
-    alias zt='zellij action toggle-floating-panes'
+if command_exists "bat"; then
+  alias gd="git diff --name-only --relative --diff-filter=d | xargs bat --diff"
+else
+  alias gd='git diff'
 fi
-
-# Command aliases
-
-if [ -x "$(command -v bat)" ]; then
-    alias cat='bat'
-fi
-
-if [ -x "$(command -v hx)" ]; then
-    alias vim='hx'
-elif [ -x "$(command -v nvim)" ]; then
-    alias vim='nvim'
-fi
-
-if [ -x "$(command -v zellij)" ]; then
-    alias tmux='zellij'
-fi
-
-if [ -x "$(command -v dust)" ]; then
-    alias du='dust'
-fi
-
-# Flatpak aliases
-
-alias flatpak="flatpak"
-alias fl="flatpak list"
-alias flr="flatpak list --runtime"
-alias flh="flatpak list --app --columns=application,version,runtime"
-alias fls="flatpak search"
-alias flin="flatpak install"
-alias flun="flatpak uninstall"
-alias flup="flatpak update"
-alias flr="flatpak run"
-
-# Docker aliases
-
-alias d="docker"
-alias dc="docker-compose"
-alias dce="docker-compose exec"
-alias dcr="docker-compose run"
-alias dcb="docker-compose build"
-alias dcd="docker-compose down"
-alias dcl="docker-compose logs"
-
-# NPM aliases
-
-if [ -x "$(command -v npm)" ]; then
-    alias n="npm"
-    alias ni="npm install"
-    alias nis="npm install --save"
-    alias nisd="npm install --save-dev"
-    alias nisg="npm install --global"
-    alias nr="npm run"
-
-elif [ -x "$(command -v yarn)" ]; then
-    alias n="yarn"
-    alias ni="yarn add"
-    alias nis="yarn add --save"
-    alias nisd="yarn add --save-dev"
-    alias nisg="yarn global add"
-    alias nr="yarn run"
-
-elif [ -x "$(command -v pnpm)" ]; then
-    alias n="pnpm"
-    alias ni="pnpm add"
-    alias nis="pnpm add --save"
-    alias nisd="pnpm add --save-dev"
-    alias nisg="pnpm global add"
-    alias nr="pnpm run"
-fi
-
-# Python aliases
-
-alias py="python"
-
-# Deno aliases
-
-alias de="deno"
-alias der="deno run"
-alias det="deno test"
-
-# Rust aliases
-
-alias cr="cargo run"
-
-# .NET aliases
-
-alias dotnet="dotnet --info"
-alias dotnetr="dotnet run"
-alias dotnett="dotnet test"
-
-# Systemctl aliases
-
-alias sctl="sudo systemctl"
-alias sctlr="sudo systemctl restart"
-alias sctls="sudo systemctl start"

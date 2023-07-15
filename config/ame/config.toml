@@ -1,9 +1,0 @@
-[base]
-pacdiff_warn = true
-aur_verification_prompt = true
-
-[extra]
-uwu = false
-
-[bin]
-sudo = 'pkexec'
