@@ -10,6 +10,7 @@ alias l="ls -l" # List all, human-readable, with colors
 alias ll="ls -lhgF" # List all, human-readable, with colors, and file-type indicators
 alias l.="ls -a | grep -E '^\.'" # Show only hidden files
 
+alias cd='$(get_command z cd)'
 alias ..="cd .." # Go up one directory
 alias ...="cd ../.." # Go up two directories
 for i in {1..5}; do
