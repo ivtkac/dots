@@ -21,7 +21,7 @@ disabled = false
 style = "purple"
 truncation_length = 0
 truncate_to_repo = true
-truncation_symbol = "repo: "
+truncation_symbol = " "
 
 # Before all the version info (python, nodejs, php, etc.)
 [git_status]
