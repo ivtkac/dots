@@ -21,6 +21,7 @@ alias cat="$(get_command bat cat) --color=auto"
 alias vim="$(get_command nvim vim)"
 alias tmux="$(get_command zellij tmux)"
 
+alias reload="source ~/.bashrc" # Reload bash
 
 # ==================== #
 # = Git Aliases = #
