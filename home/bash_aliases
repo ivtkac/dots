@@ -4,34 +4,34 @@
 # = General Aliases = #
 # ==================== #
 
-alias ls="$(get_command exa ls) --color=auto"
-alias la="ls -a" # List all
-alias l="ls -l" # List all, human-readable, with colors
-alias ll="ls -lhgF" # List all, human-readable, with colors, and file-type indicators
-alias l.="ls -a | grep -E '^\.'" # Show only hidden files
+alias ls='$(get_command exa ls) --color=auto'
+alias la='ls -a' # List all
+alias l='ls -l' # List all, human-readable, with colors
+alias ll='ls -lhgF' # List all, human-readable, with colors, and file-type indicators
+alias l.='ls -a | grep -E "^\."' # Show only hidden files
 
 alias cd='$(get_command z cd)'
-alias ..="cd .." # Go up one directory
-alias ...="cd ../.." # Go up two directories
-for i in {1..5}; do
-    alias "..$i"="cd_up $i" # Go up n directories
-done
+alias ..='cd ..' # Go up one directory
+alias ...='cd ../..' # Go up two directories
+alias ..3='cd_up 3'
+alias ..4='cd_up 4'
+alias ..5='cd_up 5'
 
-alias cat="$(get_command bat cat)"
-alias vim="$(get_command nvim vim)"
-alias tmux="$(get_command zellij tmux)"
+alias cat='$(get_command bat cat)'
+alias vim='$(get_command nvim vim)'
+alias tmux='$(get_command zellij tmux)'
 
-alias reload="source ~/.bashrc" # Reload bash
+alias reload='source ~/.bashrc' # Reload bash
 
 # ==================== #
 # = Git Aliases = #
 # ==================== #
 
-alias g="git"
-alias gcb="git checkout -b"
-alias gco="git checkout"
-alias gs="git status"
-alias gac="git add -A && git commit -v"
+alias g='git'
+alias gcb='git checkout -b'
+alias gco='git checkout'
+alias gs='git status'
+alias gac='git add -A && git commit -v'
 alias guc='git add -u && git commit -v'
 
 alias gb='git branch'
@@ -42,8 +42,8 @@ alias gf='git fetch'
 alias gcp='git cherry-pick'
 alias gcpno='git cherry-pick --no-commit'
 
-if command_exists "bat"; then
-  alias gd="git diff --name-only --relative --diff-filter=d | xargs bat --diff"
+if command_exists 'bat'; then
+  alias gd='git diff --name-only --relative --diff-filter=d | xargs bat --diff'
 else
   alias gd='git diff'
 fi

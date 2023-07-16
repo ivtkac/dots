@@ -16,7 +16,7 @@ function get_command {
 function cd_up {
     local n=$1
 
-    while [ $n -ne 0 ]; do
+    while [ "$n" -ne 0 ]; do
         cd ..
         n=$((n - 1))
     done

@@ -2,8 +2,8 @@
 
 # Install from home to ~/
 for file in home/*; do
-    ln -s $PWD/$file ~/.$(basename $file)
-    echo "Successfully installed ~/.$(basename $file)"
+    ln -s "$PWD/$file" "$HOME/.$(basename "$file")"
+    echo "Successfully installed ~/.$(basename "$file")"
 done
 
 
@@ -12,6 +12,6 @@ done
 mkdir -p ~/.config
 
 for file in config/*; do
-    ln -s $PWD/$file ~/.config/$(basename $file)
-    echo "Successfully installed ~/.config/$(basename $file)"
+    ln -s "$PWD/$file" "$HOME/.config/$(basename "$file")"
+    echo "Successfully installed ~/.config/$(basename "$file")"
 done

@@ -5,10 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-[ -f ~/.bash_functions ] && . ~/.bash_functions
-[ -f ~/.bash_aliases ] && . ~/.bash_aliases
+[ -f "$HOME/.bash_functions" ] && . "$HOME/.bash_functions"
+[ -f "$HOME/.bash_aliases" ] && . "$HOME/.bash_aliases"
 
-export EDITOR="$(get_command helix nvim nano vi vim)"
+editor="$(get_command helix nvim nano vi vim)"
+export EDITOR="$editor"
 export VISUAL="$EDITOR"
 export PATH="$HOME/.local/bin:$PATH"
 
