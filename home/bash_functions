@@ -30,3 +30,7 @@ function mkdev {
         nix flake new --template "github:the-nix-way/dev-templates#$environment_dev" "$project_name"
     fi
 }
+
+function dup_flatpak {
+    flatpak list --app --columns=application > installed_flatpaks.txt
+}

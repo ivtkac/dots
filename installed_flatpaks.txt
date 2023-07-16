@@ -3,6 +3,7 @@ com.discordapp.Discord
 com.felipekinoshita.Wildcard
 com.github.hugolabe.Wike
 com.github.marhkb.Pods
+com.github.taiko2k.avvie
 com.gitlab.newsflash
 com.hunterwittenborn.Celeste
 com.mattjakeman.ExtensionManager
@@ -11,10 +12,10 @@ com.usebottles.bottles
 com.valvesoftware.Steam
 dev.alextren.Spot
 hu.kramo.Cartridges
-io.github.Bavarder.Bavarder
 io.github.cleomenezesjr.Escambo
 io.github.mrvladus.List
 org.gnome.Loupe
+org.gnome.World.Secrets
 org.mozilla.firefox
 org.nickvision.money
 org.nickvision.tubeconverter
