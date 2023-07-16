@@ -101,7 +101,8 @@ gnome:
         gnome-menus gnome-color-manager gnome-control-center --noconfirm --needed
     
     # appearance
-    yay -S gnome-backgrounds gnome-themes-extra adwaita-icon-theme --noconfirm --needed
+    yay -S gnome-backgrounds gnome-themes-extra adwaita-icon-theme \
+        adw-gtk3 --noconfirm --needed
 
     # laptop goodies
     yay -S power-profiles-daemon switcheroo-control --noconfirm --needed
