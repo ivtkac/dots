@@ -21,3 +21,12 @@ function cd_up {
         n=$((n - 1))
     done
 }
+
+function mkdev {
+    local environment_dev=$1
+    local project_name=$2
+
+    if command_exists "nix"; then
+        nix flake new --template "github:the-nix-way/dev-templates#$environment_dev" "$project_name"
+    fi
+}
