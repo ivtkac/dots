@@ -4,7 +4,7 @@ default: gnome
 
 core: install_yay base fonts media
 
-vivobook15: gnome nvidia flatpak dotfiles
+vivobook15: gnome nvidia flatpak install_dotfiles
 
 install_yay:
     {{just}} clean_yay
@@ -55,10 +55,16 @@ flatpak:
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install -y --noninteractive `cat installed_flatpaks.txt | xargs`
 
-dotfiles:
-    mkdir -p ~/Projects
-    git clone https://github.com/seshotake/dotfiles.git ~/Projects/dotfiles
-    cd ~/Projects/dotfiles && sh install.sh
+install_dotfiles:
+    {{just}} uninstall_dotfiles
+
+    mkdir -p ~/Documents/Projects
+    git clone https://github.com/seshotake/dotfiles.git ~/Documents/Projects/dotfiles
+    cd ~/Documents/Projects/dotfiles && sh install.sh
+
+uninstall_dotfiles:
+    cd ~/Documents/Projects/dotfiles && sh uninstall.sh
+    cd ~ && rm -rf ~/Documents/Projects/dotfiles
 
 gnome-minimal:
     {{just}} core
