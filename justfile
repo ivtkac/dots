@@ -111,3 +111,4 @@ dev-stuffs:
     yay -S go rust python --noconfirm --needed
     yay -S helix bat exa starship zoxide --noconfirm --needed
     yay -S visual-studio-code-bin --noconfirm --needed
+    yay -S topgrade-bin
