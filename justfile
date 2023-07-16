@@ -10,8 +10,7 @@ install_yay:
     {{just}} clean_yay
 
     git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
-    cd /tmp/yay-bin
-    makepkg -si --noconfirm
+    cd /tmp/yay-bin && makepkg -si --noconfirm
 
 clean_yay:
     rm -rf /tmp/yay-bin
