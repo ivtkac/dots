@@ -58,13 +58,13 @@ flatpak:
 install_dotfiles:
     {{just}} uninstall_dotfiles
 
-    mkdir -p ~/Documents/Projects
-    git clone https://github.com/seshotake/dotfiles.git ~/Documents/Projects/dotfiles
-    cd ~/Documents/Projects/dotfiles && sh install.sh
+    mkdir -p ~/Projects
+    git clone https://github.com/seshotake/dotfiles.git ~/Projects/dotfiles
+    cd ~/Projects/dotfiles && sh install.sh
 
 uninstall_dotfiles:
-    cd ~/Documents/Projects/dotfiles && sh uninstall.sh
-    cd ~ && rm -rf ~/Documents/Projects/dotfiles
+    cd ~/Projects/dotfiles && sh uninstall.sh
+    cd ~ && rm -rf ~/Projects/dotfiles
 
 gnome-minimal:
     {{just}} core
