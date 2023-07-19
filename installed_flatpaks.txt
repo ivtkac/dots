@@ -1,9 +1,9 @@
 app.drey.Dialect
 com.discordapp.Discord
 com.felipekinoshita.Wildcard
+com.getpostman.Postman
 com.github.hugolabe.Wike
 com.github.marhkb.Pods
-com.github.taiko2k.avvie
 com.gitlab.newsflash
 com.hunterwittenborn.Celeste
 com.mattjakeman.ExtensionManager
@@ -12,8 +12,10 @@ com.usebottles.bottles
 com.valvesoftware.Steam
 dev.alextren.Spot
 hu.kramo.Cartridges
-io.github.cleomenezesjr.Escambo
+io.github.alainm23.planify
 io.github.mrvladus.List
+md.obsidian.Obsidian
+org.gnome.Boxes
 org.gnome.Loupe
 org.gnome.World.Secrets
 org.mozilla.firefox
