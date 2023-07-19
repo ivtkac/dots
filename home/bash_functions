@@ -31,6 +31,12 @@ function mkdev {
     fi
 }
 
-function dup_flatpak {
-    flatpak list --app --columns=application > installed_flatpaks.txt
+function dump_flatpak {
+    flatpak list --app --columns=application > ~/Projects/dotfiles/installed_flatpaks.txt
+}
+
+function pathadd {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
 }
