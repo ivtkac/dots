@@ -25,6 +25,7 @@ render = true
 left = [
   "mode",
   "spinner",
+  "spacer",
   "version-control", 
   "spacer",
   "workspace-diagnostics"
