@@ -7,7 +7,7 @@
 alias ls='$(get_command exa ls) --color=auto'
 alias la='ls -a' # List all
 alias l='ls -l' # List all, human-readable, with colors
-alias ll='ls -lhgF' # List all, human-readable, with colors, and file-type indicators
+alias ll='ls -l'
 alias l.='ls -a | grep -E "^\."' # Show only hidden files
 
 alias cd='$(get_command z cd)'
