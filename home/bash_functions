@@ -1,10 +1,10 @@
 #!/bin/bash
 
-function command_exists {
+command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
-function get_command {
+get_command() {
     for cmd in "$@"; do
         if command_exists "$cmd"; then
             echo "$cmd"
@@ -13,7 +13,7 @@ function get_command {
     done
 }
 
-function cd_up {
+cd_up() {
     local n=$1
 
     while [ "$n" -ne 0 ]; do
@@ -22,7 +22,7 @@ function cd_up {
     done
 }
 
-function mkdev {
+mkdev() {
     local environment_dev=$1
     local project_name=$2
 
@@ -31,12 +31,31 @@ function mkdev {
     fi
 }
 
-function dump_flatpak {
+dump_flatpak() {
     flatpak list --app --columns=application > ~/Projects/dotfiles/installed_flatpaks.txt
 }
 
-function pathadd {
+pathadd() {
     if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
         PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
+
+count_bits() {
+    echo "obase=2;$1" | bc | grep -o 1 | wc -l
+}
+
+backup() {
+    file=$1
+    cp "$file" "$file.bak"
+}
+
+del() {
+    local trash_dir="$HOME/.local/share/Trash/files"
+    
+    if [ -d "$trash_dir" ]; then
+        mv "$@" "$trash_dir"
+    else
+        echo "Trash directory not found"
     fi
 }
