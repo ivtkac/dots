@@ -1,7 +1,6 @@
 app.drey.Dialect
 com.discordapp.Discord
 com.felipekinoshita.Wildcard
-com.getpostman.Postman
 com.github.hugolabe.Wike
 com.github.marhkb.Pods
 com.gitlab.newsflash
