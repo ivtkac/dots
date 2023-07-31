@@ -5,16 +5,20 @@ com.github.hugolabe.Wike
 com.github.marhkb.Pods
 com.gitlab.newsflash
 com.hunterwittenborn.Celeste
+com.logseq.Logseq
 com.mattjakeman.ExtensionManager
 com.mojang.Minecraft
+com.spotify.Client
 com.usebottles.bottles
 com.valvesoftware.Steam
 dev.alextren.Spot
 hu.kramo.Cartridges
 io.github.alainm23.planify
 io.github.mrvladus.List
+ir.imansalmani.IPlan
 md.obsidian.Obsidian
 org.gnome.Boxes
+org.gnome.Builder
 org.gnome.Loupe
 org.gnome.World.Secrets
 org.mozilla.firefox
@@ -23,3 +27,4 @@ org.nickvision.tubeconverter
 org.telegram.desktop
 pm.mirko.Atoms
 re.sonny.Commit
+re.sonny.Workbench
