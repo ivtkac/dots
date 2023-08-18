@@ -11,9 +11,12 @@ com.rafaelmardojai.Blanket
 com.usebottles.bottles
 com.valvesoftware.Steam
 de.haeckerfelix.Fragments
+dev.Cogitri.Health
 dev.alextren.Spot
 dev.geopjr.Tuba
 hu.kramo.Cartridges
+io.github.cleomenezesjr.Escambo
+io.gitlab.adhami3310.Impression
 io.gitlab.news_flash.NewsFlash
 md.obsidian.Obsidian
 org.gnome.Boxes
