@@ -22,7 +22,6 @@ org.gnome.Builder
 org.gnome.Loupe
 org.gnome.Solanum
 org.gnome.World.Secrets
-org.mozilla.firefox
 org.nickvision.money
 org.nickvision.tubeconverter
 pm.mirko.Atoms
