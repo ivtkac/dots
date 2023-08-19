@@ -4,7 +4,6 @@ com.felipekinoshita.Wildcard
 com.github.hugolabe.Wike
 com.github.marhkb.Pods
 com.hunterwittenborn.Celeste
-com.logseq.Logseq
 com.mattjakeman.ExtensionManager
 com.mojang.Minecraft
 com.rafaelmardojai.Blanket
@@ -18,7 +17,6 @@ hu.kramo.Cartridges
 io.github.cleomenezesjr.Escambo
 io.gitlab.adhami3310.Impression
 io.gitlab.news_flash.NewsFlash
-md.obsidian.Obsidian
 org.gnome.Boxes
 org.gnome.Builder
 org.gnome.Loupe
@@ -27,7 +25,5 @@ org.gnome.World.Secrets
 org.mozilla.firefox
 org.nickvision.money
 org.nickvision.tubeconverter
-org.telegram.desktop
 pm.mirko.Atoms
 re.sonny.Commit
-re.sonny.Workbench
