@@ -56,18 +56,11 @@ flatpak:
     flatpak install -y --noninteractive `cat installed_flatpaks.txt | xargs`
 
 dotfiles:
-    mkdir -p ~/Projects
-    git clone https://github.com/seshotake/dotfiles.git ~/Projects/dotfiles
-    cd ~/Projects/dotfiles && sh install.sh
-
-install_dotfiles:
     {{just}} uninstall_dotfiles
-
-    {{just}} dotfiles
+    sh install.sh
 
 uninstall_dotfiles:
-    cd ~/Projects/dotfiles && sh uninstall.sh
-    cd ~ && rm -rf ~/Projects/dotfiles
+    sh uninstall.sh
 
 gnome-minimal:
     {{just}} core
