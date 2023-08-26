@@ -1,7 +1,7 @@
-theme = "adwaita-dark"
+theme = "fleet_dark"
 
 [editor]
-rulers = [81]
+rulers = [121]
 cursorline = true
 color-modes = true
 bufferline = "never"
