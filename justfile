@@ -110,7 +110,9 @@ gnome:
     yay -S power-profiles-daemon switcheroo-control --noconfirm --needed
 
 dev-stuffs:
-    yay -S go rust python --noconfirm --needed
+    yay -S go rust python nodejs npm pnpm --noconfirm --needed
     yay -S helix bat exa starship zoxide zellij --noconfirm --needed
     yay -S visual-studio-code-bin --noconfirm --needed
-    yay -S topgrade-bin
+    yay -S topgrade-bin --noconfirm --needed
+    yay -S typescript-language-server prisma-language-server --noconfirm --needed
+    yay -S docker podman --noconfirm --needed
