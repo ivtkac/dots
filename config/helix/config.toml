@@ -1,7 +1,7 @@
 theme = "fleet_dark"
 
 [editor]
-rulers = [121]
+rulers = [81]
 cursorline = true
 color-modes = true
 bufferline = "never"
