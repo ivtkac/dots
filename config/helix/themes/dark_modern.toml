@@ -9,7 +9,7 @@
 
 "ui.statusline" = { fg = "text", bg = "widget" }
 "ui.statusline.inactive" = "subtext"
-"ui.statusline.normal" = { fg = "blue", bg = "dim_blue" }
+"ui.statusline.normal" = { fg = "light_blue", bg = "dim_blue" }
 "ui.statusline.insert" = { fg = "pink", bg = "dim_pink" }
 "ui.statusline.select" = { fg = "yellow", bg = "dim_yellow" }
 
@@ -32,7 +32,7 @@
 
 "ui.virtual.ruler" = { bg = "border" }
 "ui.virtual.indent-guide" = "separator"
-"ui.virtual.inlay-hint" = "subtext"
+"ui.virtual.inlay-hint" = { fg = "subtext", modifiers = ["italic"] }
 "ui.virtual.wrap" = "separator"
 
 "ui.menu.selected" = { bg = "highlight" }
@@ -69,6 +69,7 @@ hint = "dark_blue"
 
 "constructor" = "green"
 
+"constant" = "blue"
 "constant.builtin" = "blue"
 "constant.numeric" = "light_green"
 
@@ -77,7 +78,8 @@ hint = "dark_blue"
 "comment" = "dark_green"
 
 "variable" = "light_blue"
-"variable.other" = "blue"
+"variable.parameter" = { fg = "light_blue", modifiers = ["italic"] }
+"variable.other.member" = "blue"
 
 "punctuation" = "subtext"
 
@@ -146,7 +148,7 @@ pink = "#c586c0"
 orange = "#ce9178"
 red = "#f85149"
 
-light_green = "#ce9178"
+light_green = "#b5cea8"
 dim_green = "#20322e"
 green = "#4ec9b0"
 dark_green = "#6a9955"
