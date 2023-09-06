@@ -1,9 +1,5 @@
-add_newline = false
-
-## FIRST LINE/ROW: Info & Status
-# First param ─┌
 [username]
-format = " [╭─$user]($style)@"
+format = " [$user]($style)@"
 style_user = "bold green"
 style_root = "bold green"
 show_always = true
@@ -37,29 +33,6 @@ min_time = 1
 format = "took [$duration]($style)"
 disabled = false
 
-## SECOND LINE/ROW: Prompt
-# Somethere at the beginning
-[battery]
-full_symbol = " "
-charging_symbol = " "
-discharging_symbol = " "
-disabled = true
-
-[[battery.display]]
-threshold = 15
-style = "bold red"
-disabled = true
-
-[[battery.display]]
-threshold = 50
-style = "bold yellow"
-disabled = true
-
-[[battery.display]]
-threshold = 80
-style = "bold green"
-disabled = true
-
 # Prompt: optional param 1
 [time]
 format = " 🕙 $time($style)\n"
@@ -67,17 +40,6 @@ time_format = "%T"
 style = "bright-white"
 disabled = true
 
-# Prompt: param 2 └─
-[character]
-success_symbol = " [╰─>](bold green)"
-error_symbol = " [×](bold green)"
-
-# SYMBOLS
-[status]
-symbol = "🔴"
-format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
-map_symbol = true
-disabled = false
 
 [aws]
 symbol = " "
