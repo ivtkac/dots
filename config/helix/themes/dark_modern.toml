@@ -3,7 +3,7 @@
 "ui.background" = { bg = "background" }
 "ui.background.separator" = "separator"
 
-"ui.cursor" = { bg = "cursor" }
+"ui.cursor" = { bg = "dim_cursor" }
 "ui.cursor.match" = { bg = "highlight" }
 "ui.cursor.primary" = { bg = "cursor" }
 
@@ -121,7 +121,8 @@ hint = "dark_blue"
 [palette]
 background = "#1f1f1f"
 separator = "#454545"
-cursor = "#5f5f5f"
+cursor = "#6a6b69"
+dim_cursor = "#545453"
 
 selection = "#264f78"
 selection2 = "#213e5b"
@@ -133,7 +134,7 @@ widget = "#181818"
 text = "#cccccc"
 subtext = "#8f8f8f"
 
-highlight = "#3b3b3b"
+highlight = "#454544"
 
 linenr = "#6e7681"
 
