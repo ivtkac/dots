@@ -121,7 +121,7 @@ hint = "dark_blue"
 [palette]
 background = "#1f1f1f"
 separator = "#454545"
-cursor = "#585857"
+cursor = "#5f5f5f"
 
 selection = "#264f78"
 selection2 = "#213e5b"
