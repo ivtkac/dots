@@ -1,0 +1,162 @@
+# ---- UI ----
+
+"ui.background" = { bg = "background" }
+"ui.background.separator" = "separator"
+
+"ui.cursor" = { bg = "cursor" }
+"ui.cursor.match" = { bg = "highlight" }
+"ui.cursor.primary" = { bg = "cursor" }
+
+"ui.statusline" = { fg = "text", bg = "widget" }
+"ui.statusline.inactive" = "subtext"
+"ui.statusline.normal" = { fg = "blue", bg = "dim_blue" }
+"ui.statusline.insert" = { fg = "pink", bg = "dim_pink" }
+"ui.statusline.select" = { fg = "yellow", bg = "dim_yellow" }
+
+"ui.popup" = { bg = "widget" }
+
+"ui.window" = "border"
+
+"ui.help" = { fg = "text", bg = "widget" }
+
+"ui.text" = "text"
+"ui.text.focus" = { fg = "text", bg = "highlight" }
+"ui.text.inactive" = "subtext"
+"ui.text.info" = "text"
+
+"ui.selection" = { bg = "selection2" }
+"ui.selection.primary" = { bg = "selection" }
+
+"ui.linenr" = "linenr"
+"ui.linenr.selected" = "subtext"
+
+"ui.virtual.ruler" = { bg = "border" }
+"ui.virtual.indent-guide" = "separator"
+"ui.virtual.inlay-hint" = "subtext"
+"ui.virtual.wrap" = "separator"
+
+"ui.menu.selected" = { bg = "highlight" }
+
+"ui.menu" = { bg = "widget" }
+"ui.menu.scroll" = { bg = "widget", fg = "highlight" }
+
+"ui.highlight" = { bg = "highlight" }
+
+"ui.bufferline.active" = { fg = "text", bg = "background", underline = { color = "tab", style = "line" } }
+"ui.bufferline" = { fg = "subtext", bg = "widget" }
+"ui.bufferline.background" = { bg = "widget" }
+
+"ui.cursorline" = { bg = "border" }
+
+
+"warning" = "yellow"
+"error" = "red"
+info = "green"
+hint = "dark_blue"
+
+"diagnostic.hint" = { underline = { color = "green", style = "curl" } }
+"diagnostic.info" = { underline = { color = "dark_blue", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "dark_yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+
+
+# ---- Syntax Highlighting ----
+
+"attribute" = "green"
+
+"type" = "green"
+"type.builtin" = "dark_blue"
+
+"constructor" = "green"
+
+"constant.builtin" = "blue"
+"constant.numeric" = "light_green"
+
+"string" = "orange"
+
+"comment" = "dark_green"
+
+"variable" = "light_blue"
+"variable.other" = "blue"
+
+"punctuation" = "subtext"
+
+"keyword" = "dark_blue"
+"keyword.control" = "pink"
+
+"function" = "yellow"
+
+"tag" = "dark_blue"
+
+"namespace" = "green"
+
+"special" = "tab"
+
+"diff.plus" = "dark_green"
+"diff.minus" = "red"
+"diff.delta" = "dark_blue"
+
+# ---- Interface -----
+
+"markup.normal" = "text"
+"markup.heading" = { fg = "blue", modifiers = ["bold"] }
+
+"markup.raw" = "orange"
+"markup.raw.block" = "text"
+
+"markup.list" = "blue"
+
+"markup.list.unchecked" = "red"
+"markup.list.checked" = "green"
+
+"markup.bold" = { fg = "blue", modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+
+"markup.link.url" = { underline = { style = "line" } }
+"markup.link.label" = { underline = { style = "line" } }
+"markup.link.text" = "orange"
+"markup.quote" = "dark_green"
+
+[palette]
+background = "#1f1f1f"
+separator = "#454545"
+cursor = "#585857"
+
+selection = "#264f78"
+selection2 = "#213e5b"
+
+border = "#303031"
+tab = "#0078d4"
+widget = "#181818"
+
+text = "#cccccc"
+subtext = "#8f8f8f"
+
+highlight = "#3b3b3b"
+
+linenr = "#6e7681"
+
+# Colors
+
+dim_pink = "#312831"
+pink = "#c586c0"
+
+orange = "#ce9178"
+red = "#f85149"
+
+light_green = "#ce9178"
+dim_green = "#20322e"
+green = "#4ec9b0"
+dark_green = "#6a9955"
+
+dim_yellow = "#35352d"
+yellow = "#dcdcaa"
+dark_yellow = "#cca700"
+
+
+light_blue = "#9cdcfe"
+dim_blue = "#20313a"
+blue = "#4fc1ff"
+blue2 = "#3794ff"
+dark_blue = "#569cd6"
