@@ -101,17 +101,17 @@ hint = "dark_blue"
 # ---- Interface -----
 
 "markup.normal" = "text"
-"markup.heading" = { fg = "blue", modifiers = ["bold"] }
+"markup.heading" = { fg = "dark_blue", modifiers = ["bold"] }
 
 "markup.raw" = "orange"
 "markup.raw.block" = "text"
 
-"markup.list" = "blue"
+"markup.list" = "dark_blue"
 
 "markup.list.unchecked" = "red"
 "markup.list.checked" = "green"
 
-"markup.bold" = { fg = "blue", modifiers = ["bold"] }
+"markup.bold" = { fg = "dark_blue", modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 
