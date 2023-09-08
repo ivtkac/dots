@@ -15,5 +15,31 @@ alias ..3='cd_up 3'
 alias ..4='cd_up 4'
 alias ..5='cd_up 5'
 
+alias proj='cd ~/Projects'
+alias uni='cd ~/University'
+
 # Git aliases
-git_aliases
+
+# Basic Git Commands
+alias gs='git status'
+alias gb='git branch'
+alias gf='git fetch'
+
+# Checkout Commands
+alias gco='git checkout'
+alias gcb='git checkout -b'
+
+# Commit Commands
+alias gac='git add -A && git commit -v'
+alias guc='git add -u && git commit -v'
+
+# Push and Pull commands
+alias gp='git push'
+alias gpl='git pull'
+
+# Advanced commands
+alias gcp='git cherry-pick'
+alias gcpno='git cherry-pick --no-commit'
+
+# Custom Git Diff
+alias gd='git_diff'

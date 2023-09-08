@@ -38,23 +38,6 @@ init_command() {
     command_exists "$1" && eval "$($2)"
 }
 
-# Git aliases
-git_aliases() {
-    alias g='git'
-    alias gcb='git checkout -b'
-    alias gco='git checkout'
-    alias gs='git status'
-    alias gac='git add -A && git commit -v'
-    alias guc='git add -u && git commit -v'
-    alias gb='git branch'
-    alias gp='git push'
-    alias gpl='git pull'
-    alias gf='git fetch'
-    alias gcp='git cherry-pick'
-    alias gcpno='git cherry-pick --no-commit'
-    alias gd='git_diff'
-}
-
 # Git diff with bat if available
 git_diff() {
     if command_exists 'bat'; then
@@ -69,4 +52,33 @@ set_editor() {
     editor="$(get_command hx helix nvim vim vi nano)"
     export EDITOR="$editor"
     export VISUAL="$EDITOR"
+}
+
+# Create a new directory and navigate into it
+mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
+
+# Quick add, commit, and push
+gacp() {
+    git add .
+    git commit -m "$1"
+    git push
+}
+
+# Quickly build a docker image
+dbuild() {
+    docker build -t "$1"
+}
+
+
+# Quickly run a docker container
+drun() {
+    docker run -d --name "$1" "$2"
+}
+
+# Stop and remove all docker containers
+dclean() {
+    docker stop $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
 }
