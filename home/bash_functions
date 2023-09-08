@@ -1,61 +1,72 @@
 #!/bin/bash
 
+# Check if a command exists
 command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
+# Get the first available command from the list
 get_command() {
     for cmd in "$@"; do
-        if command_exists "$cmd"; then
-            echo "$cmd"
-            return
-        fi
+        command_exists "$cmd" && echo "$cmd" && return
     done
 }
 
+# Go up `n` directories
 cd_up() {
     local n=$1
-
     while [ "$n" -ne 0 ]; do
         cd ..
         n=$((n - 1))
     done
 }
 
-mkdev() {
-    local environment_dev=$1
-    local project_name=$2
-
-    if command_exists "nix"; then
-        nix flake new --template "github:the-nix-way/dev-templates#$environment_dev" "$project_name"
-    fi
+# Source multiple files
+source_files() {
+    for file in "$@"; do
+        [ -f "$file" ] && . "$file"
+    done
 }
 
-dump_flatpak() {
-    flatpak list --app --columns=application > ~/Projects/dotfiles/installed_flatpaks.txt
-}
-
+# Add a directory to PATH if it exists and is not already in PATH
 pathadd() {
-    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
-        PATH="${PATH:+"$PATH:"}$1"
-    fi
+    [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]] && PATH="${PATH:+$PATH:}$1"
 }
 
-count_bits() {
-    echo "obase=2;$1" | bc | grep -o 1 | wc -l
+# Initialize a command if it exists
+init_command() {
+    command_exists "$1" && eval "$($2)"
 }
 
-backup() {
-    file=$1
-    cp "$file" "$file.bak"
+# Git aliases
+git_aliases() {
+    alias g='git'
+    alias gcb='git checkout -b'
+    alias gco='git checkout'
+    alias gs='git status'
+    alias gac='git add -A && git commit -v'
+    alias guc='git add -u && git commit -v'
+    alias gb='git branch'
+    alias gp='git push'
+    alias gpl='git pull'
+    alias gf='git fetch'
+    alias gcp='git cherry-pick'
+    alias gcpno='git cherry-pick --no-commit'
+    alias gd='git_diff'
 }
 
-del() {
-    local trash_dir="$HOME/.local/share/Trash/files"
-    
-    if [ -d "$trash_dir" ]; then
-        mv "$@" "$trash_dir"
+# Git diff with bat if available
+git_diff() {
+    if command_exists 'bat'; then
+        git diff --name-only --relative --diff-filter=d | xargs bat --diff
     else
-        echo "Trash directory not found"
+        git diff
     fi
+}
+
+# Set editor
+set_editor() {
+    editor="$(get_command hx helix nvim vim vi nano)"
+    export EDITOR="$editor"
+    export VISUAL="$EDITOR"
 }

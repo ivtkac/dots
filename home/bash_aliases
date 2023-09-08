@@ -1,49 +1,19 @@
 #!/bin/bash
 
-# ==================== #
-# = General Aliases = #
-# ==================== #
-
+# General Aliases
 alias ls='$(get_command exa ls) --color=auto'
-alias la='ls -a' # List all
-alias l='ls -l' # List all, human-readable, with colors
+alias la='ls -a'
+alias l='ls -l'
 alias ll='ls -l'
-alias l.='ls -a | grep -E "^\."' # Show only hidden files
+alias l.='ls -a | grep -E "^\\."'
 
+# DIrectory navigation
 alias cd='$(get_command z cd)'
-alias ..='cd ..' # Go up one directory
-alias ...='cd ../..' # Go up two directories
+alias ..='cd ..'
+alias ...='cd ../..'
 alias ..3='cd_up 3'
 alias ..4='cd_up 4'
 alias ..5='cd_up 5'
 
-alias cat='$(get_command bat cat)'
-alias vim='$(get_command nvim vim)'
-alias tmux='$(get_command zellij tmux)'
-
-alias reload='source ~/.bashrc' # Reload bash
-
-# ==================== #
-# = Git Aliases = #
-# ==================== #
-
-alias g='git'
-alias gcb='git checkout -b'
-alias gco='git checkout'
-alias gs='git status'
-alias gac='git add -A && git commit -v'
-alias guc='git add -u && git commit -v'
-
-alias gb='git branch'
-alias gp='git push'
-alias gpl='git pull'
-alias gf='git fetch'
-
-alias gcp='git cherry-pick'
-alias gcpno='git cherry-pick --no-commit'
-
-if command_exists 'bat'; then
-  alias gd='git diff --name-only --relative --diff-filter=d | xargs bat --diff'
-else
-  alias gd='git diff'
-fi
+# Git aliases
+git_aliases

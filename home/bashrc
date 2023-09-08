@@ -1,24 +1,21 @@
 #!/usr/bin/bash
 
-#
 # ~/.bashrc
-#
 
-# If not running interactively, don't do anything
+# Exit if not running interactively
 [[ $- != *i* ]] && return
 
+# Soure functions and aliases
 [ -f "$HOME/.bash_functions" ] && . "$HOME/.bash_functions"
 [ -f "$HOME/.bash_aliases" ] && . "$HOME/.bash_aliases"
 
+# Set PS1
 PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 
 pathadd "$HOME/.local/bin"
 pathadd "/usr/lib/helix"
 
-editor="$(get_command hx helix nvim vim vi nano)"
-export EDITOR="$editor"
-export VISUAL="$EDITOR"
+set_editor
 
-
-command_exists zoxide && eval "$(zoxide init bash)"
-command_exists starship && eval "$(starship init bash)"
+init_command zoxide "zoxide init bash"
+init_command starship "starship init bash"
