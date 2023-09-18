@@ -1,3 +1,6 @@
+[character]
+success_symbol = "[󰣇](blue)"
+
 [username]
 format = " [$user]($style)@"
 style_user = "bold green"
@@ -35,7 +38,7 @@ disabled = false
 
 # Prompt: optional param 1
 [time]
-format = " 🕙 $time($style)\n"
+format = " 🕙 $time($style)"
 time_format = "%T"
 style = "bright-white"
 disabled = true
