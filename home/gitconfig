@@ -1,7 +1,7 @@
 [user]
 	userConfigOnly = true
-	name = seshotake
-	email = seshotake@gmail.com
+	name = Ivan Tkachuk
+	email = 116971836+seshotake@users.noreply.github.com
 [hub]
 	protocol = https
 [github]
@@ -50,3 +50,8 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
