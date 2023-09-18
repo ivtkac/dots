@@ -21,8 +21,3 @@ set_editor
 
 init_command zoxide "zoxide init bash"
 init_command starship "starship init bash"
-
-if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
-then
-  exec fish
-fi
