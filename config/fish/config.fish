@@ -1,9 +1,3 @@
-# Straship prompt
-if status --is-interactive
-  # b asename "$PWD"
-  starship init fish | source
-end
-
 # Fish shell basic
 
 set fish_greeting
