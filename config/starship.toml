@@ -1,5 +1,5 @@
 [character]
-success_symbol = "[󰣇](blue)"
+success_symbol = " \\$"
 
 [username]
 format = " [$user]($style)@"
