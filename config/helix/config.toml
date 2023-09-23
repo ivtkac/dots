@@ -1,14 +1,11 @@
-theme = "dark_modern"
+theme = "adwaita-dark"
 
 [editor]
 rulers = [81]
 cursorline = true
-color-modes = true
-bufferline = "always"
 true-color = true
 completion-trigger-len = 1
 mouse = false
-gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
 
 [editor.cursor-shape]
 insert = "bar"
