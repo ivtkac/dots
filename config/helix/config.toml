@@ -1,9 +1,9 @@
-theme = "adwaita"
+theme = "dark_modern"
 
 [editor]
 rulers = [81]
-cursorline = true
 true-color = true
+color-modes = true
 completion-trigger-len = 1
 mouse = false
 

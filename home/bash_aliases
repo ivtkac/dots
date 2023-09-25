@@ -7,7 +7,9 @@ alias l='ls -l'
 alias ll='ls -l'
 alias l.='ls -a | grep -E "^\\."'
 
-# DIrectory navigation
+alias cat="$(get_command bat cat)"
+
+# Directory navigation
 alias cd='$(get_command z cd)'
 alias ..='cd ..'
 alias ...='cd ../..'
