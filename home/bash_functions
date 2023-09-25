@@ -51,11 +51,11 @@ git_diff() {
 set_editor() {
     editor="$(get_command hx helix nvim vim vi nano)"
 
-    if [ "$editor" != 'hx' ] && [ -d '/usr/lib/helix' ]; then
+    if [ "$editor" = 'hx' ]; then
+        export HELIX_RUNTIME="$HOME/Projects/helix/runtime"
+    elif [ "$editor" != 'hx' ] && [ -d '/usr/lib/helix' ]; then
         pathadd "/usr/lib/helix"
         editor="$(get_command hx $editor)"
-    elif [ "$editor" = 'hx' ]; then
-        export HELIX_RUNTIME="$HOME/Projects/helix/runtime"
     fi
     
     export EDITOR="$editor"

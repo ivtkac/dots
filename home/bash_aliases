@@ -18,7 +18,6 @@ alias ..4='cd_up 4'
 alias ..5='cd_up 5'
 
 alias proj='cd ~/Projects'
-alias uni='cd ~/University'
 
 # Git aliases
 
@@ -45,3 +44,15 @@ alias gcpno='git cherry-pick --no-commit'
 
 # Custom Git Diff
 alias gd='git_diff'
+
+# Networking
+alias ports='netstat -tulanp'
+alias myip='curl ipinfo.io/ip'
+
+# System information
+alias cpuinfo='lscpu'
+alias meminfo='free -h'
+
+# Misc
+alias py='python'
+alias hist='history | fzf | sed "s/^[[:space:]]*[0-9]\+[[:space:]]*//" | xargs -I {} bash -i -c "{}"'
