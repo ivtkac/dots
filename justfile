@@ -4,7 +4,7 @@ default: gnome
 
 core: install_yay base fonts media
 
-vivobook15: gnome_minimal nvidia flatpak dotfiles
+vivobook15: gnome-minimal nvidia flatpak dotfiles
 
 install_yay:
     {{just}} clean_yay
