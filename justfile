@@ -4,7 +4,7 @@ default: gnome
 
 core: install_yay base fonts media
 
-vivobook15: gnome nvidia flatpak dotfiles
+vivobook15: gnome_minimal nvidia flatpak dotfiles
 
 install_yay:
     {{just}} clean_yay
@@ -66,7 +66,8 @@ gnome-minimal:
     {{just}} core
 
     yay -S gnome-shell nautilus gnome-console gnome-tweak-tool gnome-control-center \
-        xdg-user-dirs file-roller gnome-keyring epiphany --noconfirm --needed
+        xdg-user-dirs file-roller gnome-keyring gnome-backgrounds gnome-bluetooth \
+        gnome-disk-utility gnome-menus xdg-desktop-portal-gnome evolution-data-server --noconfirm --needed
     
     yay -S mutter-performance --noconfirm --needed
 
