@@ -1,8 +1,9 @@
-theme = "dark_modern"
+theme = "adwaita"
 
 [editor]
 rulers = [81]
 true-color = true
+bufferline = "multiple"
 color-modes = true
 completion-trigger-len = 1
 mouse = false
@@ -30,4 +31,12 @@ enable = true
 
 [keys.normal]
 V = ["extend_line_below", "select_mode"]
+"C-y" = "toggle_copilot_auto"
 
+[editor.lsp.inline-diagnostics]
+enabled = true
+
+[keys.insert]
+"C-e" = "show_or_next_copilot_completion"
+"C-a" = "hide_or_prev_copilot_completion"
+"C-y" = "apply_copilot_completion"

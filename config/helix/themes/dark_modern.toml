@@ -93,6 +93,7 @@ hint = "dark_blue"
 "namespace" = "green"
 
 "special" = "tab"
+"label" = "green"
 
 "diff.plus" = "dark_green"
 "diff.minus" = "red"

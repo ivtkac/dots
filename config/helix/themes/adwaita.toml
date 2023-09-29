@@ -1,5 +1,0 @@
-inherits = "adwaita-dark"
-
-"ui.virtual.ruler" = { bg = "libadwaita_dark_alt" }
-"ui.cursor.match" = { modifiers = ["bold"] }
-"ui.text.focus" = { fg = "light4", bg = "blue_7" }
