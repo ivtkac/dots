@@ -1,4 +1,4 @@
-theme = "adwaita"
+theme = "dark_modern"
 
 [editor]
 rulers = [81]
