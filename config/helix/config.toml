@@ -1,10 +1,9 @@
-theme = "dark_modern"
+theme = "fleet_dark"
 
 [editor]
 rulers = [81]
 true-color = true
 bufferline = "multiple"
-color-modes = true
 completion-trigger-len = 1
 mouse = false
 
@@ -20,7 +19,7 @@ tab = "all"
 render = true
 
 [editor.statusline]
-left = [ "mode", "spinner", "file-base-name" ]
+left = [ "mode", "spinner", "read-only-indicator", "file-base-name", "file-modification-indicator" ]
 
 [editor.lsp]
 display-messages = true
