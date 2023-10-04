@@ -1,11 +1,11 @@
 [user]
 	userConfigOnly = true
 	name = Ivan Tkachuk
-	email = 116971836+seshotake@users.noreply.github.com
+	email = 116971836+hxv0q@users.noreply.github.com
 [hub]
 	protocol = https
 [github]
-	user = seshotake
+	user = hxv0q
 [core]
 	quotePath = false
 	ignorecase = false
