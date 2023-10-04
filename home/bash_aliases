@@ -31,8 +31,8 @@ alias gco='git checkout'
 alias gcb='git checkout -b'
 
 # Commit Commands
-alias gac='git add -A && git commit -v'
-alias guc='git add -u && git commit -v'
+alias gac='git add -A && git commit'
+alias guc='git add -u && git commit'
 
 # Push and Pull commands
 alias gp='git push'
