@@ -43,7 +43,7 @@ alias gcp='git cherry-pick'
 alias gcpno='git cherry-pick --no-commit'
 
 # Custom Git Diff
-alias gd='git_diff'
+alias gd='git diff'
 
 # Networking
 alias ports='netstat -tulanp'

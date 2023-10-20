@@ -2,21 +2,34 @@
 	userConfigOnly = true
 	name = Ivan Tkachuk
 	email = 116971836+hxrv0q@users.noreply.github.com
-[hub]
-	protocol = https
-[github]
-	user = hxrv0q
+
 [core]
 	quotePath = false
 	ignorecase = false
 	editor = flatpak run re.sonny.Commit
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
 [push]
 	default = simple
+
+[delta]
+	side-by-side = true
+	navigate = true
+	light = false
+	
 [merge]
-	tool = vimdiff
 	conflictstyle = diff3
 [diff]
 	colorMoved = default
+	
+[help]
+	autocrrect = 30
+[init]
+	defaultBranch = main
+
 [alias]
 	back = reset HEAD~
 	
@@ -42,16 +55,21 @@
 	undo = reset --soft HEAD~1
 
 	lg="log --graph --all --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
-[help]
-	autocrrect = 30
-[init]
-	defaultBranch = main
+
+[hub]
+	protocol = https
+
+[github]
+	user = hxrv0q
+	
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
