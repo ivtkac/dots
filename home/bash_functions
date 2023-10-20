@@ -94,3 +94,12 @@ dclean() {
 npkill() {
     find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' +
 }
+
+renameall() {
+    for file in *; do
+        if ! [[ "$file" =~ ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\..* ]]; then
+            mv "$file" "$(uuidgen).${file##*.}"
+            echo "Renamed $file to $(uuidgen).${file##*.}"
+        fi
+    done
+}
