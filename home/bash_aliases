@@ -22,7 +22,7 @@ alias proj='cd ~/Projects'
 # Git aliases
 
 # Basic Git Commands
-alias gs='git status'
+alias gs='git status -s'
 alias gb='git branch'
 alias gf='git fetch'
 
@@ -43,7 +43,7 @@ alias gcp='git cherry-pick'
 alias gcpno='git cherry-pick --no-commit'
 
 # Custom Git Diff
-alias gd='git diff'
+alias gd='git_diff'
 
 # Networking
 alias ports='netstat -tulanp'
