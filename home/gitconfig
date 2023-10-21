@@ -7,19 +7,10 @@
 	quotePath = false
 	ignorecase = false
 	editor = flatpak run re.sonny.Commit
-	pager = delta
-
-[interactive]
-	diffFilter = delta --color-only
 
 [push]
 	default = simple
 
-[delta]
-	side-by-side = true
-	navigate = true
-	light = false
-	
 [merge]
 	conflictstyle = diff3
 [diff]
