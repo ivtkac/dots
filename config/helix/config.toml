@@ -1,25 +1,17 @@
-theme = "fleet_dark"
+theme = "zed_onedark"
 
 [editor]
-rulers = [81]
-true-color = true
-bufferline = "multiple"
+scrolloff = 99
+cursorline = true
+auto-format = true
 completion-trigger-len = 1
-mouse = false
+bufferline = "multiple"
+color-modes = true
+idle-timeout = 100
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
-select = "block"
-
-[editor.whitespace.render]
-tab = "all"
-
-[editor.indent-guides]
-render = true
-
-[editor.statusline]
-left = [ "mode", "spinner", "read-only-indicator", "file-base-name", "file-modification-indicator" ]
 
 [editor.lsp]
 display-messages = true
@@ -28,6 +20,22 @@ display-inlay-hints = true
 [editor.soft-wrap]
 enable = true
 
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+[editor.statusline]
+left = ["mode", "spacer", "version-control", "spacer", "spinner"]
+center = ["file-name", "file-modification-indicator"]
+right = ["diagnostics", "selections", "spacer", "position-percentage", "file-type"]
+
 [keys.normal]
-V = ["extend_line_below", "select_mode"]
+V = ["extend_line_below"]
+X = ["extend_line_above"]
+"space" = { w = [":format", ":write"] } 
+
+[keys.insert]
+"C-space" = "completion"
+j = { k = "normal_mode" }
+"C-backspace" = "delete_word_backward"
 
