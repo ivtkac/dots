@@ -2,8 +2,8 @@
 
 # Install from home to ~/
 for file in home/*; do
-    ln -s "$PWD/$file" "$HOME/.$(basename "$file")"
-    echo "Successfully installed ~/.$(basename "$file")"
+    ln -s "$PWD/$file" "$HOME/$(basename "$file")"
+    echo "Successfully installed ~/$(basename "$file")"
 done
 
 
