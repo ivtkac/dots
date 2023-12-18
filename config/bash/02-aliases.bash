@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/usr/bin/bash
 
-# General Aliases
-alias ls='$(get_command exa ls) --color=auto'
+alias ls="$(get_command exa ls) --color=auto"
 alias la='ls -a'
 alias l='ls -l'
 alias ll='ls -l'

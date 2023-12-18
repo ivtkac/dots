@@ -1,31 +1,31 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Check if a command exists
 command_exists() {
-    command -v "$1" >/dev/null 2>&1
+  command -v "$1" >/dev/null 2>&1
 }
 
-# Get the first available command from the list
+# Get the first avaiable command from the list
 get_command() {
-    for cmd in "$@"; do
-        command_exists "$cmd" && echo "$cmd" && return
-    done
+  for cmd in "$@"; do
+    command_exists "$cmd" && echo "$cmd" && return
+  done
 }
 
 # Go up `n` directories
 cd_up() {
-    local n=$1
-    while [ "$n" -ne 0 ]; do
-        cd ..
-        n=$((n - 1))
-    done
+  local n=$1
+  while [ "$n" -ne 0 ]; do
+    cd ..
+    n=$((n-1))
+  done
 }
 
 # Source multiple files
 source_files() {
-    for file in "$@"; do
-        [ -f "$file" ] && . "$file"
-    done
+  for file in "$@"; do
+    [ -f "$file" ] && . "$file"
+  done
 }
 
 # Add a directory to PATH if it exists and is not already in PATH
@@ -72,27 +72,6 @@ gacp() {
     git add .
     git commit -m "$1"
     git push
-}
-
-# Quickly build a docker image
-dbuild() {
-    docker build -t "$1"
-}
-
-
-# Quickly run a docker container
-drun() {
-    docker run -d --name "$1" "$2"
-}
-
-# Stop and remove all docker containers
-dclean() {
-    docker stop $(docker ps -a -q)
-    docker rm $(docker ps -a -q)
-}
-
-npkill() {
-    find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' +
 }
 
 renameall() {
