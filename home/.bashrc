@@ -5,34 +5,37 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
 
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# PS1='[\u@\h \W]\$ '
+if [ -n "$TOOLBOX_PATH" ]; then
+    PS1='\[\033[0;35m\]\u\[\033[0m\]@\h \W>\[\033[0m\] '
+elif [ -n "$DISTROBOX_ENTER_PATH" ]; then
+    PS1='\[\033[0;33m\]\u\[\033[0m\]@\h \W>\[\033[0m\] '
+else   
+    PS1='\[\033[0;34m\]\u\[\033[0m\]@\h \W>\[\033[0m\] '
+fi
 
 # Export XDG directories
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_RUNTIME_DIR="$HOME/.local/run"
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# User specific aliases and functions
+# Load all .bash files in XDG_CONFIG_HOME/bash
 if [ -d "$XDG_CONFIG_HOME/bash" ]; then
-    for rc in "$XDG_CONFIG_HOME/bash"/*; do
-        if [ -f "$rc" ]; then
-            . "$rc"
+    for file in "$XDG_CONFIG_HOME/bash"/*; do
+        if [ -f "$file" ]; then
+            . "$file"
         fi
     done
 fi
-unset rc
 
-# Set prompt
-PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \$ "
-
-# User specific environment
-path_add "$HOME/.local/bin"
-
-# Initialize Environment
 set_editor
 init_command zoxide "zoxide init bash"
-init_command starship "starship init bash"
