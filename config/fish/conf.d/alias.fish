@@ -1,9 +1,13 @@
 # Ls aliases
-alias ll='ls -l'
+
+alias ls='eza --group-directories-first --color-scale' 
 alias la='ls -a'
+alias ll='ls -l'
 alias lT='ls -T'
+alias l.='ls -a | rg -E "^\\."'
 
 # Git aliases
+
 alias gcb='git checkout -b'
 alias gco='git checkout'
 
@@ -28,13 +32,7 @@ alias zr='zellij run --'
 alias ze='zellij edit'
 
 alias vim='hx'
-alias tmux='zellij'
 alias cat='bat'
+alias tmux='zellij'
 alias du='dust'
-
-# Pacman & AUR aliases
-
-alias upg='sudo pacman -Syu'
-alias unlock='sudo rm /var/lib/pacman/db.lck'
-alias cleanup='pacman -Qtdq | sudo pacman -Rns -'
 
