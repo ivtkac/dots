@@ -17,7 +17,7 @@ done
 if [ $# -eq 0 ]; then
   command=fish
 else
-  command="$(printf "%q" "$@")"
+  command="$(printf "%q " "$@")"
 fi
 
 if [ "$DEV" ]; then
