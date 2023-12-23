@@ -1,0 +1,27 @@
+#!/bin/bash
+
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    -D|--dev)
+      DEV=1
+      shift
+      ;;
+    *)
+      echo "Unknown option: $1"
+      exit 1
+      ;;
+  esac
+done
+
+
+if [ $# -eq 0 ]; then
+  command=fish
+else
+  command="$(printf "%q" "$@")"
+fi
+
+if [ "$DEV" ]; then
+  exec distrobox enter --name dev -- bash -ic "$command"
+else
+  exec toolbox run -c fedora-toolbox-39 bash -ic "$command"
+fi
