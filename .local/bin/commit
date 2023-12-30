@@ -3,11 +3,11 @@
 git add .
 
 if [ -f /usr/bin/flatpak-spawn ]; then
-  FLATPAK_SPAWN=1
+  export GIT_EDITOR="flatpak-spawn --host flatpak run re.sonny.Commit"
+else
+  export GIT_EDITOR="flatpak run re.sonny.Commit"
 fi
 
-if [[ "$FLATPAK_SPAWN" ]]; then
-  
-else
-  flatpak run re.sonny.Commit
-fi
+git commit
+
+unset GIT_EDITOR
