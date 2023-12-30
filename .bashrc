@@ -5,6 +5,9 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+# Update window size after every command
+shopt -s checkwinsize
+
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
