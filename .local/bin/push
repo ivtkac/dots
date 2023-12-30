@@ -11,4 +11,8 @@ if [ -z "$current_branch" ]; then
   exit 1
 fi
 
-git push origin "$current_branch"
+if [ -f /usr/bin/gh ]; then
+  git push origin "$current_branch"
+else
+  trun git push origin "$current_branch"
+fi
