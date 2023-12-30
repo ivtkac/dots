@@ -1,8 +1,0 @@
-# Set the theme to "Two Dark"
---theme='TwoDark'
-
-# Show line numbers, Git modifications and file header (but no grid)
---style="changes,header"
-
-# Use italic text on the terminal
---italic-text=always

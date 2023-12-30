@@ -8,4 +8,5 @@ if [[ -n "$BASH" ]]; then
   case $- in
     *i*) source "$HOME/.bashrc" ;;
       *) return ;;
+  esac
 fi
