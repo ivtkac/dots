@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for f in ~/.bash_completion.d/* ; do
+  if [[ -f $f ]]; then
+    source "$f"
+  fi
+done

@@ -1,0 +1,23 @@
+# Silence bell
+set bell-style none
+
+# Perform file completion in a case insensitive-fashion
+set completion-ignore-case on
+
+# Treat hyphens and underscores as equivalent
+set completion-map-case on
+
+# Display matches for ambiguous patterns at first tab press
+set show-all-if-ambiguous on
+
+# Show a trailing slash after directory names
+set mark-directories on
+
+# Immediately add a trailing slash when automcompleting symlinks to directories
+set mark-symlinked-directories on
+
+# Enable incremental history search with arrows
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
