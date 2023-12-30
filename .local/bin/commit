@@ -1,0 +1,13 @@
+#!/bin/bash
+
+git add .
+
+if [ -f /usr/bin/flatpak-spawn ]; then
+  FLATPAK_SPAWN=1
+fi
+
+if [[ "$FLATPAK_SPAWN" ]]; then
+  
+else
+  flatpak run re.sonny.Commit
+fi

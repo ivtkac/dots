@@ -95,8 +95,4 @@ while getopts ":fbsh" opt; do
   esac
 done
 
-# Install dotfiles to $HOME
-install_dotfiles "home" "$HOME"
-
-# Install config files to XDG_CONFIG_HOME or ~/.config
-install_dotfiles "config" "$CONFIG_DIR"
+install_dotfiles

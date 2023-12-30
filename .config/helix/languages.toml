@@ -1,0 +1,11 @@
+[language-server.rust-analyzer.config]
+checkOnSave.command = "clippy"
+inlayHints.closureCaptureHints.enable = true
+
+[language-server.vscode-css-language-server.config]
+css.validate = true
+
+[[langauge]]
+name = "markdown"
+auto-format = true
+soft-wrap = { enable = true, wrap-at-text-width = true }

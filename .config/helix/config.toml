@@ -1,0 +1,41 @@
+theme = "zed_onelight"
+# theme = "zed_onedark"
+
+[editor]
+scrolloff = 99
+cursorline = true
+auto-format = true
+completion-trigger-len = 1
+bufferline = "multiple"
+color-modes = true
+idle-timeout = 100
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+[editor.statusline]
+left = ["mode", "spacer", "version-control", "spacer", "spinner"]
+center = ["file-name", "file-modification-indicator"]
+right = ["diagnostics", "selections", "spacer", "position-percentage", "file-type"]
+
+[keys.normal]
+V = ["extend_line_below"]
+X = ["extend_line_above"]
+"space" = { w = [":format", ":write"] }
+
+[keys.insert]
+"C-space" = "completion"
+j = { k = "normal_mode" }
+"C-backspace" = "delete_word_backward"
