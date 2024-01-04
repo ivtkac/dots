@@ -7,6 +7,8 @@ install_files() {
   destination=$2
   exclude=$3
 
+  mkdir -p "$destination"
+
   shopt -s dotglob
 
   for file in "$source"/*; do
@@ -20,10 +22,8 @@ install_files() {
 }
 
 install_dots() {
-  dir=$(pwd)
-
-  install_files "$dir/home/.config" "$CONFIG_DIR"
-  install_files "$dir/home" "$HOME" ".config"
+  install_files "$PWD/home/.config" "$CONFIG_DIR"
+  install_files "$PWD/home" "$HOME" ".config"
 }
 
 install_dots
