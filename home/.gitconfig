@@ -5,7 +5,7 @@
 [core]
 	quotePath = false
 	ignorecase = false
-	editor = flatpak-spawn --host flatpak run re.sonny.Commit
+	# editor = flatpak-spawn --host flatpak run re.sonny.Commit
 
 [include]
 	path = .gitconfig.local
