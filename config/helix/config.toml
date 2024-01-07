@@ -1,12 +1,12 @@
-theme = "adwaita-dark"
+theme = "fleet_dark"
 
 [editor]
-line-number = "relative"
+auto-format = true
+completion-trigger-len = 1
+bufferline = "multiple"
 cursorline = true
 color-modes = true
-bufferline = "multiple"
-soft-wrap = { enable = true }
-idle-timeout = 0
+idle-timeout = 100
 
 [editor.cursor-shape]
 insert = "bar"
@@ -17,5 +17,14 @@ select = "underline"
 display-signature-help-docs = true
 display-inlay-hints = true
 
+[editor.soft-wrap]
+enable = true
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
 [editor.statusline]
-right = ["version-control", "diagnostics", "selections", "position", "file-encoding"]
+left = ["mode", "spacer", "version-control", "spacer", "spinner"]
+center = ["file-name", "file-modification-indicator"]
+right = ["diagnostics", "selections", "spacer", "position-percentage", "file-type"]
