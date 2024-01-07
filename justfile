@@ -97,3 +97,5 @@ configure-gnome:
 		org.nickvision.tubeconverter org.gnome.World.Secrets org.gnome.World.PikaBackup org.gnome.Weather org.gnome.TextEditor org.gnome.Snapshot \
 		org.gnome.NautilusPreviewer org.gnome.Maps org.gnome.Loupe org.gnome.Geary org.gnome.Evince org.gnome.clocks org.gnome.Epiphany org.gnome.Calendar \
 		org.gnome.Calculator io.bassi.Amberol com.github.marhkb.Pods dev.geopjr.Tuba org.gnome.Contacts	com.spotify.Client -y
+
+	xdg-mime default nautilus.desktop inode/directory
