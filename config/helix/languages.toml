@@ -5,7 +5,7 @@ inlayHints.closureCaptureHints.enable = true
 [language-server.vscode-css-language-server.config]
 css.validate = true
 
-[[langauge]]
+[[language]]
 name = "markdown"
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
 auto-format = true
