@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 # General aliases
 
 alias ls='ls --color=auto'
