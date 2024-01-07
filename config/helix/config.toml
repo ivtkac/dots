@@ -4,7 +4,6 @@ theme = "adwaita-dark"
 line-number = "relative"
 cursorline = true
 color-modes = true
-auto-save = true
 bufferline = "multiple"
 soft-wrap = { enable = true }
 idle-timeout = 0
