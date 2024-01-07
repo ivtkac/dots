@@ -83,7 +83,7 @@ laptop:
 
 # Configure GNOME DE
 configure-gnome:
-	# sudo pacman -Rns gnome-music gnome-calendar gnome-calculator epiphany gnome-clocks gnome-contacts gnome-tour gnome-text-editor gnome-weather gnome-characters gnome-maps sushi totem
+	sudo pacman -Rns gnome-music gnome-calendar gnome-calculator epiphany gnome-clocks gnome-contacts gnome-tour gnome-text-editor gnome-weather gnome-characters gnome-maps sushi totem
 
 	sudo pacman -S gpsd --noconfirm --needed
 	sudo systemctl enable gpsd
