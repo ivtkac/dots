@@ -98,4 +98,4 @@ configure-gnome:
 		org.gnome.NautilusPreviewer org.gnome.Maps org.gnome.Loupe org.gnome.Geary org.gnome.Evince org.gnome.clocks org.gnome.Epiphany org.gnome.Calendar \
 		org.gnome.Calculator io.bassi.Amberol com.github.marhkb.Pods dev.geopjr.Tuba org.gnome.Contacts	com.spotify.Client -y
 
-	xdg-mime default nautilus.desktop inode/directory
+	xdg-mime default org.gnome.Nautilus.desktop inode/directory
