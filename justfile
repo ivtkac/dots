@@ -85,6 +85,9 @@ laptop:
 configure-gnome:
 	# sudo pacman -Rns gnome-music gnome-calendar gnome-calculator epiphany gnome-clocks gnome-contacts gnome-tour gnome-text-editor gnome-weather gnome-characters gnome-maps sushi totem
 
+	sudo pacman -S gpsd --noconfirm --needed
+	sudo systemctl enable gpsd
+
 	gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 	gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
 	flatpak install re.sonny.Commit com.mattjakeman.ExtensionManager org.telegram.desktop org.mozilla.firefox com.discordapp.Discord \
