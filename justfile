@@ -88,6 +88,9 @@ configure-gnome:
 	sudo pacman -S gpsd --noconfirm --needed
 	sudo systemctl enable gpsd
 
+	sudo pacman -S webp-pixbuf-loader --noconfirm --needed
+	sudo pacman -S ffmpegthumbnailer --noconfirm --needed
+
 	gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 	gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
 	flatpak install re.sonny.Commit com.mattjakeman.ExtensionManager org.telegram.desktop org.mozilla.firefox com.discordapp.Discord \
