@@ -14,6 +14,8 @@ alias ..5='cd_up 5'
 alias proj='cd ~/Projects'
 alias dot='cd ~/Projects/dotfiles'
 
+alias ports='netstat -tulanp'
+
 alias cpuinfo='lscpu'
 alias meminfo='free -h'
 
@@ -32,9 +34,10 @@ alias src='source $HOME/.bashrc'
 alias less='less -R'
 alias cpwd='pwd | tr -d "\n" | c'
 alias fx='felix'
+alias hx='helix'
 
 alias v='nvim'
-alias hx='helix'
+alias h='helix'
 alias g='git'
 alias t='type'
 alias c='wl-copy'

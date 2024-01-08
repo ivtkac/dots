@@ -71,7 +71,7 @@ dev:
 
 	sudo pacman -S dua-cli tailspin bandwhich --noconfirm --needed
 
-	sudo pacman -S trash-cli nnn felix ripgrep wl-clipboard lazygit --noconfirm --needed 
+	sudo pacman -S trash-cli nnn felix ripgrep wl-clipboard lazygit net-tools --noconfirm --needed 
 
 # Configure docker
 docker:
