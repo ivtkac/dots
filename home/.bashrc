@@ -10,6 +10,10 @@
 # Pull in bash alias/functions definitions
 while read -r f; do source "$f"; done < <(find "$HOME/.bashrc.d/" -name "*.sh" | sort)
 
+[[ -f /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
+[[ -f /usr/share/fzf/key-bindings.bash ]] && source /usr/share/fzf/key-bindings.bash
+[[ -f "$HOME/.local/bin/fzf-bash-completion.sh" ]] && source "$HOME/.local/bin/fzf-bash-completion.sh"
+
 # Settings
 shopt -s autocd
 shopt -s dirspell
@@ -20,7 +24,7 @@ shopt -s extglob
 
 stty -ixon
 
-# bind -x '"\t": fzf_bash_completion'
+bind -x '"\t": fzf_bash_completion'
 bind '"\ec": "$EDITOR .\n"'
 
 # Prompt
