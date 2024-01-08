@@ -83,19 +83,44 @@ laptop:
 
 # Configure GNOME DE
 configure-gnome:
-	sudo pacman -Rns gnome-music gnome-calendar gnome-calculator epiphany gnome-clocks gnome-contacts gnome-tour gnome-text-editor gnome-weather gnome-characters gnome-maps sushi totem
-
 	sudo pacman -S gpsd --noconfirm --needed
-	sudo systemctl enable gpsd
-
+	
 	sudo pacman -S webp-pixbuf-loader --noconfirm --needed
 	sudo pacman -S ffmpegthumbnailer --noconfirm --needed
 
+	sudo pacman -S geary --noconfirm --needed
+	sudo pacman -S celluloid --noconfirm --needed
+
+	yay -S commit --noconfirm --needed
+
+	sudo pacman -S discord --noconfirm --needed
+
+
+	yay -S amberol --needed --noconfirm
+
+	sudo pacman -S secrets --needed --noconfirm
+
+	sudo pacman -S spotifyd --needed --noconfirm
+
+	yay -S pods --needed --noconfirm
+
+	yay -S paper-plane --needed --noconfirm
+
+	sudo pacman -S spotify-launcher --needed --noconfirm
+
 	gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 	gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
-	flatpak install re.sonny.Commit com.mattjakeman.ExtensionManager org.telegram.desktop org.mozilla.firefox com.discordapp.Discord \
-		org.nickvision.tubeconverter org.gnome.World.Secrets org.gnome.World.PikaBackup org.gnome.Weather org.gnome.TextEditor org.gnome.Snapshot \
-		org.gnome.NautilusPreviewer org.gnome.Maps org.gnome.Loupe org.gnome.Geary org.gnome.Evince org.gnome.clocks org.gnome.Epiphany org.gnome.Calendar \
-		org.gnome.Calculator io.bassi.Amberol com.github.marhkb.Pods dev.geopjr.Tuba org.gnome.Contacts	com.spotify.Client -y
 
 	xdg-mime default org.gnome.Nautilus.desktop inode/directory
+
+	sudo loginctl enable-linger $USER
+
+	systemctl --user enable spotifyd.service
+
+	sudo systemctl enable gpsd
+
+	# Remove packages
+	sudo pacman -Rns malcontent
+	sudo pacman -Rns gnome-software
+	sudo pacman -Rns flatpak
+	sudo pacman -Rns totem
