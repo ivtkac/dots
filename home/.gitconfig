@@ -5,7 +5,7 @@
 [core]
 	quotePath = false
 	ignorecase = false
-	editor = re.sonny.Commit
+	editor = flatpak run re.sonny.Commit
 
 [include]
 	path = .gitconfig.local

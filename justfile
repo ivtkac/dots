@@ -82,45 +82,19 @@ laptop:
 	yay -S power-profiles-daemon switcheroo-control --noconfirm --needed
 
 # Configure GNOME DE
-configure-gnome:
-	sudo pacman -S gpsd --noconfirm --needed
-	
+configure-gnome:	
 	sudo pacman -S webp-pixbuf-loader --noconfirm --needed
 	sudo pacman -S ffmpegthumbnailer --noconfirm --needed
 
 	sudo pacman -S geary --noconfirm --needed
-	sudo pacman -S celluloid --noconfirm --needed
-
-	yay -S commit --noconfirm --needed
-
-	sudo pacman -S discord --noconfirm --needed
-
-
-	yay -S amberol --needed --noconfirm
-
-	sudo pacman -S secrets --needed --noconfirm
-
-	sudo pacman -S spotifyd --needed --noconfirm
-
-	yay -S pods --needed --noconfirm
-
-	yay -S paper-plane --needed --noconfirm
-
-	sudo pacman -S spotify-launcher --needed --noconfirm
 
 	gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 	gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
 
 	xdg-mime default org.gnome.Nautilus.desktop inode/directory
 
-	sudo loginctl enable-linger $USER
-
-	systemctl --user enable spotifyd.service
-
+	sudo pacman -S gpsd --noconfirm --needed
 	sudo systemctl enable gpsd
 
 	# Remove packages
-	sudo pacman -Rns malcontent
-	sudo pacman -Rns gnome-software
-	sudo pacman -Rns flatpak
 	sudo pacman -Rns totem
