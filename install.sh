@@ -21,6 +21,7 @@ install_files() {
 install_dots() {
   install_files "$PWD/home" "$HOME"
   install_files "$PWD/config" "$CONFIG_DIR"
+  install_files "$PWD/local" "$HOME/.local"
 }
 
 install_dots
