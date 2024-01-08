@@ -1,18 +1,21 @@
 [user]
 	email = git@tkachuk.email
 	name = Ivan Tkachuk
-
+[url "ssh://git@github.com/"]
+	instedaOf = https://github.com/
+[url "ssh://git@gitlab.com/"]
+  insteadOf = https://gitlab.com/
 [core]
 	quotePath = false
 	ignorecase = false
 	editor = flatpak run re.sonny.Commit
-
-[include]
-	path = .gitconfig.local
-
+	pager = delta --syntax-theme gruvbox-dark
+[commit]
+	verbose = true
+	tempalte = ~/.git-commit-template
 [push]
 	default = current
-
+	autoSetupRemote = true
 [alias]
 	st = status
 	ls = ls-files
@@ -34,33 +37,22 @@
 	nevermind = reset --hard HEAD
 	undo = reset --soft HEAD~1
 
+	new = checkout -b
 [fetch]
 	parallel = 10
-
-[pull]
-	ff = only
-
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
 [merge]
 	conflictstyle = diff3
-
 [diff]
 	colorMoved = default
-
 [init]
 	defaultBranch = main
-
-[hub]
-	protocol = https
-
-[github]
-	user = hxrv0q
-	
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
-
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
-
-

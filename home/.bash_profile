@@ -1,12 +1,6 @@
-# Read ~/.profile
-if [[ -e "$HOME/.profile" ]]; then
-  source "$HOME/.profile"
-fi
+#!/usr/bin/env bash
 
-# Always read ~/.bashrc for interactive shells
-if [[ -n "$BASH" ]]; then
-  case $- in
-    *i*) source "$HOME/.bashrc" ;;
-      *) return ;;
-  esac
-fi
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"

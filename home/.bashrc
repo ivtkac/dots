@@ -1,74 +1,41 @@
-# .bashrc
+#!/usr/bin/env bash
+#
+# ~/.bashrc
+# The beginning of of everything.
+#
 
+# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Source functions and aliases
-[ -f "$HOME/.bash_functions" ] && . "$HOME/.bash_functions"
-[ -f "$HOME/.bash_aliases" ] && . "$HOME/.bash_aliases"
+# Pull in bash alias/functions definitions
+while read -r f; do source "$f"; done < <(find "$HOME/.bashrc.d/" -name "*.sh" | sort)
 
-# Set up Path
-pathadd "$HOME/.local/bin"
-pathadd "$HOME/.cargo/bin"
-
-# Initialize Environment
-set_editor
-init_command zoxide "zoxide init bash"
-init_command starship "starship init bash"
-
-# Update window size after every command
-shopt -s checkwinsize
-
-# Automatically trim long paths in the prompt
-if ((BASH_VERSINFO[0] >= 4)); then
-    PROMPT_DIRTRIM=2
-fi
-
-# Turn on recursive globbing (enables ** to recurse all directories)
-if ((BASH_VERSINFO[0] >= 4)); then
-    shopt -s globstar
-fi
-
-# Append to the history file, don't overwrite it
+# Settings
+shopt -s autocd
+shopt -s dirspell
+shopt -s cdspell
 shopt -s histappend
-
-# Save multi-line commands as one command
 shopt -s cmdhist
-
-# Huge history. Doesn't apper to slow things down, so why not?
-HISTSIZE=524288
-HISTFILESIZE=131072
-
-# Avoid duplicate entries
-HISTCONTROL=erasedups:ignoreboth
-
-# Don't record some commands
-HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
-
-# Readable time format
-HISTTIMEFORMAT='%F %T '
-
-# Directory navigation
-
-if ((BASH_VERSINFO[0] >= 4)); then
-    # Prepend cd to directory names automatically
-    shopt -s autocd
-
-    # Correct spelling errors during tab-completion
-    shopt -s dirspell
-
-    # Correct spelling errors in arguments supplied to cd
-    shopt -s cdspell
-fi
-
-# This defines where cd looks for targets
-# Add the directories you want to have fast access to, separated by colon
-CDPATH=".:~"
-
-# Allow expanded glob syntax
 shopt -s extglob
 
-# Exclude "." and ".." from glob expansion
-GLOBIGNORE=".:.."
+stty -ixon
 
-# Set PS1
-PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \$ "
+# bind -x '"\t": fzf_bash_completion'
+bind '"\ec": "$EDITOR .\n"'
+
+# Prompt
+PS1='\u@\[\e[34m\]\h\[\e[39m\] \w '
+
+# General variables
+export XDG_CONFIG_HOME="$HOME/.config"
+export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin"
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
+export HISTTIMEFORMAT="%h %d %H:%M:%S "
+export HISTCONTROL=ignorespace:erasedups
+export HISTSIZE=2000
+export CDPATH=".:~"
+export GLOBIGNORE=".:.."
+
+# Initialize directory jumper
+eval "$(zoxide init bash)"

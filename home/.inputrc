@@ -1,23 +1,23 @@
-# Silence bell
-set bell-style none
+# Settings
+set colored-stats On
+set completion-prefix-display-length 3
+set completion-ignore-case On
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set visible-stats On
+set enable-bracketed-paste On
 
-# Perform file completion in a case insensitive-fashion
-set completion-ignore-case on
-
-# Treat hyphens and underscores as equivalent
-set completion-map-case on
-
-# Display matches for ambiguous patterns at first tab press
-set show-all-if-ambiguous on
-
-# Show a trailing slash after directory names
-set mark-directories on
-
-# Immediately add a trailing slash when automcompleting symlinks to directories
-set mark-symlinked-directories on
-
-# Enable incremental history search with arrows
+# Shell Shortcuts
 "\e[A": history-search-backward
 "\e[B": history-search-forward
-"\e[C": forward-char
-"\e[D": backward-char
+"\C-f": "fg\n"
+"\e": "tere\n"
+
+# Git Shortcuts
+"\er": redraw-current-line
+"\C-g\C-f": "$(gs)\e\C-e\er"
+"\C-g\C-b": "$(gb)\e\C-e\er"
+"\C-g\C-t": "$(gt)\e\C-e\er"
+"\C-g\C-l": "$(gl)\e\C-e\er"
+"\C-g\C-r": "$(gr)\e\C-e\er"
+"\C-g\C-v": "$(gs)\e\C-e\er"
