@@ -64,10 +64,12 @@ dev:
 	yay -S topgrade-bin --needed --noconfirm
 
 	# LSps
-	yay -S typescript-language-server rust-analyzer --noconfirm --needed
+	sudo pacman -S typescript-language-server rust-analyzer --noconfirm --needed
 
 	# Containers
-	yay -S docker podman kubectl --noconfirm --needed
+	sudo pacman -S docker podman kubectl --noconfirm --needed
+
+	sudo pacman -S dua-cli tailspin bandwhich --noconfirm --needed
 
 # Configure docker
 docker:
