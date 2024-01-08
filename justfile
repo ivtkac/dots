@@ -3,51 +3,51 @@ default:
 	just --list
 
 # Install AUR helper
-yay:
+paru:
 	#!/usr/bin/env bash
-	[ -f /tmp/yay-bin ] &&  rm -rf /tmp/yay-bin
+	[ -f /tmp/paru-bin ] &&  rm -rf /tmp/paru-bin
 
-	git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
-	cd /tmp/yay-bin && makepkg -si --noconfirm
+	git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin
+	cd /tmp/paru-bin && makepkg -si --noconfirm
 
-core: yay base fonts media
+core: paru base fonts media
 
 # Base packages
 base:
 	# manpages
-	yay -S man-pages man-db --noconfirm --needed
+	paru -S man-pages man-db --noconfirm --needed
 
 	# sound
-	yay -S pipewire-alsa pipewire-pulse wireplumber alsa-utils alsa-firmware --noconfirm --needed
+	paru -S pipewire-alsa pipewire-pulse wireplumber alsa-utils alsa-firmware --noconfirm --needed
 
 	# xdg
-	yay -S xdg-utils xdg-user-dirs xdg-user-dirs-gtk --noconfirm --needed
+	paru -S xdg-utils xdg-user-dirs xdg-user-dirs-gtk --noconfirm --needed
 
 	# compressions
-	yay -S zip unzip --noconfirm --needed
+	paru -S zip unzip --noconfirm --needed
 
 	# utils
-	yay -S nano zsync rsync less dialog curl tracker bash-completion --noconfirm --needed
+	paru -S nano zsync rsync less dialog curl tracker bash-completion --noconfirm --needed
 
 	# network 
-	yay -S networkmanager bluez --noconfirm --needed
+	paru -S networkmanager bluez --noconfirm --needed
 
 # Configure fonts
 fonts:
-	yay -S ttf-dejavu noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols \
+	paru -S ttf-dejavu noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols \
 		ttf-meslo-nerd gnu-free-fonts ttf-liberation cantarell-fonts --noconfirm --needed
 
 # Configure media
 media:
-	yay -S ffmpeg gst-plugins-{bad,base,good,ugly} gstreamer-vaapi gst-plugin-pipewire gst-libav --noconfirm --needed
+	paru -S ffmpeg gst-plugins-{bad,base,good,ugly} gstreamer-vaapi gst-plugin-pipewire gst-libav --noconfirm --needed
 
 # Install needed packages for pinters
 printers:
-	yay -S cups system-config-printer cups-pk-helper --noconfirm --needed
+	paru -S cups system-config-printer cups-pk-helper --noconfirm --needed
 
 # Configure nvidia
 nvidia:
-	yay -S nvidia --noconfirm --needed
+	paru -S nvidia --noconfirm --needed
 
 # Install dev packages
 dev:
@@ -58,10 +58,10 @@ dev:
 	sudo pacman -S helix bat eza starship zoxide zellij --noconfirm --needed
 
 	# VSCode
-	yay -S visual-studio-code-bin --noconfirm --needed
+	paru -S visual-studio-code-bin --noconfirm --needed
 
 	# Upgrade tool
-	yay -S topgrade-bin --needed --noconfirm
+	paru -S topgrade-bin --needed --noconfirm
 
 	# LSps
 	sudo pacman -S typescript-language-server rust-analyzer --noconfirm --needed
@@ -81,7 +81,7 @@ docker:
 
 # Laptop utils
 laptop:
-	yay -S power-profiles-daemon switcheroo-control --noconfirm --needed
+	paru -S power-profiles-daemon switcheroo-control --noconfirm --needed
 
 # Configure GNOME DE
 configure-gnome:	
