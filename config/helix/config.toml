@@ -1,4 +1,4 @@
-theme = "fleet_dark"
+theme = "zed_onedark"
 
 [editor]
 auto-format = true
@@ -22,7 +22,6 @@ enable = true
 
 [editor.indent-guides]
 render = true
-skip-levels = 1
 
 [editor.statusline]
 left = ["mode", "spacer", "version-control", "spacer", "spinner"]
