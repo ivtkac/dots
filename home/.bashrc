@@ -31,7 +31,7 @@ bind '"\ec": "$EDITOR .\n"'
 PS1='\u@\[\e[34m\]\h\[\e[39m\] \w '
 
 # General variables
-export EDITOR="nvim"
+export EDITOR="helix"
 export VISUAL="$EDITOR"
 
 export HISTTIMEFORMAT="%h %d %H:%M:%S "
