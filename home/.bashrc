@@ -31,13 +31,13 @@ bind '"\ec": "$EDITOR .\n"'
 PS1='\u@\[\e[34m\]\h\[\e[39m\] \w '
 
 # General variables
-export XDG_CONFIG_HOME="$HOME/.config"
-export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin"
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
+
 export HISTTIMEFORMAT="%h %d %H:%M:%S "
 export HISTCONTROL=ignorespace:erasedups
 export HISTSIZE=2000
+
 export CDPATH=".:~"
 export GLOBIGNORE=".:.."
 
