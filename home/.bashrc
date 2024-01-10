@@ -12,7 +12,10 @@ while read -r f; do source "$f"; done < <(find "$HOME/.bashrc.d/" -name "*.sh" |
 
 [[ -f /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
 [[ -f /usr/share/fzf/key-bindings.bash ]] && source /usr/share/fzf/key-bindings.bash
-[[ -f "$HOME/.local/bin/fzf-bash-completion.sh" ]] && source "$HOME/.local/bin/fzf-bash-completion.sh"
+
+for f in ~/.bash_completion.d/*; do
+  [[ -f $f ]] && source $f
+done
 
 # Settings
 shopt -s autocd
