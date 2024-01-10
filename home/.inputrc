@@ -11,7 +11,7 @@ set enable-bracketed-paste On
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 "\C-f": "fg\n"
-"\e": "tere\n"
+"\e[Z": "felix\n"
 
 # Git Shortcuts
 "\er": redraw-current-line
