@@ -5,6 +5,7 @@ default:
 # Update system
 update:
 	sudo pacman -Syu
+	flatpak update -y
 
 # Remove unused packages
 cleanup:

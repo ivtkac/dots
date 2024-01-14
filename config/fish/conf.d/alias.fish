@@ -31,7 +31,7 @@ alias gcpno='git cherry-pick --no-commit'
 alias zr='zellij run --'
 alias ze='zellij edit'
 
-alias vim='hx'
+alias vim='helix'
 alias cat='bat'
 alias tmux='zellij'
 alias du='dust'
