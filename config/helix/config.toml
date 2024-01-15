@@ -1,6 +1,7 @@
-theme = "zed_onedark"
+theme = "amberwood"
 
 [editor]
+rulers = [81, 121]
 auto-format = true
 completion-trigger-len = 1
 bufferline = "multiple"

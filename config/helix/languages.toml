@@ -9,6 +9,11 @@ css.validate = true
 command = "ruff-lsp"
 config = { settings = { args = [] } }
 
+[language-server.pylyzer.config]
+diagnostics = true
+inlayHints = true
+smartCompletion = true
+
 [[language]]
 name = "markdown"
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
@@ -17,4 +22,4 @@ rulers = [121]
 
 [[language]]
 name = "python"
-language-servers = [ "pylyzer", "ruff-lsp" ]
+language-servers = [ "pyright", "ruff-lsp" ]
