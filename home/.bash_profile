@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Always read ~/.bashrc
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 export XDG_CONFIG_HOME="$HOME/.config"

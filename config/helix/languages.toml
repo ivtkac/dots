@@ -23,3 +23,4 @@ rulers = [121]
 [[language]]
 name = "python"
 language-servers = [ "pyright", "ruff-lsp" ]
+auto-format = true
