@@ -30,4 +30,4 @@ browse-packages:
 # Identity files not owned by any package
 notowned-packages:
 	find /etc /usr /opt | LC_ALL=C pacman -Qqo - 2>&1 >&- >/dev/null | cut -d ' ' -f 5-
-	
+
