@@ -8,7 +8,7 @@
 [core]
 	quotePath = false
 	ignorecase = false
-	editor = flatpak run re.sonny.Commit
+	editor = nvim
 	pager = delta --syntax-theme gruvbox-dark
 [commit]
 	verbose = true

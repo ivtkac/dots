@@ -20,6 +20,13 @@ local plugins = {
   },
 
   {
+    "nvim-telescope/telescope.nvim",
+    config = function()
+      require("core.utils").load_mappings "telescope"
+    end,
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
   },

@@ -33,6 +33,17 @@ M.general = {
   },
 }
 
+M.telescope = {
+  plugin = true,
+  n = {
+    ["<leader>ls"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Document LSP Symbols" },
+    ["<leader>lS"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "Workspace LSP Symbols" },
+    ["<leader>lr"] = { "<cmd> Telescope lsp_references <CR>", "LSP References" },
+    ["<leader>li"] = { "<cmd> Telescope lsp_implementations <CR>", "LSP implementations" },
+    ["<leader>lD"] = { "<cmd> Telescoep lsp_type_definitions <CR>", "LSP Type Definition" },
+  },
+}
+
 M.dap = {
   plugin = true,
   n = {
