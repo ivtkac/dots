@@ -68,3 +68,8 @@ gitctl() {
   git clone "$1"
   cd "${1##*/}" || exit
 }
+
+# get gitignore for a specific language
+gitignore() {
+  curl -L -s https://www.gitignore.io/api/"$*" > .gitignore
+}
