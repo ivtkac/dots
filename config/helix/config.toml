@@ -1,8 +1,8 @@
-theme = "amberwood"
+theme = "catppuccin_mocha"
 # theme = "nightfox"
 
 [editor]
-rulers = [81, 121]
+rulers = [81]
 auto-format = true
 completion-trigger-len = 1
 bufferline = "multiple"

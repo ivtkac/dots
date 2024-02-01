@@ -5,14 +5,14 @@ inlayHints.closureCaptureHints.enable = true
 [language-server.vscode-css-language-server.config]
 css.validate = true
 
-[language-server.ruff-lsp]
+[language-server.ruff]
 command = "ruff-lsp"
-config = { settings = { args = [] } }
 
-[language-server.pylyzer.config]
-diagnostics = true
-inlayHints = true
-smartCompletion = true
+[language-server.ruff.config.settings]
+args = ["--ignore", "E501"]
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
 
 [[language]]
 name = "markdown"
@@ -22,5 +22,9 @@ rulers = [121]
 
 [[language]]
 name = "python"
-language-servers = [ "pyright", "ruff-lsp" ]
+language-servers = [ "pyright", "ruff" ]
 auto-format = true
+
+[language.formatter]
+command = "black"
+args = ["--line-length", "79", "--quiet", "-"]
