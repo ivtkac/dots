@@ -1,8 +1,0 @@
-#!/bin/bash
-
-for file in *; do
-  if ! [[ "$file" =~ ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\..* ]]; then
-    mv "$file" "$(uuidgen).${file##*.}"
-    echo "Renamed $file to $(uuidgen).${file##*.}"
-  fi
-done
