@@ -37,3 +37,4 @@ bind '"\ec": "$EDITOR .\n"'
 
 eval "$(zoxide init --cmd cd bash)"
 eval "$(direnv hook bash)"
+eval "$(starship init bash)"
