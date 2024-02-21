@@ -1,6 +1,7 @@
 [user]
 	email = git@tkachuk.email
 	name = Ivan Tkachuk
+	signingKey = /home/me/.ssh/id_ed25519.pub
 [core]
 	quotePath = false
 	ignorecase = false
@@ -8,6 +9,7 @@
 [commit]
 	verbose = true
 	tempalte = ~/.git-commit-template
+	gpgsign = true
 [push]
 	default = current
 	autoSetupRemote = true
@@ -51,3 +53,5 @@
 	instedaOf = https://github.com/
 [url "ssh://git@gitlab.com/"]
 	insteadOf = https://gitlab.com/
+[gpg]
+	format = ssh
