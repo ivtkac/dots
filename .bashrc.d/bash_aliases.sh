@@ -10,7 +10,7 @@ alias ..='cd ..'
 alias ...="cd ../.."
 
 alias proj='cd ~/Projects'
-alias dots='cd ~/Projects/dotfiles'
+alias dots='cd ~/.dotfiles'
 
 alias bat='bat --theme "Catppuccin"'
 
