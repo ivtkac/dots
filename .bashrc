@@ -9,8 +9,8 @@
 # Source .profile
 [ -n "$BASH_VERSION" ] && [ -f "$HOME/.profile" ] && source "$HOME/.profile"
 
-# Source aliases/functions and completion definitions
-while read -r f; do source "$f"; done < <(find "$HOME/.bashrc.d/" "$HOME/.bash_completion.d/" -name "*.sh" | sort)
+# Source aliases/functions definitions
+while read -r f; do source "$f"; done < <(find "$HOME/.bashrc.d/" -name "*.sh" | sort)
 
 ## Settings
 
