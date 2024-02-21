@@ -35,6 +35,6 @@ shopt -s extglob
 # Enable Ctrl-O to open in editor
 bind '"\ec": "$EDITOR .\n"'
 
-eval "$(zoxide init --cmd cd bash)"
+eval "$(zoxide init bash)"
 eval "$(direnv hook bash)"
 eval "$(starship init bash)"
