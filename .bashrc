@@ -1,33 +1,39 @@
 # .bashrc
 
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
+[ -f /etc/bashrc ] && source /etc/bashrc
 
-# Set the GPG_TTY to be the same as the TTY, either via the env var
-# or via the tty command.
-if [ -n "$TTY" ]; then
-  export GPG_TTY=$(tty)
-else
-  export GPG_TTY="$TTY"
-fi
+# Source .profile
+[ -n "$BASH_VERSION" ] && [ -f "$HOME/.profile" ] && source "$HOME/.profile"
 
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
+# Source aliases/functions and completion definitions
+while read -r f; do source "$f"; done < <(find "$HOME/.bashrc.d/" "$HOME/.bash_completion.d/" -name "*.sh" | sort)
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
+## Settings
 
-# User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
-    for rc in ~/.bashrc.d/*; do
-        if [ -f "$rc" ]; then
-            . "$rc"
-        fi
-    done
-fi
-unset rc
+# Prepend cd to directory names automatically
+shopt -s autocd
+
+# Correct spelling errors during tab-completion
+shopt -s dirspell
+
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell
+
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# Save multi-line commands as one command
+shopt -s cmdhist
+
+# Allow expanded glob syntax
+shopt -s extglob
+
+# Enable Ctrl-O to open in editor
+bind '"\ec": "$EDITOR .\n"'
+
+eval "$(zoxide init --cmd cd bash)"
+eval "$(direnv hook bash)"

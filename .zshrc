@@ -1,10 +1,4 @@
-# Set the GPG_TTY to be the same as the TTY, either via the env var
-# or via the tty command.
-if [ -n "$TTY" ]; then
-  export GPG_TTY=$(tty)
-else
-  export GPG_TTY="$TTY"
-fi
+source $HOME/.profile
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -34,3 +28,4 @@ zle_highlight=('paste:none')
 
 
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(direnv hook zsh)"
