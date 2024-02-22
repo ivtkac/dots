@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+opt.mouse = "a"
+
 opt.number = true
 
 opt.tabstop = 2
