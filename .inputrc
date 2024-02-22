@@ -1,0 +1,60 @@
+## Settings
+
+# Set coloring for tab completion
+set colored-stats on
+
+# Show all matches in a single column
+set completion-prefix-display-length 3
+
+# Perfom file completion in a case insensitive fashion
+set completion-ignore-case on
+
+# Show a '/' at the end of directory names
+set mark-directories on
+
+# Immediately add a trailing slash when autocompleting symlinks to directories
+set mark-symlinked-directories on
+
+# Display matches for ambiguous patterns at first tab press
+set show-all-if-ambiguous on
+
+# Denoting a file's type is appended to the filename with a trailing slash
+set visible-stats on
+
+# Enable bracketed paste mode
+set enable-bracketed-paste on
+
+## Shell Shortcuts
+
+# Enable incremental history search with up/down arrows (also Readline goodness)
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Enable Ctrl+F to foreground process
+"\C-f": "fg\n"
+
+## Git Shortcuts
+
+# Enabke Ecs+R to redraw current line
+"\er": redraw-current-line
+
+# Eanble Ctrl+G, then Ctrl+S to view status
+"\C-g\C-f": "$(gs)\e\C-e\er"
+
+# Enable Ctrl+G, then Ctrl+D to view git branches
+"\C-g\C-b": "$(gb)\e\C-e\er"
+
+# Enable Ctrl+G, then Ctrl+T to view tags
+"\C-g\C-t": "$(gt)\e\C-e\er"
+
+# Enable Ctrl+G, then Ctrl+L to view logs
+"\C-g\C-l": "$(gl)\e\C-e\er"
+
+# Enable Ctrl+G, then Ctrl+R to view all remotes with commits
+"\C-g\C-r": "$(gr)\e\C-e\er"
+
+# Enable Ctrl+G, then Ctrl+V to view git tracked/untracked files
+"\C-g\C-v": "$(gs)\e\C-e\er"
+
+# Enable Ctrl+G, then Ctrl+C to add all files and commit
+"\C-g\C-a": "$(git commit)\e\C-e\er"

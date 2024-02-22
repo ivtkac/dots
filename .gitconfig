@@ -1,0 +1,61 @@
+[user]
+	email = git@tkachuk.email
+	name = Ivan Tkachuk
+	signingKey = /home/me/.ssh/id_ed25519.pub
+
+[core]
+	quotePath = false
+	ignorecase = false
+	editor = flatpak run re.sonny.Commit
+
+[commit]
+	verbose = true
+	gpgsign = true
+
+[push]
+	default = current
+	autoSetupRemote = true
+
+[alias]
+	st = status
+	ls = ls-files
+	fa = fetch --all
+	remotes = remote -v
+	branches = branch -v -a
+	discard = checkout --
+	uncommit = reset --mixed HEAD~
+	amend = commit --amend
+	find = "!git ls-files | grep -i"
+	rg = grep -Ii
+	aliases = "!git config -l | grep alias | cut -c7-"
+	clear = clean -fd
+	nevermind = reset --hard HEAD
+	undo = reset --soft HEAD~1
+	new = checkout -b
+
+[fetch]
+	parallel = 10
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+[init]
+	defaultBranch = main
+
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
+
+[url "ssh://git@github.com/"]
+	instedaOf = https://github.com/
+
+[url "ssh://git@gitlab.com/"]
+	insteadOf = https://gitlab.com/
+
+[gpg]
+	format = ssh
