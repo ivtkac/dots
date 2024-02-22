@@ -1,18 +1,21 @@
 local opt = vim.opt
 
--- Line number
 opt.number = true
 
--- Tabs and indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
--- Spelling
+opt.wrap = true
+opt.linebreak = true
+
 opt.spelllang = { "en_us", "uk" }
 opt.spell = true
 
-opt.termguicolors = true
+opt.cursorline = true
+
+opt.splitright = true
+opt.splitbelow = true
 
 vim.g.mapleader = " "
