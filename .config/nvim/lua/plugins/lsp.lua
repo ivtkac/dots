@@ -1,42 +1,36 @@
 return {
   {
     "williamboman/mason.nvim",
+    lazy = false,
     config = function()
       require("mason").setup()
-    end
+    end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "pyright", "ruff_lsp" }
-      })
-    end
+    lazy = false,
+    opts = {
+      auto_install = true,
+    },
   },
   {
     "neovim/nvim-lspconfig",
+    lazy = false,
     config = function()
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
-      lspconfig.tsserver.setup({})
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-      vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
-    end
+      local lspconfig = require("lspconfig")
+      local servers = { "lua_ls", "tsserver" }
+
+      for _, server in ipairs(servers) do
+        lspconfig[server].setup({
+          capabilities = capabilities,
+        })
+      end
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+      vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
+      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+    end,
   },
-  {
-    "nvim-telescope/telescope-ui-select.nvim",
-    config = function()
-      require("telescope").setup({
-        extensions = {
-          ["ui-select"] = {
-            require("telescope.themes").get_dropdown {
-            }
-          }
-        }
-      })
-      require("telescope").load_extension("ui-select")
-    end
-  }
 }
