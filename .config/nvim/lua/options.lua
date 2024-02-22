@@ -1,5 +1,18 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
+local opt = vim.opt
+
+-- Line number
+opt.number = true
+
+-- Tabs and indentation
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.autoindent = true
+
+-- Spelling
+opt.spelllang = { "en_us", "uk" }
+opt.spell = true
+
+opt.termguicolors = true
+
 vim.g.mapleader = " "
