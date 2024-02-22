@@ -19,9 +19,6 @@ alias ports='netstat -tulanp'
 alias cpuinfo='lscpu'
 alias meminfo="free -h"
 
-alias ld="lazydocker"
-alias lg="lazygit"
-
 alias sys="systemctl"
 alias src="source $HOME/.bashrc"
 
