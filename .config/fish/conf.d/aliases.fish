@@ -5,6 +5,7 @@ alias lT='ls -T'
 alias l.='ls -a | rg -E "^\\."'
 
 alias cat="bat" 
+alias hx="helix"
 alias vim="hx"
 alias tmux="zellij"
 alias du="dust"
