@@ -1,7 +1,7 @@
 [user]
 	email = git@tkachuk.email
 	name = Ivan Tkachuk
-  signingkey = B336C5A4
+	signingkey = B336C5A4
 
 [core]
 	quotePath = false
