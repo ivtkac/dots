@@ -33,3 +33,5 @@ export CDPATH=".:~"
 
 # Exlude "." and ".." from glob expansion
 export GLOBIGNORE=".:.."
+
+. "$HOME/.cargo/env"
