@@ -7,7 +7,7 @@ fish_add_path $HOME/.local/bin
 fish_vi_key_bindings
 
 alias cat='bat -pp'
-alica cp='cp -iv'
+alias cp='cp -iv'
 alias fcd='cd $(fd -t d | fzf)'
 alias ga='git add'
 alias gc='git commit'
