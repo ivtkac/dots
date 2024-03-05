@@ -6,7 +6,7 @@ export GPG_TTY=${TTY:-$(tty)}
 # Add local bin directories to PATH
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
-export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Enable using nvim as default editor of other programs.
 # Setting ALTERNATE_EDITOR like this make nano default, if it can't be found.

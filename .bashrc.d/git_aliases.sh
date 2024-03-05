@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+alias gc='git commit'
 alias gf='git fetch'
 alias gd='git diff'
 
