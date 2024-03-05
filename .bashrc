@@ -29,6 +29,9 @@ shopt -s histappend
 # Save multi-line commands as one command
 shopt -s cmdhist
 
+# Turn on checkwinsize
+shopt -s checkwinsize
+
 # Allow expanded glob syntax
 shopt -s extglob
 
