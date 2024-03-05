@@ -38,3 +38,5 @@ bind '"\ec": "$EDITOR .\n"'
 eval "$(zoxide init bash)"
 eval "$(direnv hook bash)"
 eval "$(starship init bash)"
+
+source /home/ivktac/.config/broot/launcher/bash/br

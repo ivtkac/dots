@@ -23,11 +23,15 @@ alias cd='cd' 2>/dev/null
 alias find='fd' 2>/dev/null
 
 # Bat for cat
-alias cat='bat -pp'
+alias cat='bat -pp' 2>/dev/null
 
 # Man for tldr
-alias man='tldr'
+alias man='tldr' 2>/dev/null
 
+# Replace tree with broot
+alias tree='broot' 2>/dev/null
+
+# Good aliases
 alias vi='nvim'
 alias vim='nvim'
 
