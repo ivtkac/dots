@@ -8,8 +8,8 @@ export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
 # Enable using nvim as default editor of other programs.
 # Setting ALTERNATE_EDITOR like this make nano default, if it can't be found.
-export EDITOR="nvim"
-export ALTERNATE_EDITOR="nano"
+export EDITOR=$(which nvim)
+export ALTERNATE_EDITOR=$(which helix)
 
 # Set default pager
 export VISUAL="$EDITOR"
@@ -33,5 +33,10 @@ export CDPATH=".:~"
 
 # Exlude "." and ".." from glob expansion
 export GLOBIGNORE=".:.."
+
+export BAT_THEME="catppuccin"
+export LESS='-R --use-color -Dd+r$Du+b$'
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
 
 . "$HOME/.cargo/env"

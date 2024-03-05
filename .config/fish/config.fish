@@ -4,14 +4,14 @@ set VIRTUAL_ENV_DISABLE PROMPT "1"
 
 fish_add_path $HOME/.local/bin
 
-set -Ux MANPAGER "sh -c 'col -bx | bat -l man -p'"
-set -Ux MANROFFOPT "-c"
-
-set -Ux EDITOR (which nvim)
-set -Ux VISUAL EDITOR
-
 fish_vi_key_bindings
 
-starship init fish | source
-zoxide init fish | source
-direnv hook fish | source
+alias cat='bat -pp'
+alica cp='cp -iv'
+alias fcd='cd $(fd -t d | fzf)'
+alias ga='git add'
+alias gc='git commit'
+alias gs='git status'
+alias gp='git push'
+alias mv='mv -iv'
+alias rm='rm -iv'
