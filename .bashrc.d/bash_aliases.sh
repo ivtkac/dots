@@ -25,8 +25,8 @@ alias find='fd' 2>/dev/null
 # Bat for cat
 alias cat='bat -pp' 2>/dev/null
 
-# Man for tldr
-alias man='tldr' 2>/dev/null
+# Help for tldr
+alias help='tldr' 2>/dev/null
 
 # Replace tree with broot
 alias tree='broot' 2>/dev/null

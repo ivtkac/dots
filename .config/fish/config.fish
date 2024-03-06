@@ -15,3 +15,8 @@ alias gs='git status'
 alias gp='git push'
 alias mv='mv -iv'
 alias rm='rm -iv'
+
+eval "$(zoxide init fish --cmd cd)"
+eval "$(starship init fish)"
+eval "$(direnv hook fish)"
+eval "$(atuin init fish)"
