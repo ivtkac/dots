@@ -41,5 +41,7 @@ export LESS='-R --use-color -Dd+r$Du+b$'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 
+export OPENAI_API_KEY=`pass show api/openai`
+
 . "$HOME/.cargo/env"
 . "$XDG_CONFIG_HOME/broot/launcher/bash/br"

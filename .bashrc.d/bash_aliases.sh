@@ -31,6 +31,9 @@ alias help='tldr' 2>/dev/null
 # Replace tree with broot
 alias tree='broot' 2>/dev/null
 
+# Replace tmux with zellij
+alias tmux='zellij' 2>/dev/null
+
 # Good aliases
 alias vi='nvim'
 alias vim='nvim'

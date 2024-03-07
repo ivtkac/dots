@@ -7,9 +7,6 @@ alias gd='git diff'
 alias gco='git checkout $(gb)'
 alias gcb='git checkout -b'
 
-alias gac='git add -A && git commit -v'
-alias guc='git add -u && git commit -v'
-
 # Push and Pull commands
 alias gp='git push'
 alias gpl='git pull'
