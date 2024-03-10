@@ -4,7 +4,7 @@
 export GPG_TTY=${TTY:-$(tty)}
 
 # Add local bin directories to PATH
-export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.dotnet/tools:$PATH"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
