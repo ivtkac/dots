@@ -6,6 +6,10 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-. "$HOME/.cargo/env"
-
+source "$HOME/.cargo/env"
 source "$HOME/.config/broot/launcher/bash/br"
+
+eval "$(zoxide init bash --cmd cd)"
+eval "$(direnv hook bash)"
+eval "$(starship init bash)"
+eval "$(atuin init bash)"

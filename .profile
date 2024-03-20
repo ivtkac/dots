@@ -3,15 +3,19 @@
 # Set the GPG_TTY to be the same as the TTY, either via the env var or via the tty command.
 export GPG_TTY=${TTY:-$(tty)}
 
-# Add local bin directories to PATH
-export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.dotnet/tools:$PATH"
-
+# XDG base directory specification
+export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+# Set the PATH so it includes user's private bin if it exists
+export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.dotnet/tools:$PATH"
 
 # Enable using nvim as default editor of other programs.
 # Setting ALTERNATE_EDITOR like this make nano default, if it can't be found.
-export EDITOR=$(which nvim)
-export ALTERNATE_EDITOR=$(which helix)
+export EDITOR=nvim
+export ALTERNATE_EDITOR=helix
 
 # Set default pager
 export VISUAL="$EDITOR"
@@ -36,12 +40,14 @@ export CDPATH=".:~"
 # Exlude "." and ".." from glob expansion
 export GLOBIGNORE=".:.."
 
-export BAT_THEME="catppuccin"
+# Set less options
 export LESS='-R --use-color -Dd+r$Du+b$'
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export MANROFFOPT="-c"
 
+# Man pages
+export MANPAGER='nvim +Man!'
+
+# Ripgrep config
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/.ripgreprc"
+
+# OpenAI API key
 export OPENAI_API_KEY=`pass show api/openai`
-
-. "$HOME/.cargo/env"
-. "$XDG_CONFIG_HOME/broot/launcher/bash/br"
