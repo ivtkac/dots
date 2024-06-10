@@ -9,7 +9,6 @@ export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
 export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
-
 # Set the PATH so it includes user's private bin if it exists
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -24,8 +23,12 @@ export VISUAL="$EDITOR"
 # Hardcode the non-xdg compliant files
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 export HISTFIE="$XDG_DATA_HOME/bash/history"
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+
 # TODO: make gnupg compliant with xdg
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+
+# Set the password store directory
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
 # Set the cargo home
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
