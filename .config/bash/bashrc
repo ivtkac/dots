@@ -6,11 +6,12 @@
 # Source global definitions
 [ -f /etc/bashrc ] && source /etc/bashrc
 
+_config_dir=${XDG_CONFIG_HOME:-$HOME/.config}
 # Source .profile
-[ -n "$BASH_VERSION" ] && [ -f "$HOME/.profile" ] && source "$HOME/.profile"
+[ -n "$BASH_VERSION" ] && [ -f "$_config_dir/.profile" ] && source "$_config_dir/.profile"
 
 # Source aliases/functions definitions
-while read -r f; do source "$f"; done < <(find "$HOME/.bashrc.d/" -name "*.sh" | sort)
+while read -r f; do source "$f"; done < <(find "$_config_dir/bash/bashrc.d/" -name "*.sh" | sort)
 
 ## Settings
 
