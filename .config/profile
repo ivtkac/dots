@@ -22,7 +22,7 @@ export VISUAL="$EDITOR"
 
 # Hardcode the non-xdg compliant files
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
-export HISTFIE="$XDG_DATA_HOME/bash/history"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 # TODO: make gnupg compliant with xdg
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"

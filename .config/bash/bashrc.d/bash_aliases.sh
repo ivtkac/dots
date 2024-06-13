@@ -9,7 +9,7 @@ alias ll='eza -l --icons=auto --group-directories-first' 2>/dev/null
 alias l1='eza -1'
 
 # Ripgrep for grep
-alias grep'rg' 2>/dev/null
+alias grep='rg' 2>/dev/null
 alias egrep='rg' 2>/dev/null
 alias fgrep='rg -F' 2>/dev/null
 alias xzgrep='rg -z' 2>/dev/null
@@ -48,7 +48,6 @@ alias meminfo="free -h"
 
 alias sys="systemctl"
 alias src="source $HOME/.bashrc"
-
 
 alias upd='paru -Syu'
 alias fcd='cd $(fd -t d | fzf)'

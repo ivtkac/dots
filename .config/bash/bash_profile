@@ -6,6 +6,8 @@ if [ -f "$_config_dir/bash/bashrc" ]; then
     . "$_config_dir/bash/bashrc"
 fi
 
+export HISTFIE="$XDG_DATA_HOME/bash/history"
+
 # User specific environment and startup programs
 source "$CARGO_HOME/env"
 source "$HOME/.config/broot/launcher/bash/br"
