@@ -34,6 +34,8 @@ alias tree='broot' 2>/dev/null
 # Replace tmux with zellij
 alias tmux='zellij' 2>/dev/null
 
+alias wman='wikiman' 2>/dev/null
+
 # Good aliases
 alias vi='nvim'
 alias vim='nvim'
@@ -49,7 +51,7 @@ alias meminfo="free -h"
 alias sys="systemctl"
 alias src="source $HOME/.bashrc"
 
-alias upd='paru -Syu'
+alias upd='paru -Syuv'
 alias fcd='cd $(fd -t d | fzf)'
 alias cpwd='pwd | tr -d "\n" | c'
 
