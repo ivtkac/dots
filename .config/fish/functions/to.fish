@@ -20,7 +20,7 @@ function to --description "Interactive cd that offers to create directories" --w
     end
 
     builtin cd $argv
-    set cd_stautus $status
+    set cd_status $status
     if test $cd_status -ne 0
         and gum confirm "Create the directory? ($argv[-1])"
         echo "Creating directory"
