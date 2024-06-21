@@ -8,15 +8,6 @@ function to --description "Interactive cd that offers to create directories" --w
             builtin cd $git_root
             return 0
         end
-
-        # If no git root, use fzf to select a directory
-        set selected_dir (find . -type d -print | fzf --height 40% --preview 'tree -C {} | head -200' --preview-window=right:50%:wrap)
-        if test -n "$selected_dir"
-            builtin cd $selected_dir
-            return 0
-        else
-            return 1
-        end
     end
 
     builtin cd $argv
