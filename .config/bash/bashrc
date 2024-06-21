@@ -36,6 +36,3 @@ shopt -s checkwinsize
 
 # Allow expanded glob syntax
 shopt -s extglob
-
-# Enable Ctrl-O to open in editor
-bind '"\ec": "$EDITOR .\n"'

@@ -33,10 +33,14 @@ set enable-bracketed-paste on
 # Enable Ctrl+F to foreground process
 "\C-f": "fg\n"
 
-## Git Shortcuts
 
-# Enabke Ecs+R to redraw current line
+# Enable Ecs+R to redraw current line
 "\er": redraw-current-line
+
+# Enable Esc+C to open in editor
+"\ec": "$EDITOR .\n"
+
+## Git Shortcuts
 
 # Eanble Ctrl+G, then Ctrl+S to view status
 "\C-g\C-f": "$(gs)\e\C-e\er"
