@@ -10,7 +10,7 @@ function to --description "Interactive cd that offers to create directories" --w
         end
 
         # If no git root, use fzf to select a directory
-        set selected_dir (fzf --height 40% --preview 'tree -C {} | head -200' --preview-window=right:50%:wrap)
+        set selected_dir (find . -type d -print | fzf --height 40% --preview 'tree -C {} | head -200' --preview-window=right:50%:wrap)
         if test -n "$selected_dir"
             builtin cd $selected_dir
             return 0
