@@ -24,7 +24,7 @@ export VISUAL="$EDITOR"
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-# TODO: make gnupg compliant with xdg
+# Make gnupg compliant with xdg
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 # Set the password store directory
