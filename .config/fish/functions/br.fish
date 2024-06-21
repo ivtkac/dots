@@ -1,1 +1,1 @@
-/home/me/.local/share/broot/launcher/fish/br.fish
+/home/ivktac/.local/share/broot/launcher/fish/br.fish

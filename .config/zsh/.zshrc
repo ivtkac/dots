@@ -93,3 +93,5 @@ alias g="git"
 alias t="type"
 alias b="bat -p"
 alias l="ls -l"
+
+source /home/ivktac/.config/broot/launcher/bash/br
