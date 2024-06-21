@@ -1,3 +1,6 @@
+[core]
+  editor = flatpak run re.sonny.Commit
+
 [user]
   email = ivktac@gmail.com
   name = Ivan Tkachuk
