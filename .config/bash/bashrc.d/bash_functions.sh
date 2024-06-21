@@ -19,3 +19,27 @@ command_exists() {
 
 	return 1
 }
+
+mvcd() {
+	# Move a file or directory to a new directory and cd into it
+	local cwd=$(pwd)
+	local newcwd=$1
+
+	cd ..
+	mv "$cwd" "$newcwd"
+	cd "$newcwd"
+	pwd
+}
+
+edit() {
+	# Edit a file with the default editor
+	local file=$(find . -type f | fzf) && ${EDITOR:-nvim} "$file"
+}
+
+kproc() {
+	# Kill a process by name
+	local pid=$(ps -ef | sed 1d | fzf | awk '{print $2}')
+	if [ -n "$pid" ]; then
+		kill -9 "$pid"
+	fi
+}
