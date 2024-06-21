@@ -4,13 +4,13 @@
 export GPG_TTY=${TTY:-$(tty)}
 
 # XDG base directory specification
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
-
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
+export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
 # Set the PATH so it includes user's private bin if it exists
-export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.dotnet/tools:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Enable using nvim as default editor of other programs.
 # Setting ALTERNATE_EDITOR like this make nano default, if it can't be found.
@@ -19,6 +19,19 @@ export ALTERNATE_EDITOR=helix
 
 # Set default pager
 export VISUAL="$EDITOR"
+
+# Hardcode the non-xdg compliant files
+export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+# TODO: make gnupg compliant with xdg
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+
+# Set the password store directory
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+
+# Set the cargo home
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
 
 # Readable time format
 export HISTTIMEFORMAT="%F %T "
@@ -47,7 +60,4 @@ export LESS='-R --use-color -Dd+r$Du+b$'
 export MANPAGER='nvim +Man!'
 
 # Ripgrep config
-export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/.ripgreprc"
-
-# OpenAI API key
-export OPENAI_API_KEY=`pass show api/openai`
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/config"

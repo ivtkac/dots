@@ -6,21 +6,11 @@
 alias ls='eza' 2>/dev/null
 alias l.='eza -d .*' 2>/dev/null
 alias ll='eza -l --icons=auto --group-directories-first' 2>/dev/null
+alias la='ls -a'
 alias l1='eza -1'
-
-# Ripgrep for grep
-alias grep'rg' 2>/dev/null
-alias egrep='rg' 2>/dev/null
-alias fgrep='rg -F' 2>/dev/null
-alias xzgrep='rg -z' 2>/dev/null
-alias xzegrep='rg -z' 2>/dev/null
-alias xzfgrep='rg -z -F' 2>/dev/null
 
 # Zoxide is handling cd
 alias cd='cd' 2>/dev/null
-
-# Fd for find
-alias find='fd' 2>/dev/null
 
 # Bat for cat
 alias cat='bat -pp' 2>/dev/null
@@ -33,6 +23,8 @@ alias tree='broot' 2>/dev/null
 
 # Replace tmux with zellij
 alias tmux='zellij' 2>/dev/null
+
+alias wman='wikiman' 2>/dev/null
 
 # Good aliases
 alias vi='nvim'
@@ -49,8 +41,7 @@ alias meminfo="free -h"
 alias sys="systemctl"
 alias src="source $HOME/.bashrc"
 
-
-alias upd='paru -Syu'
+alias upd='paru -Syuv'
 alias fcd='cd $(fd -t d | fzf)'
 alias cpwd='pwd | tr -d "\n" | c'
 

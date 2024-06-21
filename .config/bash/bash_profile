@@ -1,12 +1,15 @@
 # .bash_profile
 
 # Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
+_config_dir=${XDG_CONFIG_HOME:-$HOME/.config}
+if [ -f "$_config_dir/bash/bashrc" ]; then
+    . "$_config_dir/bash/bashrc"
 fi
 
+export HISTFIE="$XDG_DATA_HOME/bash/history"
+
 # User specific environment and startup programs
-source "$HOME/.cargo/env"
+source "$CARGO_HOME/env"
 source "$HOME/.config/broot/launcher/bash/br"
 
 eval "$(zoxide init bash --cmd cd)"
