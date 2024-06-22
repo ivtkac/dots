@@ -39,15 +39,8 @@ alias cpuinfo='lscpu'
 alias meminfo="free -h"
 
 alias sys="systemctl"
-alias src="source $HOME/.bashrc"
 
-alias upd='paru -Syuv'
+alias upd='sudo pacman -Syuv'
 alias fcd='cd $(fd -t d | fzf)'
-alias cpwd='pwd | tr -d "\n" | c'
+alias cpwd='pwd | tr -d "\n" | wl-copy'
 
-alias c="wl-copy"
-alias v="nvim"
-alias g="git"
-alias t="type"
-alias b="bat -pp"
-alias l="ls -l"

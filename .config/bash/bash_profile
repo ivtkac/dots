@@ -12,6 +12,6 @@ export HISTFIE="$XDG_DATA_HOME/bash/history"
 source "$CARGO_HOME/env"
 source "$HOME/.config/broot/launcher/bash/br"
 
-eval "$(zoxide init bash --cmd z)"
+eval "$(zoxide init bash --cmd cd)"
 eval "$(direnv hook bash)"
 eval "$(starship init bash)"
