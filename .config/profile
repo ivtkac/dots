@@ -32,6 +32,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 
 # Set the cargo home
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export PATH="$PATH:$CARGO_HOME/bin"
 
 # Readable time format
 export HISTTIMEFORMAT="%F %T "

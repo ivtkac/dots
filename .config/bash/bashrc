@@ -16,6 +16,9 @@ while read -r f; do source "$f"; done < <(find "$_config_dir/bash/bashrc.d/" -na
 
 ## Settings
 
+# Enable vim keybindings
+# set -o vi
+
 # Prepend cd to directory names automatically
 shopt -s autocd
 
