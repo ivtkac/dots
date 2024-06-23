@@ -44,3 +44,4 @@ alias upd='sudo pacman -Syuv'
 alias fcd='cd $(fd -t d | fzf)'
 alias cpwd='pwd | tr -d "\n" | wl-copy'
 
+alias g='git'

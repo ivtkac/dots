@@ -15,3 +15,6 @@ source "$HOME/.config/broot/launcher/bash/br"
 eval "$(zoxide init bash --cmd cd)"
 eval "$(direnv hook bash)"
 eval "$(starship init bash)"
+
+clear
+fastfetch --config arch

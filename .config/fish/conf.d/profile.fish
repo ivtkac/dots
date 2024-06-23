@@ -13,13 +13,12 @@ set -x ALTERNATE_EDITOR helix
 
 set -x VISUAL $EDITOR
 
-set -x INPUTRC $XDG_CONFIG_HOME/readline/inputrc
-
 set -x GNUPGHOME $XDG_DATA_HOME/gnupg
 
 set -x PASSWORD_STORE_DIR $XDG_DATA_HOME/pass
 
 set -x CARGO_HOME $XDG_DATA_HOME/cargo
+set -x PATH $CARGO_HOME/bin $PATH
 
 set -x MANPAGER 'nvim +Man!'
 
