@@ -25,8 +25,6 @@ alias tree='broot' 2>/dev/null
 # TODO: find how to setup zellij + nvim
 # alias tmux='zellij' 2>/dev/null
 
-alias wman='wikiman' 2>/dev/null
-
 # Good aliases
 alias vi='nvim'
 alias vim='nvim'
