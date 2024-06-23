@@ -158,6 +158,23 @@ keybinds {
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
+
+        bind "Alt f" {
+            LaunchPlugin "filepicker" {
+                close_on_selection true
+            }
+        }
+        bind "Alt t" {
+            NewTab {
+                layout "strider"
+            }
+        }
+        bind "Alt g" {
+            Run "ls" "-ltr" {
+                floating true
+            };
+            ToggleFocusFullscreen;
+        }
     }
     shared_except "normal" "locked" {
         bind "Enter" "Esc" { SwitchToMode "Normal"; }
@@ -182,12 +199,7 @@ keybinds {
     }
     shared_except "tmux" "locked" {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
-    }
-    bind "Alt f" {
-        LaunchPlugin "filepicker" {
-            close_on_selection true
-        }
-    }
+    } 
 }
 
 plugins {
