@@ -12,13 +12,13 @@ set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Execute the current
 
 -- Toggle hlsearch if it's on, otherwise just do "enter"
 set("n", "<CR>", function()
-	---@diagnostic disable-next-line: undefined-field
-	if vim.v.hlsearch == 1 then
-		vim.cmd.nohl()
-		return ""
-	else
-		return k("<CR>")
-	end
+  ---@diagnostic disable-next-line: undefined-field
+  if vim.v.hlsearch == 1 then
+    vim.cmd.nohl()
+    return ""
+  else
+    return k "<CR>"
+  end
 end, { expr = true })
 
 -- Normally these are not good mappings, but I have left/right on my thumb
@@ -38,21 +38,21 @@ set("n", "<M-t>", "<C-W>+")
 set("n", "<M-s>", "<C-W>-")
 
 set("n", "<M-j>", function()
-	if vim.opt.diff:get() then
-		vim.cmd([[normal! ]c]])
-	else
-		vim.cmd([[m .+1<CR>==]])
-	end
+  if vim.opt.diff:get() then
+    vim.cmd [[normal! ]c]]
+  else
+    vim.cmd [[m .+1<CR>==]]
+  end
 end)
 
 set("n", "<M-k>", function()
-	if vim.opt.diff:get() then
-		vim.cmd([[normal! [c]])
-	else
-		vim.cmd([[m .-2<CR>==]])
-	end
+  if vim.opt.diff:get() then
+    vim.cmd [[normal! [c]]
+  else
+    vim.cmd [[m .-2<CR>==]]
+  end
 end)
 
 set("n", "<space>tt", function()
-	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }), { bufnr = 0 })
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
 end)

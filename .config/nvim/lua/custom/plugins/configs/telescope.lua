@@ -1,5 +1,3 @@
-local data = assert(vim.fn.stdpath "data") --[[@as string]]
-
 require("telescope").setup {
   extensions = {
     wrap_results = true,
