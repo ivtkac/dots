@@ -22,7 +22,8 @@ alias help='tldr' 2>/dev/null
 alias tree='broot' 2>/dev/null
 
 # Replace tmux with zellij
-alias tmux='zellij' 2>/dev/null
+# TODO: find how to setup zellij + nvim
+# alias tmux='zellij' 2>/dev/null
 
 alias wman='wikiman' 2>/dev/null
 
