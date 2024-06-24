@@ -17,4 +17,4 @@ eval "$(direnv hook bash)"
 eval "$(starship init bash)"
 
 clear
-fastfetch --config arch
+fastfetch --config minimal
