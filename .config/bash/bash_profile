@@ -15,6 +15,7 @@ source "$HOME/.config/broot/launcher/bash/br"
 eval "$(zoxide init bash --cmd cd)"
 eval "$(direnv hook bash)"
 eval "$(starship init bash)"
+eval "$(fzf --bash)"
 
 clear
 fastfetch --config minimal
