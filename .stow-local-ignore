@@ -1,3 +1,4 @@
 .gitignore
 .git
 install.sh
+installed_flatpaks.txt
