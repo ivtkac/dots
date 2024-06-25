@@ -16,10 +16,10 @@ alias cd='cd' 2>/dev/null
 alias cat='bat -pp' 2>/dev/null
 
 # Help for tldr
-alias help='tldr' 2>/dev/null
+alias help='tldr'
 
-# Replace tree with broot
-alias tree='broot' 2>/dev/null
+# dircolors tree
+alias tree='tree -C'
 
 # Replace tmux with zellij
 # TODO: find how to setup zellij + nvim
@@ -44,3 +44,4 @@ alias fcd='cd $(fd -t d | fzf)'
 alias cpwd='pwd | tr -d "\n" | wl-copy'
 
 alias g='git'
+alias l='ll -Ah'

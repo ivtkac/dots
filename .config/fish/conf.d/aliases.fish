@@ -41,7 +41,7 @@ abbr -a cpwd "pwd | tr -d '\n' | c"
 abbr -a help "tldr"
 
 # Tree aliases
-abbr -a tree "broot"
+abbr -a tree "tree -C"
 
 # Tmux aliases
 abbr -a tmux "zellij"
