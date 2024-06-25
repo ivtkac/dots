@@ -37,8 +37,8 @@ set enable-bracketed-paste on
 # Enable Ecs+R to redraw current line
 "\er": redraw-current-line
 
-# Enable Esc+C to open in editor
-"\ec": "$EDITOR .\n"
+# Enable Esc+E to open in editor
+"\ee": "$EDITOR .\n"
 
 ## Git Shortcuts
 
