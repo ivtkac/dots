@@ -11,6 +11,7 @@ com.jeffser.Alpaca
 com.mattjakeman.ExtensionManager
 com.rafaelmardojai.Blanket
 de.haeckerfelix.Fragments
+de.philippun1.turtle
 de.schmidhuberj.Flare
 de.schmidhuberj.tubefeeder
 dev.bragefuglseth.Keypunch
@@ -22,6 +23,7 @@ io.github.flattool.Warehouse
 io.github.nokse22.Exhibit
 md.obsidian.Obsidian
 net.nokyan.Resources
+org.gnome.Calculator
 org.gnome.Calendar
 org.gnome.Characters
 org.gnome.Contacts
@@ -39,6 +41,5 @@ org.gnome.World.Secrets
 org.gnome.clocks
 org.gnome.font-viewer
 org.mozilla.firefox
-org.nickvision.tagger
 org.nickvision.tubeconverter
 re.sonny.Commit
