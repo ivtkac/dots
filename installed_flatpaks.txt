@@ -3,6 +3,7 @@ app.devsuite.Ptyxis
 app.drey.Dialect
 app.drey.EarTag
 app.drey.KeyRack
+app.drey.Warp
 app.fotema.Fotema
 com.github.hugolabe.Wike
 com.github.marhkb.Pods
@@ -16,6 +17,7 @@ de.schmidhuberj.Flare
 de.schmidhuberj.tubefeeder
 dev.bragefuglseth.Keypunch
 dev.geopjr.Tuba
+info.febvre.Komikku
 io.bassi.Amberol
 io.github.alainm23.planify
 io.github.finefindus.Hieroglyphic
