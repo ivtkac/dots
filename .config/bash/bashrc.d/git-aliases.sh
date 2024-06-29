@@ -2,7 +2,7 @@
 
 alias gc='git commit'
 alias gf='git fetch'
-alias gd='git diff'
+alias gd='batdiff'
 
 alias gco='git checkout $(gb)'
 alias gcb='git checkout -b'
@@ -16,7 +16,6 @@ alias gps='git push $(gr) $(gb)'
 # Advanced commands
 alias gcp='git cherry-pick'
 alias gcpno='git cherry-pick --no-commit'
-
 
 alias gtv='git tag -v $(gt)'
 

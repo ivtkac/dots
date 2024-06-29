@@ -71,5 +71,10 @@ gitctl() {
 
 # get gitignore for a specific language
 gitignore() {
-  curl -L -s https://www.gitignore.io/api/"$*" > .gitignore
+  curl -L -s https://www.gitignore.io/api/"$*" >.gitignore
+}
+
+# Preview
+batdiff() {
+  git diff --name-only --relative --diff-filter=d | xargs bat --diff
 }
