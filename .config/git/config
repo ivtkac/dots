@@ -59,3 +59,6 @@
   s = status --short
   ss = status
   st = status
+
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
