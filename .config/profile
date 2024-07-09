@@ -62,6 +62,9 @@ export MANPAGER='nvim +Man!'
 # Ripgrep config
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/config"
 
+# Remove npm from $HOME
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+
 # Set user-dirs that are not in xdg standard
 XDG_PROJECTS_DIR="$HOME/Projects"
 XDG_GAMES_DIR="$XDG_DATA_HOME/games"
