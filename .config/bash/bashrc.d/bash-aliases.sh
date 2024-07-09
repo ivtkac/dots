@@ -44,4 +44,4 @@ alias fcd='cd $(fd -t d | fzf)'
 alias cpwd='pwd | tr -d "\n" | wl-copy'
 
 alias g='git'
-alias l='ll -Ah'
+alias l='ll -Ah --git'
