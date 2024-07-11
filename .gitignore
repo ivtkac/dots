@@ -1,3 +1,4 @@
 .local/share/gnupg/
 !.local/share/gnupg/gpg-agent.conf
 .config/helix/runtime/
+.config/zed/.tmp*
