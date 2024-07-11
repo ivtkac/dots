@@ -43,3 +43,7 @@ kproc() {
 		kill -9 "$pid"
 	fi
 }
+
+fbump() {
+  flatpak list --app --columns=application > "$DOTS_DIR/installed_flatpaks.txt"
+}
