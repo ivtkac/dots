@@ -39,14 +39,6 @@ return {
         },
       },
     },
-    dependencies = {
-      {
-        "windwp/nvim-ts-autotag",
-        config = function()
-          require("nvim-ts-autotag").setup()
-        end,
-      },
-    },
   },
 
   {
@@ -103,7 +95,7 @@ return {
     end,
   },
 
-   {
+  {
     "nvim-telescope/telescope.nvim",
     opts = {
       extensions_list = { "fzf", "terms", "nerdy", "media" },
