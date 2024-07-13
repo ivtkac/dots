@@ -1,5 +1,6 @@
 app.devsuite.Manuals
 app.devsuite.Ptyxis
+app.drey.Biblioteca
 app.drey.Dialect
 app.drey.EarTag
 app.drey.KeyRack
@@ -30,6 +31,7 @@ org.gnome.Calculator
 org.gnome.Calendar
 org.gnome.Characters
 org.gnome.Contacts
+org.gnome.Decibels
 org.gnome.Epiphany
 org.gnome.Fractal
 org.gnome.Geary
@@ -39,7 +41,7 @@ org.gnome.Music
 org.gnome.NautilusPreviewer
 org.gnome.Papers
 org.gnome.Papers.Devel
-org.gnome.Showtime.Devel
+org.gnome.Showtime
 org.gnome.TextEditor
 org.gnome.Weather
 org.gnome.World.Secrets
