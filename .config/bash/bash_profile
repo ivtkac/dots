@@ -11,10 +11,12 @@ export HISTFIE="$XDG_DATA_HOME/bash/history"
 # User specific environment and startup programs
 # source "$CARGO_HOME/env"
 
-eval "$(zoxide init bash --cmd cd)"
+eval "$(zoxide init bash)"
 eval "$(direnv hook bash)"
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
+
+eval "$(mise activate bash)"
 
 if [ -f $"HOME/.cache/rye/env" ]; then
   . "$HOME/.cache/rye/env"

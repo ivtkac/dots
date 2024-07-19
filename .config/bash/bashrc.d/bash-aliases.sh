@@ -9,9 +9,6 @@ alias ll='eza -l --icons=auto --group-directories-first' 2>/dev/null
 alias la='ls -a'
 alias l1='eza -1'
 
-# Zoxide is handling cd
-alias cd='cd' 2>/dev/null
-
 # Bat for cat
 alias cat='bat -pp' 2>/dev/null
 
