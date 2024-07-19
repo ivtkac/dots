@@ -9,8 +9,12 @@ export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
 export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+
 # Set the PATH so it includes user's private bin if it exists
-export PATH="$HOME/.local/bin:$HOME/.local/share/nvim/mason/bin/:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# Add to the PATH lsp installed by nvim mason
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
 # Enable using nvim as default editor of other programs.
 # Setting ALTERNATE_EDITOR like this make nano default, if it can't be found.
