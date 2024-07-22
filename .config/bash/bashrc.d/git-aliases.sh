@@ -2,7 +2,7 @@
 
 alias gc='git commit'
 alias gf='git fetch'
-alias gd='batdiff'
+alias gd='git diff'
 
 alias gco='git checkout $(gb)'
 alias gcb='git checkout -b'
