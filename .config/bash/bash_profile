@@ -22,3 +22,5 @@ eval "$(mise activate bash)"
 if [ -f $"HOME/.cache/rye/env" ]; then
   . "$HOME/.cache/rye/env"
 fi
+
+bind -x '"\t": fzf_bash_completion'

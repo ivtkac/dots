@@ -73,8 +73,8 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export RYE_HOME="$XDG_CACHE_HOME/rye"
 
 # Set user-dirs that are not in xdg standard
-XDG_PROJECTS_DIR="$HOME/Projects"
-XDG_GAMES_DIR="$XDG_DATA_HOME/games"
+export XDG_PROJECTS_DIR="$HOME/Projects"
+export XDG_GAMES_DIR="$XDG_DATA_HOME/games"
 
 # Set dotfiles dir
-DOTS_DIR="$XDG_DATA_HOME/dotfiles/"
+export DOTS_DIR="$XDG_DATA_HOME/dotfiles/"
