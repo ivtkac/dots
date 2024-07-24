@@ -1,5 +1,5 @@
 [tools]
 node = "22"
-python = "3.12"
+python = "latest"
 uv = "latest"
 rye = "latest"
