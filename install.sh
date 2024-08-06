@@ -4,7 +4,8 @@ stow --target "$HOME" .
 
 flatpaks_to_install=$(cat installed_flatpaks.txt)
 
-read -r "Do you want to install flatpak applications? (y/n) " choice
+read -r -p "Do you want to install flatpak applications? (y/n) " choice
+
 case "$choice" in
 y | Y)
   echo "Installing flatpaks..."
@@ -18,5 +19,7 @@ y | Y)
 
   echo "Flatpak installations complete!"
   ;;
-*) ;;
+*) 
+  echo "Skipping Flatpak installation."
+  ;;
 esac
