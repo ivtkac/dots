@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=org.gnome.Geary
-Exec=flatpak run --command=geary org.gnome.Geary --gapplication-service
-X-Flatpak=org.gnome.Geary
