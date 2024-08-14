@@ -1,5 +1,6 @@
 [tools]
-node = "22"
+node = "latest"
 python = "latest"
 uv = "latest"
 rye = "latest"
+pnpm = "latest"
