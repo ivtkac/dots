@@ -9,12 +9,12 @@ abbr -a cat "bat -pp"
 abbr -a b "bat -pp"
 
 # Ls aliases
-abbr -a ls "eza"
-abbr -a "l." "eza -d .*"
+abbr -a ls "eza --icons"
+abbr -a "l." "eza -d .* --icons"
 abbr -a ll "eza -l --icons=auto --group-directories-first"
-abbr -a l1 "eza -1"
-abbr -a la "ls -a"
-abbr -a l "ls -l"
+abbr -a l1 "eza -1 --icons"
+abbr -a la "eza -a --icons"
+abbr -a l "eza -lah --icons"
 
 # Ripgrep aliases
 abbr -a grep "rg"
@@ -31,11 +31,14 @@ abbr -a zj "zellij"
 # Good aliases
 abbr -a v "nvim"
 abbr -a vi "nvim"
+abbr -a vim "nvim"
+
+abbr -a less "less -R"
 
 abbr -a c "wl-copy"
 
-abbr -a upd "paru -Syuv"
-abbr -a cpwd "pwd | tr -d '\n' | c"
+abbr -a upd "sudo pacman -Syuv"
+abbr -a cpwd "pwd | tr -d '\n' | wl-copy"
 
 # Help aliases
 abbr -a help "tldr"
@@ -45,6 +48,13 @@ abbr -a tree "tree -C"
 
 # Tmux aliases
 abbr -a tmux "zellij"
+
+# Navigation aliases
+abbr -a cd "to"
+abbr -a "-" "cd -"
+abbr -a ".." "cd .."
+abbr -a "..." "cd ../.."
+abbr -a "...." "cd ../../.."
 
 # Git aliases
 abbr -a g "git"
@@ -71,8 +81,4 @@ abbr -a gsc "git switch -c"
 abbr -a gb "git branch"
 abbr -a gl "git log"
 
-abbr -a cd "to"
-abbr -a "-" "cd -"
-abbr -a ".." "cd .."
-abbr -a "..." "cd ../.."
-abbr -a "...." "cd ../../.."
+
