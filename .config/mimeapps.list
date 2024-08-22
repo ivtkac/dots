@@ -110,6 +110,7 @@ audio/x-shorten=com.github.rafostar.Clapper.desktop
 audio/x-tta=com.github.rafostar.Clapper.desktop
 audio/x-wav=com.github.rafostar.Clapper.desktop
 audio/x-xm=com.github.rafostar.Clapper.desktop
+text/markdown=org.gnome.TextEditor.desktop
 
 [Added Associations]
 audio/mpeg=io.bassi.Amberol.desktop;com.github.rafostar.Clapper.desktop;org.gnome.Decibels.desktop;
@@ -220,3 +221,4 @@ audio/x-shorten=com.github.rafostar.Clapper.desktop;
 audio/x-tta=com.github.rafostar.Clapper.desktop;
 audio/x-wav=com.github.rafostar.Clapper.desktop;
 audio/x-xm=com.github.rafostar.Clapper.desktop;
+text/markdown=org.gnome.TextEditor.desktop;

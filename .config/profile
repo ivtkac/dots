@@ -77,4 +77,4 @@ export XDG_PROJECTS_DIR="$HOME/Projects"
 export XDG_GAMES_DIR="$XDG_DATA_HOME/games"
 
 # Set dotfiles dir
-export DOTS_DIR="$XDG_DATA_HOME/dotfiles/"
+export DOTS_DIR="$XDG_PROJECTS_DIR/dotfiles/"
