@@ -43,3 +43,5 @@ alias cpwd='pwd | tr -d "\n" | wl-copy'
 
 alias g='git'
 alias l='ll -Ah --git'
+
+alias venv='[ ! -d "./.venv" ] && python -m venv .venv; source .venv/bin/activate'
