@@ -1,0 +1,29 @@
+[general]
+cpus = 16
+editor = "nvim"
+doas = false
+language = "en-US"
+
+[aur]
+build = "/home/ivktac/.cache/aura/builds"
+cache = "/home/ivktac/.cache/aura/cache"
+clones = "/home/ivktac/.cache/aura/packages"
+hashes = "/home/ivktac/.cache/aura/hashes"
+chroot = []
+ignores = []
+git = false
+hotedit = false
+shellcheck = false
+diff = false
+delmakedeps = false
+clean = false
+warn_unknowns = true
+noconfirm = false
+nocheck = false
+skipdepcheck = false
+reverse = false
+
+[backups]
+snapshots = "/home/ivktac/.cache/aura/snapshots"
+automatic = true
+
