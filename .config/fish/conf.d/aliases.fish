@@ -9,12 +9,12 @@ abbr -a cat "bat -pp"
 abbr -a b "bat -pp"
 
 # Ls aliases
-abbr -a ls "eza --icons"
-abbr -a "l." "eza -d .* --icons"
+abbr -a ls "eza --icons always"
+abbr -a "l." "eza -d .* --icons always"
 abbr -a ll "eza -l --icons=auto --group-directories-first"
-abbr -a l1 "eza -1 --icons"
-abbr -a la "eza -a --icons"
-abbr -a l "eza -lah --icons"
+abbr -a l1 "eza -1 --icons always"
+abbr -a la "eza -a --icons always"
+abbr -a l "eza -lah --icons always"
 
 # Ripgrep aliases
 abbr -a grep "rg"
