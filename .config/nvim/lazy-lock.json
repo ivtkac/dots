@@ -13,6 +13,8 @@
   "indent-blankline.nvim": { "branch": "master", "commit": "18603eb949eba08300799f64027af11ef922283f" },
   "lazy.nvim": { "branch": "main", "commit": "1159bdccd8910a0fd0914b24d6c3d186689023d9" },
   "mason.nvim": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },
+  "menu": { "branch": "main", "commit": "ae999f34b2502bf4cac85114edf3e33a6a5f6a02" },
+  "minty": { "branch": "main", "commit": "5e459b7fcc1aea3939362e026901992fe9416ce9" },
   "nerdy.nvim": { "branch": "main", "commit": "b467d6609b78d6a5f1e12cbc08fcc1ac87af20f5" },
   "nvcommunity": { "branch": "main", "commit": "5ba7e0fb8faadaef6d17ed80b8a31f2a900912bc" },
   "nvim-autopairs": { "branch": "master", "commit": "ee297f215e95a60b01fde33275cc3c820eddeebe" },
@@ -30,6 +32,7 @@
   "trouble.nvim": { "branch": "main", "commit": "254145ffd528b98eb20be894338e2d5c93fa02c2" },
   "typescript-tools.nvim": { "branch": "master", "commit": "f8c2e0b36b651c85f52ad5c5373ff8b07adc15a7" },
   "ui": { "branch": "v2.5", "commit": "e0f06a9aa43112e94beca8283516e6804112fb8e" },
+  "volt": { "branch": "main", "commit": "a0c9e76cc8998444d22bf27476987529dc010525" },
   "which-key.nvim": { "branch": "main", "commit": "8badb359f7ab8711e2575ef75dfe6fbbd87e4821" },
   "zen-mode.nvim": { "branch": "main", "commit": "29b292bdc58b76a6c8f294c961a8bf92c5a6ebd6" }
 }

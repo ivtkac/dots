@@ -1,22 +1,22 @@
--- EXAMPLE
-local on_attach = require("nvchad.configs.lspconfig").on_attach
-local on_init = require("nvchad.configs.lspconfig").on_init
-local capabilities = require("nvchad.configs.lspconfig").capabilities
+-- load defaults i.e lua_lsp
+require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "clangd", "basedpyright", "unocss", "jsonls", "bashls" }
+
+local nvlsp = require "nvchad.configs.lspconfig"
+local servers = { "ts_ls", "html", "cssls", "clangd", "basedpyright", "unocss", "jsonls", "bashls" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
-    on_attach = on_attach,
-    on_init = on_init,
-    capabilities = capabilities,
+    on_attach = nvlsp.on_attach,
+    on_init = nvlsp.on_init,
+    capabilities = nvlsp.capabilities,
   }
 end
 
 require("typescript-tools").setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
 }
