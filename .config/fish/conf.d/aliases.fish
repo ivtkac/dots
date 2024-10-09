@@ -1,20 +1,6 @@
-abbr -a cmv "command -v"
-
-abbr -a cp "cp -iv"
-abbr -a mv "mv -iv"
-abbr -a rm "rm -iv"
-
 # Bat aliases
 abbr -a cat "bat -pp"
 abbr -a b "bat -pp"
-
-# Ls aliases
-abbr -a ls "eza --icons always"
-abbr -a "l." "eza -d .* --icons always"
-abbr -a ll "eza -l --icons=auto --group-directories-first"
-abbr -a l1 "eza -1 --icons always"
-abbr -a la "eza -a --icons always"
-abbr -a l "eza -lah --icons always"
 
 # Ripgrep aliases
 abbr -a grep "rg"
@@ -24,14 +10,21 @@ abbr -a xzgrep "rg -z"
 abbr -a xzegrep "rg -z"
 abbr -a xzfgrep "rg -z -F"
 
-# Find aliases
-abbr -a find "fd"
+# Good aliases
+abbr -a f "fzf"
+
+abbr -a l "eza --sort=size --all --header --long --group-directories-first --icons always --git -- $argv"
+
 abbr -a zj "zellij"
 
-# Good aliases
 abbr -a v "nvim"
 abbr -a vi "nvim"
 abbr -a vim "nvim"
+
+abbr -a md "python -m textual"
+
+abbr -a code "zeditor"
+abbr -a hx "helix"
 
 abbr -a less "less -R"
 
@@ -57,28 +50,34 @@ abbr -a "..." "cd ../.."
 abbr -a "...." "cd ../../.."
 
 # Git aliases
-abbr -a g "git"
-abbr -a ga "git add"
-abbr -a gad "git add ."
-abbr -a gap "git add --patch"
-abbr -a gr "git restore"
-abbr -a grs "git restore --staged"
-abbr -a gre "git reset"
-abbr -a gc "git commit"
-abbr -a gca "git commit --amend"
-abbr -a "gac" "git add . && git commit"
-abbr -a gd "git diff"
-abbr -a gdc "git diff --cached"
-abbr -a gm "git merge"
-abbr -a gs "git status"
-abbr -a gp "git push"
-abbr -a gpf "git push --force-with-lease"
-abbr -a gpu "git pull"
-abbr -a gf "git fetch"
-abbr -a gfu "git fetch upstream"
-abbr -a gsw "git switch"
-abbr -a gsc "git switch -c"
-abbr -a gb "git branch"
-abbr -a gl "git log"
+abbr -a ,a "git add"
+abbr -a ,ad "git add ."
+abbr -a ,ap "git add --patch"
+abbr -a ,r "git restore"
+abbr -a ,rs "git restore --staged"
+abbr -a ,re "git reset"
+abbr -a ,c "git commit"
+abbr -a ,ca "git commit --amend"
+abbr -a ,d "git diff"
+abbr -a ,dc "git diff --cached"
+abbr -a ,m "git merge"
+abbr -a ,s "git status"
+abbr -a ,p "git push"
+abbr -a ,pf "git push --force-with-lease"
+abbr -a ,pu "git pull"
+abbr -a ,f "git fetch"
+abbr -a ,fu "git fetch upstream"
+abbr -a ,sw "git switch"
+abbr -a ,sc "git switch -c"
+abbr -a ,b "git branch"
+abbr -a ,l "git log"
+abbr -a ,st "git stash"
 
-
+abbr -a gi "gh issue"
+abbr -a gil "gh issue list"
+abbr -a giv "gh issue view"
+abbr -a gr "gh pr"
+abbr -a grl "gh pr list"
+abbr -a grv "gh pr view"
+abbr -a grc "gh pr checkout"
+abbr -a gb "gh browse"

@@ -5,12 +5,12 @@ function to --description "Interactive cd that offers to create directories" --w
     if is_empty $argv
         set git_root (git rev-parse --git-dir 2>/dev/null | path dirname)
         if test $status -eq 0 -a "$git_root" != .
-            builtin cd $git_root
+            cd $git_root
             return 0
         end
     end
 
-    builtin cd $argv
+    cd $argv
     set cd_status $status
     if test $cd_status -ne 0
         and gum confirm "Create the directory? ($argv[-1])"

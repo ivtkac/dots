@@ -1,35 +1,39 @@
-set -x GPG_TTY (tty)
+set -gx GPG_TTY (tty)
 
-set -x XDG_CONFIG_HOME $HOME/.config
-set -x XDG_CACHE_HOME $HOME/.cache
-set -x XDG_DATA_HOME $HOME/.local/share
-set -x XDG_STATE_HOME $HOME/.local/state
-set -x XDG_RUNTIME_DIR /run/user/(id -u)
+set -gx XDG_CONFIG_HOME $HOME/.config
+set -gx XDG_CACHE_HOME $HOME/.cache
+set -gx XDG_DATA_HOME $HOME/.local/share
+set -gx XDG_STATE_HOME $HOME/.local/state
+set -gx XDG_RUNTIME_DIR /run/user/(id -u)
 
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/share/nvim/mason/bin
 
-set -x EDITOR nvim
-set -x ALTERNATE_EDITOR helix
+set -gx HISTSIZE 10000
+set -gx SAVEHIST 10000
 
-set -x VISUAL $EDITOR
+set -gx EDITOR nvim
+set -gx ALTERNATE_EDITOR zeditor
+set -gx VISUAL $EDITOR
 
-set -x GNUPGHOME $XDG_DATA_HOME/gnupg
+set -gx GNUPGHOME $XDG_DATA_HOME/gnupg
+set -gx PASSWORD_STORE_DIR $XDG_DATA_HOME/pass
 
-set -x PASSWORD_STORE_DIR $XDG_DATA_HOME/pass
+set -gx CARGO_HOME $XDG_DATA_HOME/cargo
+fish_add_path $CARGO_HOME/bin
 
-set -x CARGO_HOME $XDG_DATA_HOME/cargo
-fish_add_path $CARGO_HOME/bin 
+set -gx MANPAGER 'nvim +Man!'
 
-set -x MANPAGER 'nvim +Man!'
+set -gx RIPGREP_CONFIG_PATH $XDG_CONFIG_HOME/ripgrep/config
+set -gx NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
+set -gx RYE_HOME $XDG_CACHE_HOME/rye
 
-set -x RIPGREP_CONFIG_PATH $XDG_CONFIG_HOME/ripgrep/config
+set -gx PNPM_HOME $XDG_DATA_HOME/pnpm
+fish_add_path $PNPM_HOME
 
-set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
+# Set up custom XDG directories
+set -gx XDG_PROJECTS_DIR $HOME/Projects
+set -gx XDG_GAMES_DIR $XDG_DATA_HOME/games
+set -gx DOTS_DIR $XDG_PROJECTS_DIR/dotfiles
 
-set -x RYE_HOME $XDG_CACHE_HOME/rye
-
-set -x XDG_PROJECTS_DIR $HOME/Projects
-set -x XDG_GAMES_DIR $XDG_DATA_HOME/games
-
-set -x DOTS_DIR $XDG_PROJECTS_DIR/dotfiles
+# Custom fzf
