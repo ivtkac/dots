@@ -1,6 +1,14 @@
-[language-server.rust-analyzer.config]
-checkOnSave.command = "clippy"
-inlayHints.closureCaptureHints.enable = true
+[language-server.deno]
+command = "deno"
+args = ["lsp"]
+config = { enable = true, unstable = true, lint = true }
+
+[languager-server.rust-analyzer.config]
+check.command = "clippy"
+
+[languager-server.vtsls]
+command = "vtsls"
+args = ["--stdio"]
 
 [language-server.vscode-css-language-server.config]
 css.validate = true
@@ -15,14 +23,24 @@ args = ["--ignore", "E501"]
 typeCheckingMode = "basic"
 
 [[language]]
-name = "markdown"
-formatter = { command = "prettier", args = ["--parser", "markdown"] }
+name = "typescript"
+language-servers = ["vtsls"]
+
+[[language]]
+name = "fish"
 auto-format = true
+formatter = { command = "fish_indent" }
+
+
+[[language]]
+name = "markdown"
+formatter = { command = "deno", args = ["--ext", "md", "-"] }
+auto-format = false
 rulers = [121]
 
 [[language]]
 name = "python"
-language-servers = [ "pyright", "ruff" ]
+language-servers = ["pyright", "ruff"]
 auto-format = true
 
 [language.formatter]

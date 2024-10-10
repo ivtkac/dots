@@ -2,13 +2,23 @@ theme = "catppuccin_mocha"
 
 [editor]
 true-color = true
-rulers = [81]
-auto-format = true
+color-modes = true
+line-number = "relative"
+idle-timeout = 0
 completion-trigger-len = 1
 bufferline = "multiple"
 cursorline = true
-color-modes = true
-idle-timeout = 100
+
+[editor.statusline]
+left = ["mode", "spacer", "version-control", "spacer", "spinner"]
+center = ["file-name", "file-modification-indicator"]
+right = [
+    "diagnostics",
+    "selections",
+    "spacer",
+    "position-percentage",
+    "file-type",
+]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -17,6 +27,7 @@ select = "underline"
 
 [editor.lsp]
 display-signature-help-docs = true
+display-messages = true
 display-inlay-hints = true
 
 [editor.soft-wrap]
@@ -24,8 +35,76 @@ enable = true
 
 [editor.indent-guides]
 render = true
+character = "▏"
+skip-levels = 1
 
-[editor.statusline]
-left = ["mode", "spacer", "version-control", "spacer", "spinner"]
-center = ["file-name", "file-modification-indicator"]
-right = ["diagnostics", "selections", "spacer", "position-percentage", "file-type"]
+# [editor.inline-diagnostics]
+# cursor-line = "hint"
+# other-lines = "hint"
+
+[editor.whitespace]
+render.newline = "all"
+characters.newline = "↵"
+
+[keys.normal]
+a = ["append_mode", "collapse_selection"]
+i = ["insert_mode", "collapse_selection"]
+
+C-h = ":toggle-option lsp.display-inlay-hints"
+
+C-d = ["half_page_down", "goto_window_center"]
+C-u = ["half_page_up", "goto_window_center"]
+
+"*" = ["trim_selections", "search_selection", "select_mode"]
+
+C-q = ":quit-all"
+C-w = ":quit"
+
+C-r = ":reload"
+C-R = ":reload-all"
+
+D = "goto_word"
+
+[keys.normal.space]
+u = ":reset-diff-change"
+
+[keys.normal.space.w]
+V = ["vsplit_new", "file_picker"]
+S = ["hsplit_new", "file_picker"]
+
+[keys.normal."`"]
+c = ["trim_selections", ":pipe ccase --to camel"]
+C = ["trim_selections", ":pipe ccase --to upper-camel"]
+s = ["trim_selections", ":pipe ccase --to snake"]
+S = ["trim_selections", ":pipe ccase --to screamingsnake"]
+k = ["trim_selections", ":pipe ccase --to kebab"]
+K = ["trim_selections", ":pipe ccase --to upperkebab"]
+t = ["trim_selections", ":pipe ccase --to title"]
+r = ["trim_selections", ":pipe ccase --to pseudorandom"]
+
+[keys.select]
+a = ["append_mode", "collapse_selection"]
+i = ["insert_mode", "collapse_selection"]
+
+C-h = ":toggle-option lsp.display-inlay-hints"
+
+C-d = ["half_page_down", "goto_window_center"]
+C-u = ["half_page_up", "goto_window_center"]
+
+D = "extend_to_word"
+
+";" = ["collapse_selection", "normal_mode"]
+
+[keys.select.'`']
+c = ["trim_selections", ":pipe ccase --to camel"]
+C = ["trim_selections", ":pipe ccase --to uppercamel"]
+s = ["trim_selections", ":pipe ccase --to snake"]
+S = ["trim_selections", ":pipe ccase --to screamingsnake"]
+k = ["trim_selections", ":pipe ccase --to kebab"]
+K = ["trim_selections", ":pipe ccase --to upperkebab"]
+t = ["trim_selections", ":pipe ccase --to title"]
+r = ["trim_selections", ":pipe ccase --to pseudorandom"]
+
+[keys.insert]
+C-h = ":toggle-option lsp.display-inlay-hints"
+C-space = "completion"

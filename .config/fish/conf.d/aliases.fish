@@ -26,6 +26,8 @@ abbr -a md "python -m textual"
 abbr -a code "zeditor"
 abbr -a hx "helix"
 
+abbr -a neo "fastfetch"
+
 abbr -a less "less -R"
 
 abbr -a c "wl-copy"
