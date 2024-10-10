@@ -112,10 +112,10 @@ audio/x-wav=com.github.rafostar.Clapper.desktop
 audio/x-xm=com.github.rafostar.Clapper.desktop
 text/markdown=org.gnome.TextEditor.desktop
 application/pdf=org.gnome.Papers.desktop
-x-scheme-handler/http=org.gnome.Epiphany.desktop
-text/html=org.gnome.Epiphany.desktop
-application/xhtml+xml=org.gnome.Epiphany.desktop
-x-scheme-handler/https=org.gnome.Epiphany.desktop
+x-scheme-handler/http=io.github.zen_browser.zen.desktop
+text/html=io.github.zen_browser.zen.desktop
+application/xhtml+xml=io.github.zen_browser.zen.desktop
+x-scheme-handler/https=io.github.zen_browser.zen.desktop
 
 [Added Associations]
 audio/mpeg=io.bassi.Amberol.desktop;com.github.rafostar.Clapper.desktop;org.gnome.Decibels.desktop;
@@ -228,7 +228,7 @@ audio/x-wav=com.github.rafostar.Clapper.desktop;
 audio/x-xm=com.github.rafostar.Clapper.desktop;
 text/markdown=org.gnome.TextEditor.desktop;
 application/pdf=org.gnome.Papers.desktop;
-x-scheme-handler/http=org.gnome.Epiphany.desktop;
-text/html=org.gnome.Epiphany.desktop;
-application/xhtml+xml=org.gnome.Epiphany.desktop;
-x-scheme-handler/https=org.gnome.Epiphany.desktop;
+x-scheme-handler/http=org.gnome.Epiphany.desktop;io.github.zen_browser.zen.desktop;
+text/html=org.gnome.Epiphany.desktop;io.github.zen_browser.zen.desktop;
+application/xhtml+xml=org.gnome.Epiphany.desktop;io.github.zen_browser.zen.desktop;
+x-scheme-handler/https=org.gnome.Epiphany.desktop;io.github.zen_browser.zen.desktop;
