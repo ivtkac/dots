@@ -8,6 +8,7 @@ set -gx XDG_RUNTIME_DIR /run/user/(id -u)
 
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/share/nvim/mason/bin
+fish_add_path $XDG_CACHE_HOME/.bun/bin
 
 set -gx HISTSIZE 10000
 set -gx SAVEHIST 10000
