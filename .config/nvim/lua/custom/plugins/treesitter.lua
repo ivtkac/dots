@@ -5,7 +5,12 @@ return {
     branch = "main",
     lazy = false,
     config = function()
-      require("custom.configs.treesitter").setup()
+      require("nvim-treesitter").setup {
+        ensure_install = {
+          "core",
+          "stable",
+        },
+      }
     end,
   },
 }

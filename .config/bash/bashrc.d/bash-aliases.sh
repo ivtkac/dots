@@ -13,6 +13,8 @@ alias l1='eza -1'
 # Bat for cat
 alias cat='bat -pp' 2>/dev/null
 
+alias grep='grep --color=auto'
+
 # Help for tldr
 alias help='tldr'
 
