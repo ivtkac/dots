@@ -12,7 +12,6 @@ export HISTFIE="$XDG_DATA_HOME/bash/history"
 # User specific environment and startup programs
 # source "$CARGO_HOME/env"
 
-eval "$(zoxide init bash)"
 eval "$(direnv hook bash)"
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
@@ -31,3 +30,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+eval "$(zoxide init bash)"
