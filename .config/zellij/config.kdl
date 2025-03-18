@@ -1,4 +1,4 @@
-default_shell "fish"
+default_shell "bash"
 // pane_frames false
 
 theme "catppuccin-mocha"
