@@ -4,7 +4,7 @@ return {
     priority = 1000,
     "catppuccin/nvim",
     name = "catppuccin",
-    disabled = true,
+    enabled = false,
     config = function()
       vim.cmd.colorscheme "catppuccin"
     end,
