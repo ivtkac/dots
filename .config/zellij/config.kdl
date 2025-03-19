@@ -1,7 +1,7 @@
 default_shell "bash"
 // pane_frames false
 
-theme "catppuccin-mocha"
+scrollback_editor "/usr/bin/nvim"
 
 keybinds {
   normal {}

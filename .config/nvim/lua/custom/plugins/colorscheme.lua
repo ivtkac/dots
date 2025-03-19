@@ -4,7 +4,7 @@ return {
     priority = 1000,
     "catppuccin/nvim",
     name = "catppuccin",
-    enabled = false,
+    enabled = true,
     config = function()
       vim.cmd.colorscheme "catppuccin"
     end,
@@ -13,6 +13,7 @@ return {
     "Mofiqul/adwaita.nvim",
     lazy = false,
     priority = 1000,
+    enabled = false,
     config = function()
       vim.cmd.colorscheme "adwaita"
     end,

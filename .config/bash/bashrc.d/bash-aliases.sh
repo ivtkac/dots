@@ -24,6 +24,8 @@ alias tree='tree -C'
 # Replace tmux with zellij
 # TODO: find how to setup zellij + nvim
 # alias tmux='zellij' 2>/dev/null
+alias tmux="zellij" 2>/dev/null
+alias hx="helix" 2>/dev/null
 
 # Good aliases
 alias vi='nvim'

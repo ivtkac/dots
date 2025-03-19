@@ -1,4 +1,4 @@
-theme = "adwaita-dark"
+theme = "fleet_dark"
 
 [editor]
 true-color = true
@@ -42,9 +42,9 @@ skip-levels = 1
 # cursor-line = "hint"
 # other-lines = "hint"
 
-[editor.whitespace]
-render.newline = "all"
-characters.newline = "↵"
+# [editor.whitespace]
+# render.newline = "all"
+#characters.newline = "↵"
 
 [keys.normal]
 a = ["append_mode", "collapse_selection"]
