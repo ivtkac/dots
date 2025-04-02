@@ -83,3 +83,5 @@ abbr -a grl "gh pr list"
 abbr -a grv "gh pr view"
 abbr -a grc "gh pr checkout"
 abbr -a gb "gh browse"
+
+alias neofetch="pokeget random --hide-name | fastfetch --file -"

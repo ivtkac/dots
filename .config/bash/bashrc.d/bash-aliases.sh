@@ -24,7 +24,8 @@ alias tree='tree -C'
 # Replace tmux with zellij
 # TODO: find how to setup zellij + nvim
 # alias tmux='zellij' 2>/dev/null
-alias tmux="zellij" 2>/dev/null
+alias ze="zellij" 2>/dev/null
+alias t="tmux" 2>/dev/null
 alias hx="helix" 2>/dev/null
 
 # Good aliases
@@ -49,3 +50,5 @@ alias g='git'
 alias l='ll -Ah --git'
 
 alias venv='[ ! -d "./.venv" ] && python -m venv .venv; source .venv/bin/activate'
+
+alias vm="vboxmanage startvm OracleLinux9.5 --type headless 2>/dev/null; ssh vm"
