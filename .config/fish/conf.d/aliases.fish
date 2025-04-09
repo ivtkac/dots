@@ -35,12 +35,8 @@ abbr -a c wl-copy
 abbr -a upd "sudo pacman -Syuv"
 abbr -a cpwd "pwd | tr -d '\n' | wl-copy"
 
-# Help aliases
-abbr -a help tldr
-
 # Tree aliases
 abbr -a tree "tree -C"
-
 
 # Navigation aliases
 abbr -a cd to
@@ -83,5 +79,3 @@ abbr -a grl "gh pr list"
 abbr -a grv "gh pr view"
 abbr -a grc "gh pr checkout"
 abbr -a gb "gh browse"
-
-alias neofetch="pokeget random --hide-name | fastfetch --file -"

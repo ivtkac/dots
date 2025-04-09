@@ -10,8 +10,8 @@ fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/share/nvim/mason/bin
 fish_add_path $XDG_CACHE_HOME/.bun/bin
 
-set -gx HISTSIZE 10000
-set -gx SAVEHIST 10000
+set -gx HISTSIZE 524288
+set -gx SAVEHIST 131072
 
 set -gx EDITOR nvim
 set -gx ALTERNATE_EDITOR zeditor
@@ -37,4 +37,3 @@ set -gx XDG_PROJECTS_DIR $HOME/Projects
 set -gx XDG_GAMES_DIR $XDG_DATA_HOME/games
 set -gx DOTS_DIR $XDG_PROJECTS_DIR/dotfiles
 
-# Custom fzf
