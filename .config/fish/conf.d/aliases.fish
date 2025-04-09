@@ -1,14 +1,5 @@
 # Bat aliases
-abbr -a cat "bat -pp"
 abbr -a b "bat -pp"
-
-# Ripgrep aliases
-abbr -a grep rg
-abbr -a egrep rg
-abbr -a fgrep "rg -F"
-abbr -a xzgrep "rg -z"
-abbr -a xzegrep "rg -z"
-abbr -a xzfgrep "rg -z -F"
 
 # Good aliases
 abbr -a f fzf
@@ -26,7 +17,7 @@ abbr -a md "python -m textual"
 abbr -a code zeditor
 abbr -a hx helix
 
-abbr -a neo fastfetch
+abbr -a neofetch fastfetch
 
 abbr -a less "less -R"
 
