@@ -1,4 +1,4 @@
-theme = "fleet_dark"
+theme = "catppuccin_mocha"
 
 [editor]
 true-color = true
@@ -13,11 +13,11 @@ cursorline = true
 left = ["mode", "spacer", "version-control", "spacer", "spinner"]
 center = ["file-name", "file-modification-indicator"]
 right = [
-    "diagnostics",
-    "selections",
-    "spacer",
-    "position-percentage",
-    "file-type",
+  "diagnostics",
+  "selections",
+  "spacer",
+  "position-percentage",
+  "file-type",
 ]
 
 [editor.cursor-shape]
