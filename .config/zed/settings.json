@@ -13,12 +13,12 @@
   "remove_trailing_whitespace_on_save": true,
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4"
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },
-  "theme": "Catppuccin Mocha",
+  "theme": "Catppuccin Latte",
   "terminal": {
     "font_family": "MesloLGL Nerd Font",
     "option_as_meta": true
