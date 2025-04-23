@@ -1,35 +1,25 @@
-local opt = vim.opt
+-- options.lua
 
-opt.inccommand = "split"
+-- Set options
+vim.opt.nu = true             -- Line numbers
+vim.opt.relativenumber = true -- Relative line numbers
 
-opt.smartcase = true
-opt.ignorecase = true
+vim.opt.tabstop = 4           -- Tab width
+vim.opt.shiftwidth = 4        -- Indent width
+vim.opt.expandtab = true      -- Use spaces instead of tabs
+vim.opt.smartindent = true    -- Smart indentation
 
-opt.number = true
-opt.relativenumber = true
+vim.opt.hlsearch = true       -- Highlight search results
+vim.opt.incsearch = true      -- Incremental search
 
-opt.splitbelow = true
-opt.splitright = true
+vim.opt.termguicolors = true  -- Enable true color support
 
-opt.signcolumn = "yes"
-opt.shada = { "'10", "<0", "s10", "h" }
+vim.opt.scrolloff = 8         -- Lines to keep above/below cursor
 
-opt.swapfile = false
+vim.opt.updatetime = 50       -- Faster update time for plugins
+vim.opt.timeoutlen = 300      -- Decrease timeout for key mappings
 
-opt.wrap = true
+vim.opt.signcolumn = "yes"    -- Always show sign column
+vim.opt.cmdheight = 1         -- Command line height
 
-opt.formatoptions:remove { "o" }
-
-opt.wrap = true
-opt.linebreak = true
-
-opt.tabstop = 4
-opt.shiftwidth = 4
-
-opt.winborder = 'rounded'
-
-opt.more = false
-
-opt.foldmethod = "manual"
-
-opt.clipboard = "unnamedplus"
+vim.opt.isfname:append("@-@") -- Allow '-' in file names
