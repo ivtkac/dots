@@ -1,3 +1,46 @@
+to() {
+    # Some git trickery first. If the function is called with no arguments,
+    # typically that means to cd to $HOME, but we can be smarter - if you're
+    # in a git repo and not in its root, cd to the root.
+    local git_root git_dir cd_status last_arg
+
+    if [[ $# -eq 0 ]]; then
+      if git_dir=$(git rev-parse --git-dir 2>/dev/null); then
+        git_root=$(dirname "$git_dir")
+        if [[ -n "$git_root" && "$git_root" != "." ]]; then
+          command cd "$git_root"
+          return $?
+        fi
+      fi
+    fi
+
+    command cd "$@"
+    cd_status=$?
+
+    if [[ $cd_status -ne 0 && $# -gt 0 ]]; then
+      last_arg="${!#}"
+
+      if command -v gum >/dev/null && gum confirm "Create the directory? ($last_arg)"; then
+        echo "Creating directory: $last_arg"
+        if command mkdir -p -- "$last_arg"; then
+
+          command cd -- "$last_arg"
+          return $?
+        else
+          echo "Failed to create directory: $last_arg" >&2
+          return 1
+        fi
+      fi
+      return $cd_status
+    else
+      return $cd_status
+    fi
+}
+
+up() {
+  cd $(eval printf '../'%0.s {1..$1})
+}
+
 # Switch to a temporary directory
 cdtmp() {
   cd "$(mktemp -d)" || exit
