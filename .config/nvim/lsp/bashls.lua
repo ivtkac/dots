@@ -7,5 +7,4 @@ return {
   },
   filetypes = { 'bash', 'sh' },
   root_markers = { '.git' },
-  single_file_support = true
 }
