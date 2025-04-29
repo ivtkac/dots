@@ -5,6 +5,7 @@ alias f='fzf'
 alias t='tmux'
 alias g='git'
 alias l='eza --sort=size --all --header --long --group-directories-first --icons always --git'
+alias s='kitten ssh'
 
 alias please='sudo'
 
