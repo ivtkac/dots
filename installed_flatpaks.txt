@@ -20,6 +20,7 @@ com.mattjakeman.ExtensionManager
 com.mojang.Minecraft
 com.pojtinger.felicitas.Multiplex
 com.rafaelmardojai.Blanket
+com.ranfdev.DistroShelf
 com.spotify.Client
 com.usebottles.bottles
 com.valvesoftware.Steam
@@ -78,6 +79,7 @@ org.gnome.World.Iotas
 org.gnome.World.Secrets
 org.gnome.clocks
 org.gnome.font-viewer
+org.gnome.gitlab.YaLTeR.VideoTrimmer
 org.gnome.gitlab.somas.Apostrophe
 org.mozilla.firefox
 org.nickvision.tubeconverter
