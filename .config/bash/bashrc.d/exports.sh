@@ -33,12 +33,7 @@ export GLOBIGNORE=".:.."
 export LESS="-R --use-color"
 
 # Set man pages
-export MANPAGER="nvim +Man!"
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
 
-# FZF config
-export FZF_CTRL_T_OPTS="--height 60% \
---border sharp \
---layout reverse \
---prompt '∷ ' \
---pointer ▶ \
---marker ⇒"
+export FZF_DEFAULT_OPTS="--style minimal --color 16 --layout=reverse --height 30% --preview='bat -p --color=always {}'"
+export FZF_CTRL_R_OPTS="--style minimal --color 16 --info inline --no-sort --no-preview"

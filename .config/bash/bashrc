@@ -12,4 +12,9 @@ _config_dir=${XDG_CONFIG_HOME:-$HOME/.config}
 # Source aliases/functions definitions
 while read -r f; do source "$f"; done < <(find "$_config_dir/bash/bashrc.d/" -name "*.sh")
 
+eval "$(direnv hook bash)"
+eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
+eval "$(starship init bash)"
+
+bind -x '"\e[Z": fzf_bash_completion'
