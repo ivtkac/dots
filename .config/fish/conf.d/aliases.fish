@@ -93,6 +93,6 @@ abbr -a psmem "ps -eo pid,ppid,cmd,rss,stat,%mem,%cpu --sort=-%mem | head"
 abbr -a ff "find . -type f -iname"
 abbr -a fdir "find . -type d -iname"
 
-abbr -a batcheck "upower -i $(upower -e | grep BAT)"
+alias batcheck="upower -i $(upower -e | grep BAT)"
 
-abbr -a cln "sudo pacman -Rns $(pacman -Qtdq)"
+alias cln="sudo pacman -Rns $(pacman -Qtdq)"
