@@ -1,4 +1,5 @@
 alias please='sudo'
+alias fuck='sudo'
 
 # ls aliases
 alias ls='ls --color=auto'
