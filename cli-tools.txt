@@ -1,0 +1,13 @@
+atuin
+direnv
+eza
+fd
+fzf
+ripgrep
+tealderr
+television
+trash-cli
+ugrep
+uutils-coreutils
+yq
+zoxide

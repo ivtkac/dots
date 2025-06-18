@@ -1,98 +1,33 @@
-# Onechar shortcuts
-abbr -a b "bat -pp"
-abbr -a v nvim
-abbr -a f fzf
-abbr -a t tmux
-abbr -a g git
-abbr -a l "eza --sort=size --all --header --long --group-directories-first --icons always --git -- $argv"
+# Eza for ls
+alias ll='eza -l --icons=auto --group-directories-first' 2>/dev/null
+alias l.='eza -d .*' 2>/dev/null
+alias ls='eza' 2>/dev/null
+alias l1='eza -1'
 
-abbr -a please sudo
+# Ripgrep for grep
+alias grep='rg' 2>/dev/null
+alias egrep='rg' 2>/dev/null
+alias fgrep='rg -F' 2>/dev/null
+alias xzgrep='rg -z' 2>/dev/null
+alias xzegrep='rg -z' 2>/dev/null
+alias xzfgrep='rg -z -F' 2>/dev/null
 
-# ls aliases
-abbr -a ls 'ls --color=auto'
-abbr -a la 'ls -a'
-abbr -a l1 'ls -1'
-abbr -a ll 'ls -lAh'
+# Zoxide is handling cd
+alias cd='cd' 2>/dev/null
 
-# Editors
-abbr -a zj zellij
-abbr -a ze zellij
+# Fd for find
+alias find='fd' 2>/dev/null
 
-abbr -a hx helix
-abbr -a md 'python -m textual'
+# Bat for cat
+alias cat="bat --style=plain --pager=never" 2>/dev/null
 
-abbr -a vi nvim
-abbr -a vim nvim
-abbr -a code nvim
+# Fastfetch for neofetch
+alias neofetch="fastfetch" 2>/dev/null
 
-abbr -a neofetch fastfetch
-
-# Colors
-abbr -a grep 'grep --color=auto'
-abbr -a less "less -R"
-
-# Essentials
-abbr -a upd "sudo pacman -Syuv"
-abbr -a cpwd "pwd | tr -d '\n' | wl-copy"
-
-# Easy navigate
-abbr -a cd to
-
-# Git aliases
-abbr -a ,a "git add"
-abbr -a ,ad "git add ."
-abbr -a ,ap "git add --patch"
-abbr -a ,r "git restore"
-abbr -a ,rs "git restore --staged"
-abbr -a ,re "git reset"
-abbr -a ,c "git commit"
-abbr -a ,ca "git commit --amend"
-abbr -a ,co "git checkout"
-abbr -a ,cb "git checkout -b"
-abbr -a ,d "git diff"
-abbr -a ,dc "git diff --cached"
-abbr -a ,m "git merge"
-abbr -a ,s "git status"
-abbr -a ,p "git push"
-abbr -a ,pf "git push --force-with-lease"
-abbr -a ,pu "git pull"
-abbr -a ,f "git fetch"
-abbr -a ,fu "git fetch upstream"
-abbr -a ,sw "git switch"
-abbr -a ,sc "git switch -c"
-abbr -a ,b "git branch"
-abbr -a ,l "git log"
-abbr -a ,st "git stash"
-abbr -a ,cp "git cherry-pick"
-abbr -a ,cpno "git cherry-pick --no-commit"
-
-abbr -a gi "gh issue"
-abbr -a gil "gh issue list"
-abbr -a giv "gh issue view"
-abbr -a gpr "gh pr"
-abbr -a grl "gh pr list"
-abbr -a grv "gh pr view"
-abbr -a grc "gh pr checkout"
-abbr -a gbr "gh browse"
-
-abbr -a vm "vboxmanage startvm OracleLinux 9.5 --type headless 2>/dev/null; ssh vm"
-
-abbr -a chownme "sudo chown -R $USER:$USER"
-
-abbr -a chx "chmod +x"
-
-abbr -a fstor "sudo find / -type f -exec du -h {} + | sort -hr | head"
-abbr -a ducwd "du -sh * .[!.]* | sort -h"
-
-abbr -a lsdof "sudo lsof +L1"
-
-abbr -a psa "ps aux"
-abbr -a psf "ps auxf"
-abbr -a psmem "ps -eo pid,ppid,cmd,rss,stat,%mem,%cpu --sort=-%mem | head"
-
-abbr -a ff "find . -type f -iname"
-abbr -a fdir "find . -type d -iname"
-
-alias batcheck="upower -i $(upower -e | grep BAT)"
-
-alias cln="sudo pacman -Rns $(pacman -Qtdq)"
+# Helix for all editors
+alias hx="helix" 2>/dev/null
+alias vi="helix" 2>/dev/null
+alias vim="helix" 2>/dev/null
+alias nvim="helix" 2>/dev/null
+alias nano="helix" 2>/dev/null
+alias code="helix" 2>/dev/null

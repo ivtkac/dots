@@ -1,10 +1,8 @@
-set fish_greeting
-
-set VIRTUAL_ENV_DISABLE PROMPT "1"
-
-# fish_vi_key_bindings
-
-eval "$(zoxide init fish --cmd z)"
-eval "$(starship init fish)"
-eval "$(direnv hook fish)"
-eval "$(mise activate fish)"
+if status is-interactive
+    set -gx STARSHIP_CONFIG /etc/starship.toml
+    set -gx LANG en_US.utf8
+    eval "$(starship init fish)"
+    eval "$(atuin init fish)"
+    eval "$(zoxide init fish --cmd cd)"
+    set -gx HOST (hostname -s)
+end
