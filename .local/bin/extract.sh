@@ -70,11 +70,10 @@ if [ ! -f "$archive" ]; then
   exit 1
 fi
 
-WORKDIR="extracted"
-mkdir -p "$WORKDIR" || { echo -e "${RED} Error: Failed to create working directory '$WORKDIR'${RESET}"; exit 1; }
+WORKDIR=$(mktemp -d "./extracted-XXX" )
 
-cp "$archive" "$WORKDIR/" || { echo -e "${RED} Error: Failed to copy archive to working directory.${RESET}"; exit 1; }
-cd "$WORKDIR" || { echo -e "${RED} Error: Failed to change to working directory '$WORKDIR'.${RESET}"; exit 1; }
+cp "$archive" "$WORKDIR/"
+cd "$WORKDIR"
 
 echo -e "\n${GREEN} 🚀 Starting extraction…${RESET}"
 
