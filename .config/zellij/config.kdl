@@ -1,7 +1,7 @@
-default_shell "bash"
+default_shell "fish"
 // pane_frames false
 
-scrollback_editor "/usr/bin/nvim"
+scrollback_editor "/usr/bin/helix"
 theme "catppuccin-mocha"
 
 keybinds {

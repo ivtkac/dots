@@ -30,7 +30,11 @@ extract() {
 
   case "$mime" in
     application/gzip)
-      out="${archive%.*}"
+      if [[ "$archive" == *.* && "${archive%.*}" != "" ]]; then
+        out="${archive%.*}"
+      else
+        out="$(basename "$archive").out"
+      fi
       gunzip -c "$archive" > "$out"
       ;;
     application/x-tar)
@@ -47,7 +51,7 @@ extract() {
       ;;
     application/x-7z-compressed)
       7z x -y "$archive" >/dev/null
-      out=$(7z l "$current_file" | awk '/^[ ]+[0-9]+/ {print $NF; exit}')
+      out=$(7z l "$archive" | awk '/^[ ]+[0-9]+/ {print $NF; exit}')
       ;;
     *)
       echo -e "${RED} Unsupported archive type: $mime${RESET}"
@@ -85,6 +89,7 @@ fi
 
 while is_archive "$current_file"; do
   next_file=$(extract "$current_file")
+  
   echo -e "${YELLOW} Extracted ${RED} $current_file${RESET}"
 
   rm -f "$current_file"

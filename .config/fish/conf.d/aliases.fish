@@ -31,3 +31,6 @@ alias vim="helix" 2>/dev/null
 alias nvim="helix" 2>/dev/null
 alias nano="helix" 2>/dev/null
 alias code="helix" 2>/dev/null
+
+# Zellij for tmux
+alias tmux="zellij" 2>/dev/null
