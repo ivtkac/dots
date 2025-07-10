@@ -7,7 +7,7 @@ readonly GREEN='\033[1;32m' BLUE='\033[1;34m' YELLOW='\033[1;33m' RED='\033[1;31
 # Check archive type
 is_archive() {
     case $(file --mime-type -b "$1") in
-    application/gzip | application/x-tar | application/zip | application/x-rar | application/x-7z-compressed)
+    application/gzip | application/x-tar | application/zip | application/x-rar | application/x-7z-compressed | application/x-xz)
         return 0
         ;;
     *) return 1 ;;
@@ -30,7 +30,7 @@ extract() {
         fi
         gunzip -c "$archive" >"$out"
         ;;
-    application/x-tar)
+    application/x-tar|application/x-xz)
         tar -xf "$archive"
         out=$(tar -tf "$archive" | head -n1)
         ;;
@@ -130,9 +130,13 @@ if [[ ! -f "$archive" ]]; then
     exit 1
 fi
 
-output_dir="${output_dir:=$(mktemp -d "./extracted-XXX")}"
+output_dir="${output_dir:=$PWD}"
 
-cp "$archive" "$output_dir/"
+is_pwd=false
+if ! cp "$archive" "$output_dir/" 2>/dev/null; then
+    cp "$archive" "$output_dir/$archive.bak"
+    is_pwd=true
+fi
 cd "$output_dir"
 
 [[ "$verbose" = true ]] && echo -e "\n${GREEN} 🚀 Starting extraction…${RESET}"
@@ -164,6 +168,10 @@ while is_archive "$current_file"; do
         break
     fi
 done
+
+if "$is_pwd"; then
+    mv "$archive.bak" "$archive"
+fi
 
 if [[ "$verbose" = true ]]; then
     echo -e "${GREEN} ✅ Done!${RESET}"
