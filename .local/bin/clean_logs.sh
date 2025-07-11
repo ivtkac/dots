@@ -11,6 +11,12 @@ LOG_FILE="/var/log/cleaned.log"
 DAYS_OLD=30
 PREPARE=false
 
+log() {
+    local level="$1"
+    local message="$2"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') [$level] $message" >>"$LOG_FILE"
+}
+
 error() {
     echo "[ERROR] $*" >&2
 }
@@ -40,21 +46,21 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] Cleanup started. Prepare: $PREPARE" >>"$LOG_FILE"
+if [[ "$PREPARE" = false ]]; then
+    log "INFO" "Cleanup started." >>"$LOG_FILE"
+fi
 
 while IFS= read -r -d '' file; do
     if "$PREPARE"; then
-        echo "[INFO] Would delete: $file"
+        echo "$file"
     else
-        echo "[$(date '+%Y-%m-%d %H:%M:%S')] Deleting: $file" >>"$LOG_FILE"
-
         if rm -i "$file"; then
-            echo "Deleted: $file"
+            log "INFO" "Deleted $file" >>"$LOG_FILE"
         else
             error "Failed to delete: $file"
-            echo "[$(date '+%Y-%m-%d %H:%M:%S')] ERROR: Failed to delete: $file" >>"$LOG_FILE"
+            echo "ERROR" "Failed to delete: $file"
         fi
     fi
 done < <(find "$LOG_DIR" -type f -mtime "+$DAYS_OLD" -print0)
 
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] Cleanup finished." >>"$LOG_FILE"
+echo "INFO" "Cleanup finished."
