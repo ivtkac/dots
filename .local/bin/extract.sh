@@ -1,80 +1,228 @@
 #!/bin/bash
+#
+# Extract nested archives based on mime type
+# Supports: tar, tar.gz, tar.xz, zip, rar, 7z, gzip
+
 set -euo pipefail
+IFS=$'\n\t'
 
-### COLORS ###
-readonly GREEN='\033[1;32m' BLUE='\033[1;34m' YELLOW='\033[1;33m' RED='\033[1;31m' RESET='\033[0m'
+declare -r SCRIPT_NAME="${0##*/}"
+declare -r VERSION="1.0"
 
-# Check archive type
-is_archive() {
-    case $(file --mime-type -b "$1") in
-    application/gzip | application/x-tar | application/zip | application/x-rar | application/x-7z-compressed | application/x-xz)
-        return 0
-        ;;
-    *) return 1 ;;
+declare -r GREEN='\033[0;32m'
+declare -r RED='\033[0;31m'
+declare -r YELLOW='\033[0;33m'
+declare -r CYAN='\033[0;36m'
+declare -r RESET='\033[0m'
+
+declare -r SUPPORTED_FORMATS=(
+    "application/gzip"
+    "application/x-tar"
+    "application/zip"
+    "application/x-rar"
+    "application/x-7z-compressed"
+    "application/x-bzip2"
+    "application/x-xz"
+)
+
+log() {
+    local level="$1"
+    shift
+
+    case "$level" in
+    "INFO") [[ "$verbose" = true ]] && echo -e "${GREEN}[INFO]${RESET} $*" ;;
+    "WARN") echo -e "${YELLOW}[WARN]${RESET} $*" >&2 ;;
+    "ERROR") echo -e "${RED}[ERROR]${RESET} $*" >&2 ;;
+    "DEBUG") [[ "$verbose" = true ]] && echo -e "${CYAN}[DEBUG]${RESET} $*" ;;
     esac
 }
 
-# Extract archive based on mime type
-extract() {
-    local archive="$1" mime out
-    mime="$(file --mime-type -b "$archive")"
+check_deps() {
+    local tools=("file" "tar" "gzip" "gunzip")
+    local optional_tools=("unzip" "unrar" "7z" "xz" "bzip2")
+    local missing=()
 
-    [[ "$verbose" = true ]] && >&2 echo -e "${BLUE} Detected: $mime${RESET}"
-
-    case "$mime" in
-    application/gzip)
-        if [[ "$archive" == *.* && "${archive%.*}" != "" ]]; then
-            out="${archive%.*}"
-        else
-            out="$(basename "$archive").out"
+    for tool in "${tools[@]}"; do
+        if ! command -v "$tool" &>/dev/null; then
+            missing+=("$tool")
         fi
-        gunzip -c "$archive" >"$out"
+    done
+
+    if [[ "${#missing[@]}" -gt 0 ]]; then
+        log "ERROR" "Missing required dependencies: ${missing[*]}"
+        exit 1
+    fi
+
+    for tool in "${optional_tools[@]}"; do
+        if ! command -v "$tool" &>/dev/null; then
+            log "WARN" "Optional tool not found: $tool"
+        fi
+    done
+}
+
+is_archive() {
+    local file="$1"
+    local mime_type
+
+    [[ -f "$file" ]] || return 1
+
+    mime_type="$(file --mime-type -b "$file" 2>/dev/null)" || return 1
+
+    for supported_format in "${SUPPORTED_FORMATS[@]}"; do
+        [[ "$mime_type" == "$supported_format" ]] && return 0
+    done
+
+    return 1
+}
+
+extract() {
+    local archive="$1"
+    local mime_type out_file
+
+    mime_type="$(file --mime-type -b "$archive" 2>/dev/null)"
+
+    >&2 log "INFO" "Detected MIME type '${mime_type}'"
+
+    case "$mime_type" in
+    application/gzip)
+        if [[ "$archive" == *.tar.gz || "$archive" == *.tgz ]]; then
+            tar -xzf "$archive" || return 1
+            out_file=$(tar -tf "$archive" 2>/dev/null | head -1)
+        else
+            if [[ "$archive" == *.* && "${archive%.*}" != "" ]]; then
+                out_file="${archive%.*}"
+            else
+                out_file="$(basename "$archive").out"
+            fi
+            guncip -c "$archive" >"$out_file" || return 1
+        fi
         ;;
-    application/x-tar|application/x-xz)
-        tar -xf "$archive"
-        out=$(tar -tf "$archive" | head -n1)
+    application/x-tar)
+        tar -xf "$archive" || return 1
+        out_file=$(tar -tf "$archive" 2>/dev/null | head -1)
+        ;;
+    application/x-xz)
+        if [[ "$archive" == *.tar.xz || "$archive" == *.txz ]]; then
+            tar -xJf "$archive" || return 1
+            out_file="${archive%.*}"
+        else
+            xz -dc "$archive" >"${archive%.xz}" || return 1
+            out_file="${archive%.xz}"
+        fi
+        ;;
+    application/x-bzip2)
+        if [[ "$archive" == *.tar.bz2 || "$archive" == *.tbz2 ]]; then
+            tar -xjf "$archive" || return 1
+            out_file="${archive%.*}"
+        else
+            bzip2 -dc "$archive" >"${archive%.bz2}" || return 1
+            if [[ "$archive" == "*.bz2" ]]; then
+                out_file="${archive%.bz2}"
+            else
+                out_file="$(basename "$archive" .bz2).out"
+            fi
+        fi
         ;;
     application/zip)
-        unzip -o "$archive" >/dev/null
-        out=$(unzip -l "$archive" | awk 'NR==4 { print $4 }')
+        if ! command -v unzip >/dev/null 2>&1; then
+            return 1
+        fi
+        unzip -o "$archive" >/dev/null 2>&1 || return 1
+        out_file=$(unzip -l "$archive" 2>/dev/null | awk 'NR==4 { print $4 }')
         ;;
     application/x-rar)
-        unrar x -o+ "$archive" >/dev/null
-        out=$(unrar lb "$archive" | head -n1)
+        if ! command -v unrar >/dev/null 2>&1; then
+            return 1
+        fi
+        unrar x -o+ "$archive" || return 1
+        out_file=$(unrar lb "$archive" | head -n1)
         ;;
     application/x-7z-compressed)
-        7z x -y "$archive" >/dev/null
-        out=$(7z l "$archive" | awk '/^[ ]+[0-9]+/ {print $NF; exit}')
+        if ! command -v 7z >/dev/null 2>&1; then
+            return 1
+        fi
+        7z x -y "$archive" || return 1
+        out_file=$(7z l "$archive" | awk '/^[ ]+[0-9]+/ {print $NF; exit}')
         ;;
     *)
-        [[ "$verbose" = true ]] && echo -e "${RED} Unsupported archive type: $mime${RESET}"
-        exit 1
+        log "ERROR" "Unsupported archive format: $mime_type"
+        return 1
         ;;
     esac
 
-    echo "$out"
+    echo "$out_file"
 }
-
-### Script starts here ###
-verbose=false
-output_dir=""
-args=()
 
 usage() {
     cat <<EOF
-Usage: $(basename "$0") <archive>
+$SCRIPT_NAME - Extracts files from archives.
+
+Usage:
+    $SCRIPT_NAME [OPTIONS] <archive>
+
 OPTIONS:
-      -h, --help            Show help display
-      -v, --verbose         Enable detail output
-      -o, --output DIR      Extract to specified directory
+    -h, --help          Display this help message and exit
+    -v, --verbose       Enable verbose mode
+    -o, --output DIR    Specify output directory
+    -k, --keep-original Keep the original archive file
+    -V, --version       Display version information and exit
+
+SUPPORTED FORMATS:
+    tar, tar.gz, tar.bz2, tar.xz, gz, bz2, xz, zip, rar, 7z
 EOF
 }
 
+process_archive() {
+    local archive="$1"
+    local current_file="$archive"
+    local next_file
+
+    log "INFO" "🚀 Starting extraction…"
+
+    if [[ "$output_dir" != "$(dirname "$current_file")" ]]; then
+        keep_original=false
+    fi
+
+    while is_archive "$current_file"; do
+        next_file=$(extract "$current_file")
+
+        log "INFO" "Extracting  $current_file"
+
+        if [[ "$current_file" != "$archive" ]] || [[ "$keep_original" = false ]]; then
+            rm -f "$current_file"
+            log "DEBUG" "Removed '$current_file'"
+        fi
+
+        if [[ -n "$next_file" && -f "$next_file" ]]; then
+            if is_archive "$next_file"; then
+                log "INFO" "Found nested archive  $next_file"
+                current_file="$next_file"
+            else
+                log "INFO" "No further extraction needed"
+                break
+            fi
+        else
+            log "INFO" "No further nested archives found"
+            break
+        fi
+    done
+}
+
+args=()
+verbose=false
+output_dir=""
+keep_original=false
+
 while [[ $# -gt 0 ]]; do
-    case $1 in
+    case "$1" in
     -h | --help)
         usage
-        exit 0
+        exit
+        ;;
+    -V | --version)
+        echo "$SCRIPT_NAME - Extracts files from archives."
+        echo "Version: $VERSION"
+        exit
         ;;
     -v | --verbose)
         verbose=true
@@ -82,24 +230,21 @@ while [[ $# -gt 0 ]]; do
         ;;
     -o | --output)
         if [[ $# -lt 2 ]] || [[ "$2" == -* ]]; then
-            echo "Error: --output requires a directory argument" >&2
-            exit 1
+            log "ERROR" "--output requires a directory as argument"
         fi
         output_dir="$2"
-        if [[ -f "$output_dir" ]]; then
-            echo "Error: '$output_dir' is not a directory." >&2
-            exit 1
-        elif [[ ! -d "$output_dir" ]]; then
-            mkdir -p "$output_dir"
-        fi
         shift 2
+        ;;
+    -k | --keep-original)
+        keep_original=true
+        shift
         ;;
     --)
         shift
         break
         ;;
     -*)
-        echo "Unknown argument $1" >&2
+        log "ERROR" "Unknown option: $1"
         exit 1
         ;;
     *)
@@ -115,65 +260,61 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [[ ${#args[@]} -eq 0 ]]; then
-    echo "Error: Archive file not specified"
-    usage
+    log "ERROR" "Archive file not specified"
     exit 1
 elif [[ ${#args[@]} -gt 1 ]]; then
-    echo "Error: Too many arguments. Expected only one archive file."
-    usage
-    exit 1
+    log "ERROR" "Too many arguments. Expected only one archive file"
 fi
 
 archive="${args[0]}"
+
 if [[ ! -f "$archive" ]]; then
-    echo -e "Error: '$archive' is not a valid file."
+    log "ERROR" "'$archive' is not a valid file"
     exit 1
 fi
 
-output_dir="${output_dir:=$PWD}"
+check_deps
 
-is_pwd=false
-if ! cp "$archive" "$output_dir/" 2>/dev/null; then
-    cp "$archive" "$output_dir/$archive.bak"
-    is_pwd=true
+output_dir="${output_dir:-$(dirname "$archive")}"
+
+if [[ -f "$output_dir" ]]; then
+    log "ERROR" "'$output_dir' is a file, not a directory"
+    exit 1
+elif [[ ! -d "$output_dir" ]]; then
+    log "INFO" "Creating output directory '$output_dir'"
+    mkdir -p "$output_dir" || {
+        log "ERROR" "Failed to create output directory '$output_dir'"
+        exit 1
+    }
+elif [[ ! -w "$output_dir" ]]; then
+    log "ERROR" "Output directory '$output_dir' is not writable"
+    exit 1
 fi
-cd "$output_dir"
 
-[[ "$verbose" = true ]] && echo -e "\n${GREEN} 🚀 Starting extraction…${RESET}"
-
-current_file="$(basename "$archive")"
-
-if ! is_archive "$current_file"; then
-    [[ "$verbose" = true ]] && echo -e "Warning: ${YELLOW} Looks like it's not archive. Bye!${RESET}"
-    exit 2
+if ! is_archive "$archive"; then
+    log "ERROR" "'$archive' is not a supported archive format"
+    exit 1
 fi
 
-while is_archive "$current_file"; do
-    next_file=$(extract "$current_file")
+archive_name="$(basename "$archive")"
+work_archive="$output_dir/$archive_name"
 
-    [[ "$verbose" = true ]] && echo -e "${YELLOW} Extracted ${RED} $current_file${RESET}"
+if [[ "$archive" -ef "$work_archive" ]]; then
+    cd "$output_dir"
+    process_archive "$archive"
+else
+    log "DEBUG" "Copying archive to work directory"
+    cp "$archive" "$work_archive" || {
+        log "ERROR" "Failed to copy '$archive' to '$work_archive'"
+        exit 1
+    }
 
-    rm -f "$current_file"
+    cd "$output_dir"
+    process_archive "$archive"
 
-    if [[ -n "$next_file" && -f "$next_file" ]]; then
-        if is_archive "$next_file"; then
-            [[ "$verbose" = true ]] && echo -e "${YELLOW} Found nested archive: ${RED} $next_file${RESET}"
-            current_file="$next_file"
-        else
-            [[ "$verbose" = true ]] && echo -e "${YELLOW} No further nested archives found.${RESET}"
-            break
-        fi
-    else
-        [[ "$verbose" = true ]] && echo -e "${YELLOW} No further nested archives found or identified.${RESET}"
-        break
+    if [[ "$keep_original" = false ]]; then
+        rm -f "$work_archive"
     fi
-done
-
-if "$is_pwd"; then
-    mv "$archive.bak" "$archive"
 fi
 
-if [[ "$verbose" = true ]]; then
-    echo -e "${GREEN} ✅ Done!${RESET}"
-    echo -e "\n Extracted files are in ${BLUE} $(pwd)/${RESET}"
-fi
+log "INFO" "Extracted files are in   $(pwd)/"

@@ -9,21 +9,21 @@ IFS=$'\n\t'
 LOG_DIR="/var/log/"
 LOG_FILE="/var/log/cleaned.log"
 DAYS_OLD=30
-DRY_RUN=false
+PREPARE=false
 
 error() {
     echo "[ERROR] $*" >&2
 }
 
 usage() {
-    echo "Usage: $0 [--dry-run]"
-    echo "  --dry-run   Only show what would be deleted"
+    echo "Usage: $0 [--prepare]"
+    echo "  --prepare   Only show what would be deleted but not actually delete them"
     exit 1
 }
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
-    --dry-run) DRY_RUN=true ;;
+    --prepare) PREPARE=true ;;
     -h | --help) usage ;;
     *) usage ;;
     esac
@@ -35,16 +35,16 @@ if [[ ! -d "$LOG_DIR" ]]; then
     exit 1
 fi
 
-if ! touch "$LOG_FILE" 2>/dev/null; then
-    error "Cannot write to log file: $LOG_FILE"
+if [[ $EUID -ne 0 ]]; then
+    error "This script must be run as root."
     exit 1
 fi
 
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] Cleanup started. Dry-run: $DRY_RUN" >>"$LOG_FILE"
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Cleanup started. Prepare: $PREPARE" >>"$LOG_FILE"
 
 while IFS= read -r -d '' file; do
-    if "$DRY_RUN"; then
-        echo "[DRY RUN] Would delete: $file"
+    if "$PREPARE"; then
+        echo "[INFO] Would delete: $file"
     else
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] Deleting: $file" >>"$LOG_FILE"
 
