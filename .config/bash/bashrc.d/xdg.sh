@@ -31,3 +31,5 @@ export PNPM_HOME="$XDG_DATA_HOME/pnpm"
 export PATH="$PATH:$PNPM_HOME"
 
 export CUDE_CACHE_PATH="$XDG_CACHE_HOME/nv"
+
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/doker

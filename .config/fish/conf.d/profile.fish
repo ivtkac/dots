@@ -37,3 +37,5 @@ set -gx XDG_PROJECTS_DIR $HOME/Projects
 set -gx XDG_GAMES_DIR $XDG_DATA_HOME/games
 set -gx DOTS_DIR $XDG_PROJECTS_DIR/dotfiles
 
+set -gx CUDA_CACHE_PATH "$XDG_CACHE_HOME"/nv
+set -gx DOCKER_CONFIG "$XDG_CONFIG_HOME"/docker
