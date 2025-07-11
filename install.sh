@@ -19,7 +19,7 @@ y)
 
   echo "Flatpak installations complete!"
   ;;
-*) 
+*)
   echo "Skipping Flatpak installation."
   ;;
 esac

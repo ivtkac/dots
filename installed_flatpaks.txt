@@ -13,11 +13,13 @@ com.getpostman.Postman
 com.github.Matoking.protontricks
 com.github.hugolabe.Wike
 com.github.marhkb.Pods
+com.github.neithern.g4music
 com.github.tchx84.Flatseal
 com.github.tenderowl.frog
 com.jeffser.Alpaca
 com.mattjakeman.ExtensionManager
 com.mojang.Minecraft
+com.obsproject.Studio
 com.pojtinger.felicitas.Multiplex
 com.rafaelmardojai.Blanket
 com.ranfdev.DistroShelf
@@ -49,7 +51,6 @@ io.github.seadve.Mousai
 io.gitlab.adhami3310.Impression
 io.gitlab.news_flash.NewsFlash
 it.mijorus.collector
-md.obsidian.Obsidian
 me.sanchezrodriguez.passes
 net.nokyan.Resources
 org.blender.Blender
@@ -83,6 +84,7 @@ org.gnome.gitlab.YaLTeR.VideoTrimmer
 org.gnome.gitlab.somas.Apostrophe
 org.mozilla.firefox
 org.nickvision.tubeconverter
+org.pgadmin.pgadmin4
 org.prismlauncher.PrismLauncher
 org.telegram.desktop
 page.kramo.Cartridges
