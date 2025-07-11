@@ -13,8 +13,8 @@ fish_add_path $XDG_CACHE_HOME/.bun/bin
 set -gx HISTSIZE 524288
 set -gx SAVEHIST 131072
 
-set -gx EDITOR nvim
-set -gx ALTERNATE_EDITOR zeditor
+set -gx EDITOR helix
+set -gx ALTERNATE_EDITOR nano
 set -gx VISUAL $EDITOR
 
 set -gx GNUPGHOME $XDG_DATA_HOME/gnupg
