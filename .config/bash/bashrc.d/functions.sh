@@ -84,7 +84,7 @@ mvcd() {
 
 # Edit a file with the default editor
 edit() {
-  ${EDITOR:-nvim} "$(find . type -f | fzf)"
+  ${EDITOR:-nano} "$(tv files)"
 }
 
 kproc() {

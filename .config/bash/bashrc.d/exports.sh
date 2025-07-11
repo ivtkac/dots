@@ -3,7 +3,7 @@ export GPG_TTY=${TTY:-$(tty)}
 
 # Enable using vi/vim as default editor of other programs.
 # Setting ALTERNATE_EDITOR to nano
-export EDITOR=vim
+export EDITOR=helix
 export ALTERNATE_EDITOR=nano
 
 # Set the default pager
