@@ -94,7 +94,7 @@ extract() {
             else
                 out_file="$(basename "$archive").out"
             fi
-            guncip -c "$archive" >"$out_file" || return 1
+            gunzip -c "$archive" >"$out_file" || return 1
         fi
         ;;
     application/x-tar)
@@ -125,6 +125,7 @@ extract() {
         ;;
     application/zip)
         if ! command -v unzip >/dev/null 2>&1; then
+            log "ERROR" "unzip command not found"
             return 1
         fi
         unzip -o "$archive" >/dev/null 2>&1 || return 1
@@ -132,6 +133,7 @@ extract() {
         ;;
     application/x-rar)
         if ! command -v unrar >/dev/null 2>&1; then
+            log "ERROR" "unrar command not found"
             return 1
         fi
         unrar x -o+ "$archive" || return 1
@@ -139,6 +141,7 @@ extract() {
         ;;
     application/x-7z-compressed)
         if ! command -v 7z >/dev/null 2>&1; then
+            log "ERROR" "7z command not found"
             return 1
         fi
         7z x -y "$archive" || return 1
