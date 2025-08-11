@@ -5,6 +5,7 @@
   email = gearxxed@gmail.com
   name = KD-6190
   signinkey = B336C5A4
+	signingkey = B3694380B336C5A4
   
 [init]
   defaultBranch = main
