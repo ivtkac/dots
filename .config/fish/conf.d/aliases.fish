@@ -25,8 +25,6 @@ alias cat="bat --style=plain --pager=never" 2>/dev/null
 # Fastfetch for neofetch
 alias neofetch="fastfetch" 2>/dev/null
 
-# Helix for all editors
-alias hx="helix" 2>/dev/null
 alias vi="helix" 2>/dev/null
 alias nano="helix" 2>/dev/null
 alias vim='nvim' 2>/dev/null
