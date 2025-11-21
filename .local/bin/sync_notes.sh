@@ -2,14 +2,12 @@
 
 set -euo pipefail
 
-NOTES_DIR="${NOTES_DIR:-$HOME/Documents/Notes}"
-VAULT_DIR="${VAULT_DIR:-$HOME/Documents/Vault}"
+INPUT_DIR="$HOME/Documents/Notes"
+OUTPUT_DIR="$HOME/Projects/notes"
 
-rsync -av --include="*/" --include="*.md" --exclude="*" "$NOTES_DIR/notes/" "$VAULT_DIR/"
+pushd "$OUTPUT_DIR" || exit 1
 
-rsync -av "$NOTES_DIR/_attachments/" "$VAULT_DIR/_attachments/"
-
-pushd "$VAULT_DIR" || exit 1
+uv run transfer_notes.py --input-dir="$INPUT_DIR" --output-dir="$OUTPUT_DIR/notes" --skip-tags=sexuality
 
 git add .
 git commit -m "vault backup: $(date "+%Y-%m-%d %H:%M:%S")"

@@ -2,16 +2,16 @@
   editor = flatpak run re.sonny.Commit
 
 [user]
-  email = gearxxed@gmail.com
-  name = KD-6190
+  email = ivtkac@gmail.com
+  name = Ivan Tkachuk
   signinkey = B336C5A4
-	signingkey = B3694380B336C5A4
+	signingkey = 6A5BAF802A0BB4CC9D2EB7B3B3694380B336C5A4
   
 [init]
   defaultBranch = main
   
 [commit]
-  gpgSign = true
+	gpgsign = true
   
 [push]
   default = current
