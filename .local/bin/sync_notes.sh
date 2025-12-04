@@ -3,16 +3,23 @@
 set -euo pipefail
 
 INPUT_DIR="$HOME/Documents/Notes"
-OUTPUT_DIR="$HOME/Projects/quartz"
+SCRIPT_DIR="$HOME/Projects/notes"
+OUTPUT_DIR="$HOME/Projects/quartz/content"
 
-pushd "$OUTPUT_DIR" || exit 1
+pushd "$SCRIPT_DIR" || exit 1
 
-echo "Transfer notes to quartz"
+echo "Transfer notes to quartz..."
 
-rsync -av --delete --exclude={'journal','private','templates','bases','.obsidian','.git'} "$INPUT_DIR"/* "$OUTPUT_DIR"/content/
+uv run transfer_notes.py --input-dir="$INPUT_DIR" --output-dir="$OUTPUT_DIR" --skip-tags="private"
 
-echo "Sync quartz"
+echo "Copy attachments..."
 
-npx quartz sync
+cp -rf "$INPUT_DIR/attachments" "$OUTPUT_DIR/attachments"
+
+pushd "$OUTPUT_DIR/.." || exit 1
+
+echo "Sync quartz..."
+
+npx quartz sync --no-pull
 
 popd || exit 1
